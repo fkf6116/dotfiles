@@ -1,3 +1,6 @@
+
+include cat-mocha
+
 # Default config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
@@ -26,6 +29,7 @@ set $menu rofi -show drun
 exec_always autotiling
 exec lxsession 
 exec wl-paste -t text --watch clipman store --no-persist
+exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1 
 # Notification Daemon
 exec dunst &
 
@@ -99,6 +103,11 @@ input "12815:20571:Evision_AK820" {
 
 xkb_options ctrl:nocaps
 }
+
+input "3141:31237:SONiX_Gaming_Mouse" {
+    accel_profile "flat"
+  }
+
 
 
 
@@ -260,11 +269,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-
 exec waybar -c ~/.config/sway/waybar/config -s ~/.config/sway/waybar/style.css  
 exec wl-paste -t text --watch clipman store --no-persist
 exec /usr/libexec/xdg-desktop-portal-gtk
@@ -273,3 +277,30 @@ exec /usr/libexec/xdg-desktop-portal-gnome
 
 
 include @sysconfdir@/sway/config.d/*
+
+
+
+# target                 title     bg    text   indicator  border
+client.focused           $lavender $base $text  $rosewater $lavender
+client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
+client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+client.urgent            $peach    $base $peach $overlay0  $peach
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+client.background        $base
+
+# bar {
+#   colors {
+#     background         $base
+#     statusline         $text
+#     focused_statusline $text
+#     focused_separator  $base
+#
+#     # target           border bg        text
+#     focused_workspace  $base  $mauve    $crust
+#     active_workspace   $base  $surface2 $text
+#     inactive_workspace $base  $base     $text
+#     urgent_workspace   $base  $red      $crust
+#   }
+#
+# }
+
