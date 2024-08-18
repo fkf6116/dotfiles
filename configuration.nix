@@ -122,6 +122,7 @@ fonts = {
   };
 
 
+programs.hyprland.enable = true;
 
 
 
@@ -166,14 +167,21 @@ fonts = {
 	slurp
 	grim
 	gh
+	catppuccin-gtk
+
+	wl-clipboard
 	unzip
+	lxappearance
 	unrar
-
 	github-desktop
-
 	gcc
 	clang
 	zig
+	ags
+	gjs
+	dbus
+
+		
 	libgcc
 
 
@@ -184,24 +192,34 @@ fonts = {
 
 # SWAYFX
 
+xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    config.common.default = "*";
+    extraPortals = [
+#      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-xapp
 
+      pkgs.xdg-desktop-portal-gnome
+      pkgs.xdg-desktop-portal-hyprland
+      pkgs.xdg-desktop-portal-wlr
+    ];
+  };
 
 programs.sway = {
     enable = true;
     package = pkgs.swayfx;
     wrapperFeatures.gtk = true;
   };
+
+
+
+
+
+
 security.polkit.enable = true;
 
-
-
-
-
-
-
-
-
-
+services.gnome.gnome-keyring.enable = true;
 
 
   # Some programs need SUID wrappers, can be configured further or are
