@@ -26,21 +26,21 @@ set $menu rofi -show drun
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-exec_always autotiling
+exec_always autotiling-rs
 exec lxsession 
 exec wl-paste -t text --watch clipman store --no-persist
-exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1 
+exec --no-startup-id lxsession 
 # Notification Daemon
 exec dunst &
 
 # Toggle control center
-bindsym $mod+Shift+n exec swaync-client -t -sw
+#bindsym $mod+Shift+n exec swaync-client -t -sw
 
 bindsym $mod+n exec ~/.config/rofi/applets/bin/quicklinks.sh
 
 exec waypaper --restore
 
-
+#exec swaync
 
 #### SWAYFX ONLY!!!
 
@@ -288,19 +288,20 @@ client.urgent            $peach    $base $peach $overlay0  $peach
 client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
-bar {
-  colors {
-    background         $base
-    statusline         $text
-    focused_statusline $text
-    focused_separator  $base
+# bar {
+#   colors {
+#     background         $base
+#     statusline         $text
+#     focused_statusline $text
+#     focused_separator  $base
+#
+#     # target           border bg        text
+#     focused_workspace  $base  $mauve    $crust
+#     active_workspace   $base  $surface2 $text
+#     inactive_workspace $base  $base     $text
+#     urgent_workspace   $base  $red      $crust
+#   }
+# }
 
-    # target           border bg        text
-    focused_workspace  $base  $mauve    $crust
-    active_workspace   $base  $surface2 $text
-    inactive_workspace $base  $base     $text
-    urgent_workspace   $base  $red      $crust
-  }
-  swaybar_command waybar
-}
 
+exec killall xwaylandvideobridge
