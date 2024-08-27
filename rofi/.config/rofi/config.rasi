@@ -13,4 +13,6 @@ configuration{
     sidebar-mode: true;
 }
 
-@theme "catppuccin-mocha"
+//@theme "catppuccin-mocha"
+
+@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
