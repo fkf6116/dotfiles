@@ -18,7 +18,7 @@ set $mod Mod4
 exec --no-startup-id picom 
 exec --no-startup-id wal -R
 exec --no-startup-id autotiling
-exec_always --no-startup-id setxkbmap -option caps:ctrl_modifier
+exec setxkbmap -option caps:ctrl_modifier
 
 exec_always lxsession &
 exec ~/.config/polybar/launch.sh
