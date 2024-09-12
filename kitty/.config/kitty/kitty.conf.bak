@@ -1,5 +1,5 @@
 # VISUAL CONFIGURATION
-background_opacity 1
+background_opacity 0.75
 hide_window_decorations yes
 resize_in_steps yes
 window_margin_width    1
@@ -70,6 +70,6 @@ font_size 9.0
 
 
 # BEGIN_KITTY_THEME
-# Gruvbox Material Dark Hard
+# Catppuccin-Mocha
 include cyber.conf
 # END_KITTY_THEME
