@@ -20,3 +20,5 @@ I'm using both kitty and wezterm(depends on my mood)
 for a file browser I am using broot which is AMAZING
 
 I'm a guy who steals from other peoples configs deal with it
+
+The bar is [Hyprpanel](https://hyprpanel.com/configuration/themes.html)
