@@ -21,8 +21,8 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu rofi -show drun 
- 
+# set $menu rofi -show drun 
+set $menu ulauncher-toggle 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
@@ -103,7 +103,12 @@ input "12815:20571:Evision_AK820" {
 
 xkb_options ctrl:nocaps
 }
-
+input "1739:0:Synaptics_TM3276-022" {
+    dwt enabled
+    tap enabled
+    natural_scroll enabled
+    middle_emulation enabled
+  }
 input "3141:31237:SONiX_Gaming_Mouse" {
     accel_profile "flat"
   }
@@ -269,7 +274,9 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-exec waybar -c ~/.config/sway/waybar/config -s ~/.config/sway/waybar/style.css  
+# exec waybar -c ~/.config/sway/waybar/config -s ~/.config/sway/waybar/style.css  
+exec waybar
+exec ulauncher --hide-window
 exec wl-paste -t text --watch clipman store --no-persist
 exec /usr/libexec/xdg-desktop-portal-gtk
 exec /usr/libexec/xdg-desktop-portal-wlr
