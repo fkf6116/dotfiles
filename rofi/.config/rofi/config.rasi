@@ -13,6 +13,6 @@ configuration{
     sidebar-mode: true;
 }
 
-@theme "~/.cache/wal/colors-rofi-dark.rasi"
-
+//@theme "~/.cache/wal/colors-rofi-dark.rasi"
+@theme "~/.config/rofi/catppuccin-mocha.rasi"
 //@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
