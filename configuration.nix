@@ -4,18 +4,58 @@
 
 { config, pkgs, ... }:
 
+
+
+
+let
+# add unstable channel declaratively
+  unstableTarball =
+    fetchTarball
+      https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz;
+in
+
+
+
+
+#landmark
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+    ./hardware-configuration.nix
+    <home-manager/nixos>
     ];
 
-  # Bootloader.
+  nixpkgs.config = {
+    packageOverrides = pkgs: {
+      unstable = import unstableTarball {
+        config = config.nixpkgs.config;
+      };
+    };
+  };
+
+
+# Bootloader.
+
   boot.loader.systemd-boot.enable = true;
+
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  boot.plymouth = {
+    enable = true;
+    theme = "rings";
+    themePackages = [(pkgs.adi1090x-plymouth-themes.override {selected_themes = ["rings"];})];
+  };
+
+  boot.initrd.verbose = false;
+
+  boot.consoleLogLevel = 0;
+
+  boot.kernelParams = [ "quiet" "udev.log_level=0" ]; 
+
+
+
+  networking.hostName = "thonkpad"; # Define your hostname.
+  #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -23,16 +63,13 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  
 
 
 
-  programs.fish.enable = true;
-  users.users.fkf.shell = pkgs.fish;
-
-
-
-# Set your time zone.
-  time.timeZone = "Asia/Dhaka";
+  # Set your time zone.
+  # TODO change it to someplace random next week
+  time.timeZone = "Europe/Oslo";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -61,9 +98,16 @@
     layout = "us";
     variant = "";
   };
+ 
+ 
+ 
+  programs.fish.enable = true;
+  users.users.fkf.shell = pkgs.fish;
+  services.flatpak.enable = true;
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
+
+
+
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
@@ -94,15 +138,93 @@
     ];
   };
 
+
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+
   # Install firefox.
   programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # List packages installed in system profile. To search, run:
+  # $ nix search wget
+  environment.systemPackages = with pkgs; [
+  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+  #  wget
+  vim
+	yazi
+  unstable.neovim
+	bottom
+	fish
+	git
+  ulauncher
+	stow
+	polybar
+	waybar
+	rofi
+	fastfetch
+	kitty
+	kitty-themes
+	kitty-img
+	jetbrains-mono
+	spotify
+	pkgs.vesktop
+	cowsay
+	tmux
+	nodejs
+	pipx
+	zoxide
+  gnome.gnome-tweaks	
+  hugo
+  tldr
+	fzf
+	zellij
+	pulseaudioFull
+	starship    
+	eza
+	ripgrep
+	bat
+	less
+	wget
+	swaybg
+  mako
+	waypaper
+	slurp
+	grim
+	gh
+	catppuccin-gtk
+	wl-clipboard
+	unzip
+	unrar
+	github-desktop
+	gcc
+	clang
+  clang-tools
+  lua-language-server
+  prettierd
+  nwg-look
+  pkgs.nixfmt-rfc-style
+  stylua
+  nodePackages.bash-language-server
+  nixd
+  helix
+  brightnessctl
+  marksman
+	zig
+  bibata-cursors
+  ];
 
-
-
+  # Some programs need SUID wrappers, can be configured further or are
+  # started in user sessions.
+  # programs.mtr.enable = true;
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  # };
+environment.variables.EDITOR = "vim";
 
 fonts = {
     packages = with pkgs; [
@@ -120,116 +242,6 @@ fonts = {
       sansSerif = [ "Noto Sans" "Source Han Sans" ];
     };
   };
-
-
-programs.hyprland.enable = true;
-
-
-
-
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-	vim
-	neovim
-	yazi
-	bottom
-	fish
-	git
-	stow
-	swayfx
-	polybar
-	waybar
-	rofi
-	autotiling-rs
-	fastfetch
-	kitty
-	kitty-themes
-	kitty-img
-	jetbrains-mono
-	spotify
-	pkgs.vesktop
-	cowsay
-	tmux
-	nodejs
-	pipx
-	zoxide
-	fzf
-	zellij
-	pulseaudioFull
-	starship    
-	eza
-	ripgrep
-	bat
-	less
-	wget
-	swaybg
-	waypaper
-	slurp
-	grim
-	gh
-	catppuccin-gtk
-
-	wl-clipboard
-	unzip
-	lxappearance
-	unrar
-	github-desktop
-	gcc
-	clang
-	zig
-	ags
-	gjs
-	dbus
-
-		
-	libgcc
-
-
-
-  ];
-
-
-
-# SWAYFX
-
-xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-    config.common.default = "*";
-    extraPortals = [
-#      pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-xapp
-
-      pkgs.xdg-desktop-portal-gnome
-      pkgs.xdg-desktop-portal-hyprland
-      pkgs.xdg-desktop-portal-wlr
-    ];
-  };
-
-programs.sway = {
-    enable = true;
-    package = pkgs.swayfx;
-    wrapperFeatures.gtk = true;
-  };
-
-
-
-
-
-
-security.polkit.enable = true;
-
-services.gnome.gnome-keyring.enable = true;
-
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
@@ -240,7 +252,27 @@ services.gnome.gnome-keyring.enable = true;
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+systemd.services.NetworkManager-wait-online.enable = false;
+programs.sway = {
+    enable = true;
+    package = pkgs.swayfx;
+    wrapperFeatures.gtk = true;
+  };
 
+security.polkit.enable = true;
+
+services.gnome.gnome-keyring.enable = true;
+
+
+services.blueman.enable = true;
+
+hardware.bluetooth.enable = true; # enables support for Bluetooth
+hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+
+
+
+
+programs.hyprland.enable = true; # enable Hyprland
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
