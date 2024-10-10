@@ -22,7 +22,7 @@ in
   imports =
     [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    <home-manager/nixos>
+    
     ];
 
   nixpkgs.config = {
@@ -86,12 +86,15 @@ in
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+# NOTE Enable the KDE PLASMA LESGOOO Desktop Environment.
+
+  services.xserver.enable = true; 
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
+  services.desktopManager.plasma6.enable = true;
+
+
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -215,7 +218,29 @@ in
   marksman
 	zig
   bibata-cursors
-  ];
+  prismlauncher
+  lxqt.lxqt-policykit
+  libsForQt5.qtstyleplugin-kvantum
+  libsForQt5.qt5ct
+  kdePackages.breeze-gtk
+  kdePackages.breeze-icons
+  kdePackages.breeze.qt5
+  kdePackages.breeze
+  catppuccin-cursors # Mouse cursor theme
+  catppuccin-papirus-folders # Icon theme, e.g. for pcmanfm-qt
+  papirus-folders # For the catppucing stuff work
+  papirus-folders
+  catppuccin-kde
+  sweet-nova
+  nordic
+
+
+
+
+
+
+
+ ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -224,7 +249,28 @@ in
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+
 environment.variables.EDITOR = "vim";
+
+
+
+environment.variables = {
+  # This will become a global environment variable
+ "QT_STYLE_OVERRIDE"="kvantum";
+    XDG_CURRENT_DESKTOP = "Hyprland";
+    XDG_SESSION_DESKTOP = "Hyprland";
+    XDG_SESSION_TYPE = "wayland";
+    GDK_BACKEND = "wayland";
+    GTK_USE_PORTAL = "1";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
+    QT_QPA_PLATFORM = "wayland";
+    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+    QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+    MOZ_ENABLE_WAYLAND = "1";
+
+
+};
+
 
 fonts = {
     packages = with pkgs; [
