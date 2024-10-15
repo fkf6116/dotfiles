@@ -40,15 +40,15 @@ in
 
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.plymouth = {
-    enable = true;
-    theme = "rings";
-    themePackages = [(pkgs.adi1090x-plymouth-themes.override {selected_themes = ["rings"];})];
-  };
-
+  # boot.plymouth = {
+  #   enable = true;
+  #   theme = "rings";
+  #   themePackages = [(pkgs.adi1090x-plymouth-themes.override {selected_themes = ["rings"];})];
+  # };
+  #
   boot.initrd.verbose = false;
 
-  boot.consoleLogLevel = 0;
+  # boot.consoleLogLevel = 0;
 
   boot.kernelParams = [ "quiet" "udev.log_level=0" ]; 
 
@@ -233,12 +233,9 @@ in
   catppuccin-kde
   sweet-nova
   nordic
-
-
-
-
-
-
+  nil
+  ffmpeg
+  obs-studio
 
  ];
 
@@ -254,29 +251,29 @@ environment.variables.EDITOR = "vim";
 
 
 
-environment.variables = {
-  # This will become a global environment variable
- "QT_STYLE_OVERRIDE"="kvantum";
-    XDG_CURRENT_DESKTOP = "Hyprland";
-    XDG_SESSION_DESKTOP = "Hyprland";
-    XDG_SESSION_TYPE = "wayland";
-    GDK_BACKEND = "wayland";
-    GTK_USE_PORTAL = "1";
-    QT_QPA_PLATFORMTHEME = "qt5ct";
-    QT_QPA_PLATFORM = "wayland";
-    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-    QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-    MOZ_ENABLE_WAYLAND = "1";
-
-
-};
-
-programs.steam = {
-  enable = true;
-  remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-  dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-  localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
-};
+# environment.variables = {
+#   # This will become a global environment variable
+#  "QT_STYLE_OVERRIDE"="kvantum";
+#     XDG_CURRENT_DESKTOP = "Hyprland";
+#     XDG_SESSION_DESKTOP = "Hyprland";
+#     XDG_SESSION_TYPE = "wayland";
+#     GDK_BACKEND = "wayland";
+#     GTK_USE_PORTAL = "1";
+#     QT_QPA_PLATFORMTHEME = "qt5ct";
+#     QT_QPA_PLATFORM = "wayland";
+#     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+#     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+#     MOZ_ENABLE_WAYLAND = "1";
+#
+#
+# };
+#
+# programs.steam = {
+#   enable = true;
+#   remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+#   dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+#   localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+# };
 
 fonts = {
     packages = with pkgs; [
