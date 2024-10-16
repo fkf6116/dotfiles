@@ -96,6 +96,7 @@ in
   services.xserver.desktopManager.gnome.enable = true;
 
 
+
 # NOTE Enable the KDE PLASMA LESGOOO Desktop Environment.
 
   # services.xserver.enable = true; 
