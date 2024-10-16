@@ -202,8 +202,7 @@ in
 	less
 	wget
 	swaybg
-  mako
-	waypaper
+  waypaper
 	slurp
 	grim
 	gh
@@ -247,6 +246,9 @@ in
   obs-studio
   pcmanfm
   lazygit
+  swaynotificationcenter
+  fd
+  
 
  ];
 
