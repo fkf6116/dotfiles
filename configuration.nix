@@ -246,6 +246,7 @@ in
   ffmpeg
   obs-studio
   pcmanfm
+  lazygit
 
  ];
 
