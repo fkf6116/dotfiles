@@ -48,7 +48,7 @@ in
   #
   boot.initrd.verbose = false;
 
-  # boot.consoleLogLevel = 0;
+  boot.consoleLogLevel = 0;
 
   boot.kernelParams = [ "quiet" "udev.log_level=0" ]; 
 
@@ -87,12 +87,20 @@ in
   };
 
 
+
+
+# NOTE enable GNOMEEEEEEE 
+  services.xserver.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
+
+
 # NOTE Enable the KDE PLASMA LESGOOO Desktop Environment.
 
-  services.xserver.enable = true; 
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  # services.xserver.enable = true; 
+  # services.displayManager.sddm.enable = true;
+  # services.displayManager.sddm.wayland.enable = true;
+  # services.desktopManager.plasma6.enable = true;
 
 
 
@@ -222,17 +230,17 @@ in
   lxqt.lxqt-policykit
   libsForQt5.qtstyleplugin-kvantum
   libsForQt5.qt5ct
-  kdePackages.breeze-gtk
-  kdePackages.breeze-icons
-  kdePackages.breeze.qt5
-  kdePackages.breeze
+  # kdePackages.breeze-gtk
+  # kdePackages.breeze-icons
+  # kdePackages.breeze.qt5
+  # kdePackages.breeze
   catppuccin-cursors # Mouse cursor theme
   catppuccin-papirus-folders # Icon theme, e.g. for pcmanfm-qt
   papirus-folders # For the catppucing stuff work
   papirus-folders
-  catppuccin-kde
-  sweet-nova
-  nordic
+  # catppuccin-kde
+  # sweet-nova
+  # nordic
   nil
   ffmpeg
   obs-studio
