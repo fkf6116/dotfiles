@@ -167,6 +167,33 @@ in
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
+
+
+
+
+
+
+ (vscode-with-extensions.override {
+    vscodeExtensions = with vscode-extensions; [
+      bbenoist.nix
+      ms-python.python
+      ms-azuretools.vscode-docker
+      ms-vscode-remote.remote-ssh
+    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+      {
+        name = "remote-ssh-edit";
+        publisher = "ms-vscode-remote";
+        version = "0.47.2";
+        sha256 = "1hp6gjh4xp2m1xlm1jsdzxw9d8frkiidhph6nvl24d0h8z34w49g";
+      }
+    ];
+  })
+
+
+
+
+
+
   vim
 	yazi
   unstable.neovim
@@ -208,6 +235,9 @@ in
 	grim
 	gh
 	catppuccin-gtk
+  catppuccin-cursors
+  pkgs.catppuccin-papirus-folders
+
 	wl-clipboard
 	unzip
 	unrar
@@ -249,7 +279,6 @@ in
   lazygit
   swaynotificationcenter
   fd
-  
 
  ];
 
@@ -262,7 +291,7 @@ in
   # };
 
 environment.variables.EDITOR = "vim";
-
+environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
 
 # environment.variables = {
@@ -327,11 +356,9 @@ security.polkit.enable = true;
 services.gnome.gnome-keyring.enable = true;
 security.pam.services.greetd.enableGnomeKeyring = true;
 
-services.blueman.enable = true;
-
 hardware.bluetooth.enable = true; # enables support for Bluetooth
 hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
-
+services.blueman.enable = true;
 
 
 
