@@ -1,3 +1,4 @@
+# NOTE Made by FKF
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
@@ -244,6 +245,7 @@ in
   nil
   ffmpeg
   obs-studio
+  pcmanfm
 
  ];
 
@@ -319,7 +321,7 @@ programs.sway = {
 security.polkit.enable = true;
 
 services.gnome.gnome-keyring.enable = true;
-
+security.pam.services.greetd.enableGnomeKeyring = true;
 
 services.blueman.enable = true;
 
