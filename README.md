@@ -5,20 +5,18 @@
 These are my dotfiles
 They're what I use on my main daily driving system
 
-A **_lot_** of the stuff is stolen from other places
+A bunch of the stuff is stolen from other places
 
-For example the hyprland config is from [ "this guy who did an AMAZING job"](https://github.com/prasanthrangan/hyprdots)
-
-And my neovim config is [lunarvim](https://www.lunarvim.org/ "lunarvim")
-
-though nowadays I use [Lazyvim](https://www.lazyvim.org/ "lazyvim")
-
+I mainly use helix nowadays but I also often use neovim
+And my neovim config is [this](https://github.com/fruity-fkf/nvim "this")
 there's nothing more to say TBH
 
 I'm using both kitty and wezterm(depends on my mood)
 
-for a file browser I am using broot which is AMAZING
+for a file browser I am using yazi which is AMAZING
 
 I'm a guy who steals from other peoples configs deal with it
 
-The bar is [Hyprpanel](https://hyprpanel.com/configuration/themes.html)
+The bar is [Hyprpanel](https://hyprpanel.com/configuration/themes.html) or waybar depending on my mood
+
+My colorscheme is either catppuccin or Gruvbox material
