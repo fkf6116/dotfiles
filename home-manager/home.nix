@@ -74,21 +74,13 @@
     # EDITOR = "emacs";
   };
 stylix.enable = true;
-stylix.image = /home/fkf/Downloads/nix-wallpaper-nineish-catppuccin-frappe-alt.png;
+stylix.image = /home/fkf/wallpapers/desktop-wallpaper/gruvbox/gruvbox-194.png;
 
   programs.git = {
     enable = true;
     userName = "fruity-fkf";
     userEmail = "fkf.6106@gmail.com";
   };
-
-gtk = {
-  enable = true;
-  theme.name = "adw-gtk3";
-  cursorTheme.name = "Bibita-Modern-Ice";
-  iconTheme.name = "GruvboxPlus";
-};
-
 
 xdg.mimeApps.defaultApplications = {
 "text/plain" = [ "neovide.desktop"];
@@ -101,7 +93,7 @@ xdg.mimeApps.defaultApplications = {
 
 
 
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
 
 
 

@@ -93,6 +93,9 @@ in
 # NOTE enable GNOMEEEEEEE 
   services.xserver.enable = true;
   services.xserver.displayManager.sddm.enable = true;
+
+services.displayManager.sddm.theme = "catppuccin-sddm";
+  
   services.xserver.desktopManager.gnome.enable = true;
 
 
