@@ -1,5 +1,5 @@
 # VISUAL CONFIGURATION
-background_opacity 0.75
+background_opacity 0.65
 hide_window_decorations yes
 resize_in_steps yes
 window_margin_width    1
@@ -70,6 +70,6 @@ font_size 11.0
 
 
 # BEGIN_KITTY_THEME
-# Tokyo Night Storm
+# Catppuccin-Mocha
 include cyber.conf
 # END_KITTY_THEME

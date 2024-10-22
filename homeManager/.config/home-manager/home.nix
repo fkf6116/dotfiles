@@ -74,13 +74,8 @@
     # EDITOR = "emacs";
   };
 stylix.enable = true;
-stylix.image = /home/fkf/wallpapers/desktop-wallpaper/gruvbox/gruvbox-194.png;
+stylix.image = /home/fkf/wallpapers/desktop-wallpaper/colorful/colorful-016.png;
 
-  programs.git = {
-    enable = true;
-    userName = "fruity-fkf";
-    userEmail = "fkf.6106@gmail.com";
-  };
 
 xdg.mimeApps.defaultApplications = {
 "text/plain" = [ "neovide.desktop"];
@@ -93,7 +88,7 @@ xdg.mimeApps.defaultApplications = {
 
 
 
-stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
 
 
