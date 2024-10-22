@@ -1,4 +1,6 @@
-theme = "gruvbox_dark_hard"
+#theme = "gruvbox_dark_hard"
+theme = "cyberdream"
+
 
 [editor]
 line-number = "relative"

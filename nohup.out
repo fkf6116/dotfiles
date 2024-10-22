@@ -1,0 +1,44 @@
+[2024-10-20 19:12:44.598] [info] Using configuration file /home/fkf/.config/waybar/config
+[2024-10-20 19:12:44.600] [info] Discovered appearance 'dark'
+[2024-10-20 19:12:44.600] [info] Using CSS file /home/fkf/.config/waybar/style.css
+
+(waybar:126444): Gtk-WARNING **: 19:12:44.601: Theme parsing error: style.css:29:11: Not using units is deprecated. Assuming 'px'.
+
+(waybar:126444): Gtk-WARNING **: 19:12:44.601: Theme parsing error: style.css:30:17: Not using units is deprecated. Assuming 'px'.
+
+(waybar:126444): Gtk-WARNING **: 19:12:44.601: Theme parsing error: style.css:31:18: Not using units is deprecated. Assuming 'px'.
+[2024-10-20 19:12:44.607] [info] Hyprland IPC starting
+[2024-10-20 19:12:44.607] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-10-20 19:12:44.607] [warning] module hyprland/mode: Unknown module: hyprland/mode
+[2024-10-20 19:12:44.608] [warning] module hyprland/scratchpad: Unknown module: hyprland/scratchpad
+/usr/bin/python3: can't open file '/home/fkf/.config/hyprland/waybar/modules/mediaplayer.py': [Errno 2] No such file or directory
+[2024-10-20 19:12:44.626] [error] spotify stopped unexpectedly, is it endless?
+[2024-10-20 19:12:44.689] [info] Bar configured (width: 1920, height: 24) for output: HDMI-A-1
+
+** (waybar:126444): WARNING **: 19:12:44.700: Status Notifier Item with bus name ':1.13' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:126444): WARNING **: 19:12:44.700: Status Notifier Item with bus name ':1.21' and object path '/org/ayatana/NotificationItem/ulauncher' is already registered
+
+** (waybar:126444): WARNING **: 19:13:15.932: Status Notifier Item with bus name ':1.65' and object path '/StatusNotifierItem' is already registered
+
+** (waybar:126444): WARNING **: 19:13:15.933: Status Notifier Item with bus name ':1.13' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:126444): WARNING **: 19:13:15.934: Status Notifier Item with bus name ':1.21' and object path '/org/ayatana/NotificationItem/ulauncher' is already registered
+
+** (waybar:126444): WARNING **: 19:13:15.934: Status Notifier Host with bus name ':1.144' and object path '/StatusNotifierHost/0' is already registered
+
+** (waybar:126444): WARNING **: 19:14:28.418: Status Notifier Item with bus name ':1.65' and object path '/StatusNotifierItem' is already registered
+
+** (waybar:126444): WARNING **: 19:14:28.418: Status Notifier Item with bus name ':1.13' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:126444): WARNING **: 19:14:28.419: Status Notifier Item with bus name ':1.21' and object path '/org/ayatana/NotificationItem/ulauncher' is already registered
+
+** (waybar:126444): WARNING **: 19:14:28.419: Status Notifier Host with bus name ':1.144' and object path '/StatusNotifierHost/0' is already registered
+
+** (waybar:126444): WARNING **: 19:15:39.854: Status Notifier Item with bus name ':1.65' and object path '/StatusNotifierItem' is already registered
+
+** (waybar:126444): WARNING **: 19:15:39.856: Status Notifier Item with bus name ':1.21' and object path '/org/ayatana/NotificationItem/ulauncher' is already registered
+
+** (waybar:126444): WARNING **: 19:15:39.856: Status Notifier Item with bus name ':1.13' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:126444): WARNING **: 19:15:39.857: Status Notifier Host with bus name ':1.144' and object path '/StatusNotifierHost/0' is already registered
