@@ -3,39 +3,28 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
-
-
-
+{ config, pkgs, inputs, ... }:
 
 let
-# add unstable channel declaratively
-  unstableTarball =
-    fetchTarball
-      https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz;
-in
+  # add unstable channel declaratively
+  unstableTarball = fetchTarball
+    "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz";
 
-
-
-
-#landmark
-{
-  imports =
-    [ # Include the results of the hardware scan.
+  #landmark
+in {
+  imports = [
+    # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    
-    ];
+
+  ];
 
   nixpkgs.config = {
     packageOverrides = pkgs: {
-      unstable = import unstableTarball {
-        config = config.nixpkgs.config;
-      };
+      unstable = import unstableTarball { config = config.nixpkgs.config; };
     };
   };
 
-
-# Bootloader.
+  # Bootloader.
 
   boot.loader.systemd-boot.enable = true;
 
@@ -51,9 +40,7 @@ in
 
   boot.consoleLogLevel = 0;
 
-  boot.kernelParams = [ "quiet" "udev.log_level=0" ]; 
-
-
+  boot.kernelParams = [ "quiet" "udev.log_level=0" ];
 
   networking.hostName = "thonkpad"; # Define your hostname.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -64,9 +51,6 @@ in
 
   # Enable networking
   networking.networkmanager.enable = true;
-  
-
-
 
   # Set your time zone.
   # TODO change it to someplace random next week
@@ -87,43 +71,30 @@ in
     LC_TIME = "en_US.UTF-8";
   };
 
-
-
-
-# NOTE enable GNOMEEEEEEE 
+  # NOTE enable GNOMEEEEEEE 
   services.xserver.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
 
-services.displayManager.sddm.theme = "catppuccin-sddm";
-  
+  # services.displayManager.sddm.theme = "catppuccin-sddm";
+
   services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
 
-
-
-# NOTE Enable the KDE PLASMA LESGOOO Desktop Environment.
+  # NOTE Enable the KDE PLASMA LESGOOO Desktop Environment.
 
   # services.xserver.enable = true; 
   # services.displayManager.sddm.enable = true;
   # services.displayManager.sddm.wayland.enable = true;
   # services.desktopManager.plasma6.enable = true;
 
-
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
- 
- 
- 
+
   programs.fish.enable = true;
   users.users.fkf.shell = pkgs.fish;
   services.flatpak.enable = true;
-
-
-
-
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
@@ -149,15 +120,13 @@ services.displayManager.sddm.theme = "catppuccin-sddm";
     isNormalUser = true;
     description = "FKF";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
+    packages = with pkgs;
+      [
+        #  thunderbird
+      ];
   };
 
-
-
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -168,105 +137,105 @@ services.displayManager.sddm.theme = "catppuccin-sddm";
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-  vim
-	yazi
-  unstable.neovim
-	bottom
-	fish
-	git
-  ulauncher
-	stow
-	polybar
-	waybar
-	rofi
-	fastfetch
-	kitty
-	kitty-themes
-	kitty-img
-	jetbrains-mono
-	spotify
-	pkgs.vesktop
-	cowsay
-	tmux
-	nodejs
-	pipx
-	zoxide
-  gnome.gnome-tweaks	
-  hugo
-  tldr
-	fzf
-  zellij	
-	pulseaudioFull
-	starship    
-	eza
-	ripgrep
-	bat
-	less
-	wget
-	swaybg
-  waypaper
-	slurp
-	grim
-	gh
-	catppuccin-gtk
-  catppuccin-cursors
-  pkgs.catppuccin-papirus-folders
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
+    vim
+    yazi
+    unstable.neovim
+    bottom
+    fish
+    git
+    ulauncher
+    stow
+    polybar
+    waybar
+    rofi
+    fastfetch
+    kitty
+    kitty-themes
+    kitty-img
+    jetbrains-mono
+    spotify
+    pkgs.vesktop
+    cowsay
+    tmux
+    nodejs
+    pipx
+    zoxide
+    gnome.gnome-tweaks
+    hugo
+    tldr
+    fzf
+    zellij
+    pulseaudioFull
+    starship
+    eza
+    ripgrep
+    bat
+    less
+    wget
+    swaybg
+    waypaper
+    slurp
+    grim
+    gh
+    catppuccin-gtk
+    catppuccin-cursors
+    catppuccin-papirus-folders
+    wl-clipboard
+    unzip
+    unrar
+    github-desktop
+    gcc
+    clang
+    clang-tools
+    lua-language-server
+    prettierd
+    nwg-look
+    stylua
+    nodePackages.bash-language-server
+    nixd
+    helix
+    brightnessctl
+    marksman
+    zig
+    bibata-cursors
+    prismlauncher
+    lxqt.lxqt-policykit
+    libsForQt5.qtstyleplugin-kvantum
+    libsForQt5.qt5ct
+    # kdePackages.breeze-gtk
+    # kdePackages.breeze-icons
+    # kdePackages.breeze.qt5
+    # kdePackages.breeze
+    catppuccin-cursors # Mouse cursor theme
+    catppuccin-papirus-folders # Icon theme, e.g. for pcmanfm-qt
+    papirus-folders # For the catppucing stuff work
+    papirus-folders
+    # catppuccin-kde
+    # sweet-nova
+    # nordic
+    nil
+    ffmpeg
+    obs-studio
+    pcmanfm
+    lazygit
+    swaynotificationcenter
+    fd
+    vscode
+    home-manager
+    neovide
+    sxiv
+    zathura
+    mpv
+    base16-schemes
+    bluez
+    bluez-tools
+    hyprcursor
+    nixd
+    nixfmt
 
-	wl-clipboard
-	unzip
-	unrar
-	github-desktop
-	gcc
-	clang
-  clang-tools
-  lua-language-server
-  prettierd
-  nwg-look
-  pkgs.nixfmt-rfc-style
-  stylua
-  nodePackages.bash-language-server
-  nixd
-  helix
-  brightnessctl
-  marksman
-	zig
-  bibata-cursors
-  prismlauncher
-  lxqt.lxqt-policykit
-  libsForQt5.qtstyleplugin-kvantum
-  libsForQt5.qt5ct
-  # kdePackages.breeze-gtk
-  # kdePackages.breeze-icons
-  # kdePackages.breeze.qt5
-  # kdePackages.breeze
-  catppuccin-cursors # Mouse cursor theme
-  catppuccin-papirus-folders # Icon theme, e.g. for pcmanfm-qt
-  papirus-folders # For the catppucing stuff work
-  papirus-folders
-  # catppuccin-kde
-  # sweet-nova
-  # nordic
-  nil
-  ffmpeg
-  obs-studio
-  pcmanfm
-  lazygit
-  swaynotificationcenter
-  fd
-  vscode
-  pkgs.home-manager
-  neovide
-  sxiv
-  zathura
-  mpv
-  base16-schemes
-  bluez
-  bluez-tools
-  hyprcursor
-  
- ];
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -276,35 +245,34 @@ services.displayManager.sddm.theme = "catppuccin-sddm";
   #   enableSSHSupport = true;
   # };
 
-environment.variables.EDITOR = "vim";
-environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.variables.EDITOR = "vim";
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  # environment.variables = {
+  #   # This will become a global environment variable
+  #  "QT_STYLE_OVERRIDE"="kvantum";
+  #     XDG_CURRENT_DESKTOP = "Hyprland";
+  #     XDG_SESSION_DESKTOP = "Hyprland";
+  #     XDG_SESSION_TYPE = "wayland";
+  #     GDK_BACKEND = "wayland";
+  #     GTK_USE_PORTAL = "1";
+  #     QT_QPA_PLATFORMTHEME = "qt5ct";
+  #     QT_QPA_PLATFORM = "wayland";
+  #     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+  #     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+  #     MOZ_ENABLE_WAYLAND = "1";
+  #
+  #
+  # };
+  #
+  # programs.steam = {
+  #   enable = true;
+  #   remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+  #   dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  #   localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+  # };
 
-# environment.variables = {
-#   # This will become a global environment variable
-#  "QT_STYLE_OVERRIDE"="kvantum";
-#     XDG_CURRENT_DESKTOP = "Hyprland";
-#     XDG_SESSION_DESKTOP = "Hyprland";
-#     XDG_SESSION_TYPE = "wayland";
-#     GDK_BACKEND = "wayland";
-#     GTK_USE_PORTAL = "1";
-#     QT_QPA_PLATFORMTHEME = "qt5ct";
-#     QT_QPA_PLATFORM = "wayland";
-#     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-#     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-#     MOZ_ENABLE_WAYLAND = "1";
-#
-#
-# };
-#
-# programs.steam = {
-#   enable = true;
-#   remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-#   dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-#   localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
-# };
-
-fonts = {
+  fonts = {
     packages = with pkgs; [
       noto-fonts
       nerdfonts
@@ -330,46 +298,38 @@ fonts = {
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-systemd.services.NetworkManager-wait-online.enable = false;
-programs.sway = {
+  systemd.services.NetworkManager-wait-online.enable = false;
+  programs.sway = {
     enable = true;
     package = pkgs.swayfx;
     wrapperFeatures.gtk = true;
   };
 
-security.polkit.enable = true;
+  security.polkit.enable = true;
 
-services.gnome.gnome-keyring.enable = true;
-security.pam.services.greetd.enableGnomeKeyring = true;
+  services.gnome.gnome-keyring.enable = true;
+  security.pam.services.greetd.enableGnomeKeyring = true;
 
+  #environment.systemPackages = with pkgs; [bluez5-experimental bluez-tools];
+  services.blueman.enable = true;
 
-
-
-
- 
-#environment.systemPackages = with pkgs; [bluez5-experimental bluez-tools];
-services.blueman.enable = true;
-
-hardware.bluetooth = {
-  enable = true;
-  powerOnBoot = true;
-  #package = pkgs.bluez5-experimental;
-  package = pkgs.bluez;
-  settings.Policy.AutoEnable = "true";
-  settings.General = {
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    #package = pkgs.bluez5-experimental;
+    package = pkgs.bluez;
+    settings.Policy.AutoEnable = "true";
+    settings.General = {
       Enable = "Source,Sink,Media,Socket";
       Name = "Hello";
       ControllerMode = "dual";
       FastConnectable = "true";
       Experimental = "true";
       KernelExperimental = "true";
+    };
   };
-};
 
-
-programs.hyprland.enable = true; # enable Hyprland
-
-
+  programs.hyprland.enable = true; # enable Hyprland
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
