@@ -158,7 +158,6 @@ in {
     spotify
     pkgs.vesktop
     cowsay
-    tmux
     nodejs
     pipx
     zoxide
@@ -330,6 +329,7 @@ in {
     };
   };
 
+  programs.tmux.enable = true;
   programs.hyprland.enable = true; # enable Hyprland
 
   # This value determines the NixOS release from which the default
