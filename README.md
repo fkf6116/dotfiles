@@ -20,3 +20,9 @@ I'm a guy who steals from other peoples configs deal with it
 The bar is [Hyprpanel](https://hyprpanel.com/configuration/themes.html) or waybar depending on my mood
 
 My colorscheme is either catppuccin or Gruvbox material
+
+
+> # INFO
+
+> [!IMPORTANT]
+> To make a dev env for a language in Nix use ```nix flake init --template "https://flakehub.com/f/the-nix-way/dev-templates/*#${ENV}"```
