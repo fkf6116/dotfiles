@@ -234,6 +234,7 @@ in {
     hyprcursor
     nixd
     nixfmt
+    sxiv
 
   ];
 
