@@ -246,7 +246,7 @@ in
     nixfmt-rfc-style
     sxiv
     brave
-    joplin-desktop
+    unstable.joplin-desktop
 
   ];
 
