@@ -3,15 +3,20 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 let
   # add unstable channel declaratively
-  unstableTarball = fetchTarball
-    "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz";
+  unstableTarball = fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz";
 
-  #landmark
-in {
+in
+#landmark
+{
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -19,9 +24,7 @@ in {
   ];
 
   nixpkgs.config = {
-    packageOverrides = pkgs: {
-      unstable = import unstableTarball { config = config.nixpkgs.config; };
-    };
+    packageOverrides = pkgs: { unstable = import unstableTarball { config = config.nixpkgs.config; }; };
   };
 
   # Bootloader.
@@ -40,7 +43,10 @@ in {
 
   boot.consoleLogLevel = 0;
 
-  boot.kernelParams = [ "quiet" "udev.log_level=0" ];
+  boot.kernelParams = [
+    "quiet"
+    "udev.log_level=0"
+  ];
 
   networking.hostName = "thonkpad"; # Define your hostname.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -119,14 +125,19 @@ in {
   users.users.fkf = {
     isNormalUser = true;
     description = "FKF";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs;
-      [
-        #  thunderbird
-      ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    packages = with pkgs; [
+      #  thunderbird
+    ];
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -232,8 +243,10 @@ in {
     bluez-tools
     hyprcursor
     nixd
-    nixfmt
+    nixfmt-rfc-style
     sxiv
+    brave
+    joplin-desktop
 
   ];
 
@@ -284,8 +297,14 @@ in {
       source-han-serif-japanese
     ];
     fontconfig.defaultFonts = {
-      serif = [ "Noto Serif" "Source Han Serif" ];
-      sansSerif = [ "Noto Sans" "Source Han Sans" ];
+      serif = [
+        "Noto Serif"
+        "Source Han Serif"
+      ];
+      sansSerif = [
+        "Noto Sans"
+        "Source Han Sans"
+      ];
     };
   };
   # List services that you want to enable:
