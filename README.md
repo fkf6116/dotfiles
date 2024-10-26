@@ -25,4 +25,4 @@ My colorscheme is either catppuccin or Gruvbox material
 > # INFO
 
 > [!IMPORTANT]
-> To make a dev env for a language in Nix use ```nix flake init --template "https://flakehub.com/f/the-nix-way/dev-templates/*#${ENV}"```
+> To make a dev env for a language in Nix use [this template repo](https://github.com/fruity-fkf/dev-templates/) 
