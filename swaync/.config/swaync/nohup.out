@@ -1,0 +1,8 @@
+** Message: 20:18:52.988: configModel.vala:289: Loading Config: "/home/fkf/.config/swaync/config.json"
+** Message: 20:18:52.989: functions.vala:86: Loading CSS: "/run/current-system/sw/etc/xdg/swaync/style.css"
+** Message: 20:18:52.990: functions.vala:100: Loading CSS: "/home/fkf/.config/swaync/style.css"
+** Message: 20:18:52.996: factory.vala:44: Loading widget: inhibitors
+** Message: 20:18:52.996: factory.vala:44: Loading widget: title
+** Message: 20:18:52.997: factory.vala:44: Loading widget: dnd
+** Message: 20:18:52.997: factory.vala:44: Loading widget: volume
+** Message: 20:18:53.024: factory.vala:44: Loading widget: mpris
