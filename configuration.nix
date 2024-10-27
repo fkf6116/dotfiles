@@ -248,6 +248,11 @@ in
     sxiv
     brave
     unstable.joplin-desktop
+    krita
+    pinta
+    gimp
+    blender
+    godot_4
 
   ];
 
