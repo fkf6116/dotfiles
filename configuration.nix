@@ -246,13 +246,14 @@ in
     nixd
     nixfmt-rfc-style
     sxiv
-    brave
+    # brave
     unstable.joplin-desktop
     krita
     pinta
     gimp
     blender
     godot_4
+    tilix
 
   ];
 
