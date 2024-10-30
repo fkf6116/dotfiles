@@ -7,6 +7,8 @@
   #                    V                             V
   xdg.configFile."starship.toml".source = ./starship.toml;
 
+  home.packages = with pkgs; [ pkgs.fishPlugins.autopair ];
+
   programs.starship = {
     enable = true;
     enableFishIntegration = true;
@@ -70,7 +72,6 @@
 
   };
   programs.fish = {
-
     enable = true;
 
     shellInit = "set -g fish_greeting";
