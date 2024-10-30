@@ -2,7 +2,7 @@
 {
 
   stylix.enable = true;
-  stylix.image = /home/fkf/wallpapers/desktop-wallpaper/colorful/colorful-016.png;
+  stylix.image = /home/fkf/wallpapers/desktop-wallpaper/nord/nord-51.jpg;
 
   xdg.mimeApps.defaultApplications = {
     "text/plain" = [ "neovide.desktop" ];
@@ -25,7 +25,7 @@
   stylix.targets.kitty.enable = true;
   stylix.targets.foot.enable = true;
   stylix.targets.waybar.enable = true;
-  stylix.targets.fish.enable = true;
+  stylix.targets.fish.enable = false;
 
   stylix.cursor.package = pkgs.bibata-cursors;
   stylix.cursor.name = "Bibata-Modern-Ice";

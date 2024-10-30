@@ -1,10 +1,14 @@
 ls
 clear
 exit
-: 1730298647:0;ls
-: 1730298649:0;clear
-: 1730298652:0;extract
-: 1730298653:0;clear
-: 1730298654:0;ls
-: 1730298656:0;clear
-: 1730298657:0;git add .
+ls
+clear
+extract
+clear
+ls
+clear
+git add .
+git commit -m "IDK" again
+git commit -m "IDK again"
+git pusj
+git push
