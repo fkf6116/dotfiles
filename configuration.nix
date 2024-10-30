@@ -157,11 +157,11 @@ in
     bottom
     fish
     git
-    ulauncher
+    # ulauncher
     stow
     polybar
     waybar
-    rofi
+    rofi-wayland
     fastfetch
     kitty
     kitty-themes
@@ -254,6 +254,8 @@ in
     blender
     godot_4
     tilix
+    wofi
+    playerctl
 
   ];
 

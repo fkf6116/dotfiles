@@ -8,6 +8,7 @@
     ./term.nix
     ./stylix.nix
     ./tmux.nix
+    ./fancy.nix
   ];
 
   home.username = "fkf";

@@ -22,6 +22,7 @@
     popups = 1.0;
   };
   stylix.polarity = "dark";
+
   stylix.targets.kitty.enable = true;
   stylix.targets.foot.enable = true;
   stylix.targets.waybar.enable = true;
