@@ -1,8 +1,8 @@
-{ pkgs, stylix, ... }: {
+{ pkgs, stylix, ... }:
+{
 
   stylix.enable = true;
-  stylix.image =
-    /home/fkf/wallpapers/desktop-wallpaper/colorful/colorful-016.png;
+  stylix.image = /home/fkf/wallpapers/desktop-wallpaper/colorful/colorful-016.png;
 
   xdg.mimeApps.defaultApplications = {
     "text/plain" = [ "neovide.desktop" ];
@@ -13,8 +13,7 @@
     "video/*" = [ "mpv.desktop" ];
   };
 
-  stylix.base16Scheme =
-    "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
   stylix.opacity = {
     applications = 1.0;
@@ -26,6 +25,7 @@
   stylix.targets.kitty.enable = true;
   stylix.targets.foot.enable = true;
   stylix.targets.waybar.enable = true;
+  stylix.targets.fish.enable = true;
 
   stylix.cursor.package = pkgs.bibata-cursors;
   stylix.cursor.name = "Bibata-Modern-Ice";
