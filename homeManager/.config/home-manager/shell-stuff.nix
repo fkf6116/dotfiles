@@ -7,7 +7,10 @@
   #                    V                             V
   xdg.configFile."starship.toml".source = ./starship.toml;
 
-  home.packages = with pkgs; [ pkgs.fishPlugins.autopair ];
+  home.packages = with pkgs; [
+    pkgs.fishPlugins.autopair
+    fishPlugins.fzf-fish
+  ];
 
   programs.starship = {
     enable = true;
