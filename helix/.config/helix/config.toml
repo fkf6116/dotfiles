@@ -1,6 +1,6 @@
 #theme = "gruvbox_dark_hard"
-theme = "cyberdream"
-
+# theme = "cyberdream"
+theme = "catppuccin_mocha"
 
 [editor]
 line-number = "relative"
@@ -27,12 +27,12 @@ mode.select = "SELECT"
 
 [editor.indent-guides]
 render = true
-character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+character = "┆"  # Some characters that work well: "▏", "┆", "┊", "⸽"
 skip-levels = 1
 [keys.normal.g]
 a = "code_action" # Maps `ga` to show possible code actions
 
 # invert `j` and `k` in view mode
-[keys.normal.z]
-j = "scroll_up"
-k = "scroll_down"
+#[keys.normal.z]
+#j = "scroll_up"
+#k = "scroll_down"

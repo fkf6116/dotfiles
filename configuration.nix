@@ -256,8 +256,14 @@ in
     tilix
     wofi
     playerctl
+    pipes
+    lolcat
+    figlet
+    emacs
+    coreutils
 
   ];
+  # NOTE PackageEnd
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -340,6 +346,11 @@ in
 
   #environment.systemPackages = with pkgs; [bluez5-experimental bluez-tools];
   services.blueman.enable = true;
+
+  services.emacs = {
+    enable = true;
+    package = pkgs.emacs; # replace with emacs-gtk, or a version provided by the community overlay if desired.
+  };
 
   hardware.bluetooth = {
     enable = true;
