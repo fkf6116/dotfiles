@@ -12,6 +12,31 @@
     fishPlugins.fzf-fish
   ];
 
+  # programs.git = {
+  #   enable = true;
+  #   lfs.enable = true;
+  #   userName = "fruity-fkf";
+  #   userEmail = "fruity.fkf@proton.me";
+  #   signing.key = null;
+  #   signing.signByDefault = true;
+  #
+  #   extraConfig = {
+  #     pull = {
+  #       rebase = true;
+  #     };
+  #     init = {
+  #       defaultBranch = "main";
+  #     };
+  #   };
+  # };
+
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+    enableFishIntegration = true;
+    options = [ "--cmd cd" ];
+  };
+
   programs.starship = {
     enable = true;
     enableFishIntegration = true;
