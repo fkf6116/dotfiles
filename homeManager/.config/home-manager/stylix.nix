@@ -2,7 +2,7 @@
 {
 
   stylix.enable = true;
-  stylix.image = /home/fkf/wallpapers/desktop-wallpaper/nord/nord-51.jpg;
+  stylix.image = /home/fkf/wallpapers/desktop-wallpaper/nord/nord-3.jpg;
 
   xdg.mimeApps.defaultApplications = {
     "text/plain" = [ "neovide.desktop" ];

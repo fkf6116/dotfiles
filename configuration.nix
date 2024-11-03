@@ -265,7 +265,6 @@ in
     coreutils
     man-pages
     man-pages-posix
-
   ];
   # NOTE PackageEnd
 
