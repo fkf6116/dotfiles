@@ -170,7 +170,7 @@ in
     kitty-img
     jetbrains-mono
     spotify
-    pkgs.vesktop
+    discord
     cowsay
     nodejs
     pipx
@@ -265,6 +265,11 @@ in
     coreutils
     man-pages
     man-pages-posix
+    pavucontrol
+    lsp-plugins
+    easyeffects
+    gnome.gnome-keyring
+
   ];
   # NOTE PackageEnd
 

@@ -11,24 +11,26 @@
     pkgs.fishPlugins.autopair
     fishPlugins.fzf-fish
   ];
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+    # tmux.enableShellIntegration = true;
+  };
+  programs.git = {
+    enable = true;
+    lfs.enable = true;
+    userName = "fruity-fkf";
+    userEmail = "fruity.fkf@proton.me";
 
-  # programs.git = {
-  #   enable = true;
-  #   lfs.enable = true;
-  #   userName = "fruity-fkf";
-  #   userEmail = "fruity.fkf@proton.me";
-  #   signing.key = null;
-  #   signing.signByDefault = true;
-  #
-  #   extraConfig = {
-  #     pull = {
-  #       rebase = true;
-  #     };
-  #     init = {
-  #       defaultBranch = "main";
-  #     };
-  #   };
-  # };
+    extraConfig = {
+      # pull = {
+      #   rebase = true;
+      # };
+      init = {
+        defaultBranch = "main";
+      };
+    };
+  };
 
   programs.zoxide = {
     enable = true;
