@@ -170,7 +170,7 @@ in
     kitty-img
     jetbrains-mono
     spotify
-    discord
+    vesktop
     cowsay
     nodejs
     pipx
