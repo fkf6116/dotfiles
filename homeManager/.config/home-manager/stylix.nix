@@ -1,8 +1,14 @@
-{ pkgs, stylix, ... }:
+{
+  pkgs,
+  stylix,
+  lib,
+  ...
+}:
+
 {
 
   stylix.enable = true;
-  stylix.image = /home/fkf/wallpapers/desktop-wallpaper/nord/nord-3.jpg;
+  stylix.image = /home/fkf/wallpapers/desktop-wallpaper/gruvbox/gruvbox-150.png;
 
   xdg.mimeApps.defaultApplications = {
     "text/plain" = [ "neovide.desktop" ];
@@ -13,7 +19,7 @@
     "video/*" = [ "mpv.desktop" ];
   };
 
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
 
   stylix.opacity = {
     applications = 1.0;
@@ -26,7 +32,12 @@
   stylix.targets.kitty.enable = true;
   stylix.targets.foot.enable = true;
   stylix.targets.waybar.enable = true;
-  stylix.targets.fish.enable = false;
+  stylix.targets.fish.enable = true;
+  programs.rofi = {
+    enable = true;
+    package = pkgs.rofi-wayland;
+  };
+  programs.wofi.enable = true;
 
   stylix.cursor.package = pkgs.bibata-cursors;
   stylix.cursor.name = "Bibata-Modern-Ice";
