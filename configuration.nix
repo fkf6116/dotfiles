@@ -282,7 +282,7 @@ in
   # };
 
   environment.variables.EDITOR = "vim";
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  # environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # environment.variables = {
   #   # This will become a global environment variable

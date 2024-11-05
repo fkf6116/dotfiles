@@ -9,6 +9,8 @@
     ./stylix.nix
     ./tmux.nix
     ./fancy.nix
+    ./zsh.nix
+    ./fish.nix
   ];
 
   home.username = "fkf";
