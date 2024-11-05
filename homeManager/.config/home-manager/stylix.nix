@@ -38,7 +38,6 @@
     package = pkgs.rofi-wayland;
   };
   programs.wofi.enable = true;
-
   stylix.cursor.package = pkgs.bibata-cursors;
   stylix.cursor.name = "Bibata-Modern-Ice";
 

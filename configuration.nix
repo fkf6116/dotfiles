@@ -99,7 +99,9 @@ in
   };
 
   programs.fish.enable = true;
-  users.users.fkf.shell = pkgs.fish;
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
+  # users.users.fkf.shell = pkgs.fish;
   services.flatpak.enable = true;
 
   # Enable sound with pipewire.
@@ -212,6 +214,8 @@ in
     brightnessctl
     marksman
     zig
+    zls
+    rust-analyzer
     bibata-cursors
     prismlauncher
     lxqt.lxqt-policykit
@@ -269,6 +273,7 @@ in
     lsp-plugins
     easyeffects
     gnome.gnome-keyring
+    zsh
 
   ];
   # NOTE PackageEnd
