@@ -211,11 +211,6 @@
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
 environment.systemPackages = with pkgs; [
-
-
-
-
-
     vim
     yazi
     unstable.neovim
@@ -335,9 +330,6 @@ environment.systemPackages = with pkgs; [
     easyeffects
     gnome.gnome-keyring
     zsh
-
-
-
 ];
 
 
