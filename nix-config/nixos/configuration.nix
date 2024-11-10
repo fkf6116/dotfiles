@@ -91,7 +91,18 @@
     "udev.log_level=0"
   ];
 
+  #    NOTE enableShit
+
+  programs.hyprland.enable = true;
+
   programs.firefox.enable = true;
+
+  programs.fish.enable = true;
+  programs.zsh.enable = true;
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
+  # users.defaultUserShell = pkgs.zsh;
 
   fonts = {
     packages = with pkgs; [
@@ -116,23 +127,6 @@
     };
   };
 
-  programs.fish.enable = true;
-  programs.zsh.enable = true;
-  # users.defaultUserShell = pkgs.zsh;
-  services.flatpak.enable = true;
-
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    #jack.enable = true;
-
-    #media-session.enable = true;
-  };
-
   time.timeZone = "Europe/Oslo";
 
   # Select internationalisation properties.
@@ -151,16 +145,52 @@
   };
 
   # NOTE enable GNOMEEEEEEE 
+
   services.xserver.enable = true;
 
   services.xserver.desktopManager.gnome.enable = true;
   services.xserver.displayManager.gdm.enable = true;
+
+  #    NOTE Services
+
   networking.networkmanager.enable = true;
 
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
+
+  services.flatpak.enable = true;
+
+  hardware.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    #jack.enable = true;
+
+    #media-session.enable = true;
+  };
+
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    #package = pkgs.bluez5-experimental;
+    package = pkgs.bluez;
+    settings.Policy.AutoEnable = "true";
+    settings.General = {
+      Enable = "Source,Sink,Media,Socket";
+      Name = "Hello";
+      ControllerMode = "dual";
+      FastConnectable = "true";
+      Experimental = "true";
+      KernelExperimental = "true";
+    };
+  };
+
+  services.blueman.enable = true;
 
   security.polkit.enable = true;
 
@@ -180,6 +210,7 @@
       # If you do, you can skip setting a root password by passing '--no-root-passwd' to nixos-install.
       # Be sure to change it (using passwd) after rebooting!
       isNormalUser = true;
+      shell = pkgs.fish;
       openssh.authorizedKeys.keys = [
         # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
       ];
