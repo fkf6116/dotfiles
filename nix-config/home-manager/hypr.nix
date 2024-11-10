@@ -65,15 +65,15 @@
 
       animations = {
         enabled = true;
-        bezier = "myBezier, 0.05, 0.9, 0.1, 1.0.5";
-        animation = [
-          "windows, 1, 10, myBezier, slide"
-          "windowsOut, 1, 10, myBezier, popin"
-          "border, 1, 10, default"
-          "borderangle, 1, 8, default"
-          "fade, 1, 7, default"
-          "workspaces, 1, 6, default, slidevert"
-        ];
+        # bezier = "myBezier, 0.05, 0.9, 0.1, 1.0.5";
+        # animation = [
+        #   "windows, 1, 10, myBezier, slide"
+        #   "windowsOut, 1, 10, myBezier, popin"
+        #   "border, 1, 10, default"
+        #   "borderangle, 1, 8, default"
+        #   "fade, 1, 7, default"
+        #   "workspaces, 1, 6, default, slidevert"
+        # ];
       };
 
       dwindle = {
@@ -109,8 +109,8 @@
       "$altMod" = "ALT"; # alternative modifier
 
       windowrulev2 = [
-        "opacity 0.8 0.8,class:(.*)"
-
+        # "opacity 0.8 0.8,class:(.*)"
+        #
         "tile,class:(Aseprite)"
         # "fakefullscreen,class:^(code-url-handler)$"
         "fullscreen,class:^(cs2)$"
