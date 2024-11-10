@@ -18,14 +18,16 @@
       exec-once = [ ];
       exec = [
         "hyprpaper"
+        "emacs --daemon"
+
         "waybar"
       ];
 
       input = {
         kb_layout = "us";
+        kb_options = "ctrl:nocaps, altwin:swap_alt_win";
         #        kb_variant = ",altgr-intl";
         #       kb_options = "grp:alt_space_toggle";
-        follow_mouse = 1;
         #      repeat_delay = 300;
         #       repeat_rate = 50;
         sensitivity = 0.0;
@@ -40,7 +42,7 @@
         gaps_in = 10;
         gaps_out = 20;
         border_size = 1;
-        layout = "dwindle";
+        layout = "master";
 
       };
 
@@ -103,24 +105,11 @@
         no_hardware_cursors = true;
       };
 
-      "$mainMod" = "ALT"; # main modifier
-      "$altMod" = "SUPER"; # alternative modifier
+      "$mainMod" = "SUPER"; # main modifier
+      "$altMod" = "ALT"; # alternative modifier
 
       windowrulev2 = [
         "opacity 0.8 0.8,class:(.*)"
-
-        "workspace 2 silent,class:(firefox)"
-        "workspace 2 silent,class:(zen)"
-        "workspace 3 silent,class:(jetbrains)"
-        "workspace 4 silent,class:(Godot)"
-        "workspace 5 silent,class:(DesktopEditors)"
-        "workspace 6 silent,class:(Aseprite)"
-        "workspace 8 silent,title:(Spotify)"
-        "workspace 9 silent,class:(WebCord)"
-        "workspace 9 silent,class:(discord)"
-        "workspace 9 silent,class:(vesktop)"
-        "workspace 9 silent,class:(Vencord)"
-        "workspace 10 silent,class:(steam)"
 
         "tile,class:(Aseprite)"
         # "fakefullscreen,class:^(code-url-handler)$"
@@ -162,14 +151,14 @@
         "$mainMod CTRL, S, exec, grimblast --notify --freeze save area"
 
         # Move window focus
-        "$altMod, left, movefocus, l"
-        "$altMod, right, movefocus, r"
-        "$altMod, up, movefocus, u"
-        "$altMod, down, movefocus, d"
-        "$altMod, h, movefocus, l"
-        "$altMod, l, movefocus, r"
-        "$altMod, k, movefocus, u"
-        "$altMod, j, movefocus, d"
+        "$mainMod, left, movefocus, l"
+        "$mainMod, right, movefocus, r"
+        "$mainMod, up, movefocus, u"
+        "$mainMod, down, movefocus, d"
+        "$mainMod, h, movefocus, l"
+        "$mainMod, l, movefocus, r"
+        "$mainMod, k, movefocus, u"
+        "$mainMod, j, movefocus, d"
 
         # Move to workspace
         "$mainMod, Tab, workspace, previous"
