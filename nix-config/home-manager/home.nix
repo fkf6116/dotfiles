@@ -31,6 +31,17 @@
     # ./nvim.nix
   ];
 
+  xdg.enable = true;
+  xdg.mimeApps.enable = true;
+  xdg.mimeApps.defaultApplications = {
+    "text/plain" = [ "neovide.desktop" ];
+    "application/pdf" = [ "zathura.desktop" ];
+    "image/*" = [ "sxiv.desktop" ];
+    "video/png" = [ "mpv.desktop" ];
+    "video/jpg" = [ "mpv.desktop" ];
+    "video/*" = [ "mpv.desktop" ];
+  };
+
   nixpkgs = {
     # You can add overlays here
     overlays = [
