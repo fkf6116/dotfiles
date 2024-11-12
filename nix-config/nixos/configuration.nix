@@ -37,7 +37,6 @@
       # neovim-nightly-overlay.overlays.default
 
       # Or define it inline, for example:
-https://youtu.be/EvFfp_f8koo?si=rI3c2AspE_Ok9DJR
       # (final: prev: {
       #   hi = final.hello.overrideAttrs (oldAttrs: {
       #     patches = [ ./change-hello-to-hi.patch ];
