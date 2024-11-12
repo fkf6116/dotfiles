@@ -3,8 +3,9 @@
 {
 
   home.packages = with pkgs; [
-    pkgs.fishPlugins.autopair
+    fishPlugins.autopair
     fishPlugins.fzf-fish
+
   ];
 
   programs.fish = {

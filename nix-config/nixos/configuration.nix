@@ -37,6 +37,7 @@
       # neovim-nightly-overlay.overlays.default
 
       # Or define it inline, for example:
+https://youtu.be/EvFfp_f8koo?si=rI3c2AspE_Ok9DJR
       # (final: prev: {
       #   hi = final.hello.overrideAttrs (oldAttrs: {
       #     patches = [ ./change-hello-to-hi.patch ];
@@ -94,13 +95,18 @@
   #    NOTE enableShit
 
   programs.hyprland.enable = true;
-
+  programs.kdeconnect = {
+    enable = true;
+    package = pkgs.gnomeExtensions.gsconnect;
+  };
   programs.firefox.enable = true;
 
   programs.fish.enable = true;
   programs.zsh.enable = true;
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
+
+  programs.nix-ld.enable = true;
 
   # users.defaultUserShell = pkgs.zsh;
 
@@ -362,6 +368,7 @@
     easyeffects
     gnome.gnome-keyring
     zsh
+    ytmdl
   ];
 
 }

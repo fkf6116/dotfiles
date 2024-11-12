@@ -20,6 +20,7 @@
     ./zsh.nix
     ./fish.nix
     ./hypr.nix
+    ./waybar.nix
 
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example

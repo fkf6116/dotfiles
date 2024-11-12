@@ -4,25 +4,29 @@
     enable = true;
 
     # TODO: Please clean this shit up into seperate files
+
     settings = {
       source = [
         #external files to add
       ];
 
       monitor = [
-
+        "HDMI-A-1, 1920x1080@100, auto, 1"
         #monitor config here
 
       ];
 
-      exec-once = [ ];
       exec = [
+        "lxqt-policykit-agent"
+        " swaync"
+      ];
+      exec-once = [
         "hyprpaper"
         "emacs --daemon"
 
         "waybar"
       ];
-
+      # TODO change this because my keyboard layout is kinda weird honestly
       input = {
         kb_layout = "us";
         kb_options = "ctrl:nocaps, altwin:swap_alt_win";
@@ -82,7 +86,7 @@
       };
 
       master = {
-        new_status = "master"; # slave, master, inherit
+        new_status = "slave"; # slave, master, inherit
       };
 
       gestures = {
@@ -94,7 +98,7 @@
         disable_hyprland_logo = true;
         focus_on_activate = true;
         animate_manual_resizes = true;
-        animate_mouse_windowdragging = false;
+        animate_mouse_windowdragging = true;
       };
 
       xwayland = {
