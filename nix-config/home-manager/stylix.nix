@@ -8,9 +8,9 @@
 {
 
   stylix.enable = true;
-  stylix.image = /home/fkf/wallpapers/desktop-wallpaper/gruvbox/gruvbox-150.png;
+  stylix.image = /home/fkf/wallpapers/desktop-wallpaper/simply-muted/muted-11.png;
 
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
   stylix.opacity = {
     applications = 1.0;

@@ -1,0 +1,676 @@
+[2024-11-12 18:43:32.423] [info] Using configuration file /home/fkf/.config/waybar/config
+[2024-11-12 18:43:32.425] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-11-12 18:43:32.425] [info] Using CSS file /home/fkf/.config/waybar/style.css
+[2024-11-12 18:43:32.441] [info] Hyprland IPC starting
+[2024-11-12 18:43:32.444] [info] Loading persistent workspaces from Hyprland workspace rules
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+[2024-11-12 18:43:32.592] [warning] Requested height: 14 is less than the minimum height: 36 required by the modules
+[2024-11-12 18:43:32.592] [info] Bar configured (width: 1920, height: 36) for output: HDMI-A-1
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+[2024-11-12 18:46:26.853] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-11-12 18:46:26.873] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-12 18:46:26.926] [info] Reloading...
+[2024-11-12 18:46:26.985] [info] Using configuration file /home/fkf/.config/waybar/config
+[2024-11-12 18:46:26.995] [info] Using CSS file /home/fkf/.config/waybar/style.css
+[2024-11-12 18:46:27.039] [info] Loading persistent workspaces from Hyprland workspace rules
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+[2024-11-12 18:46:27.217] [warning] Requested height: 14 is less than the minimum height: 36 required by the modules
+[2024-11-12 18:46:27.217] [info] Bar configured (width: 1920, height: 36) for output: HDMI-A-1
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+[2024-11-12 18:49:48.039] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-11-12 18:49:48.073] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-12 18:49:48.100] [info] Reloading...
+[2024-11-12 18:49:48.239] [info] Using configuration file /home/fkf/.config/waybar/config
+[2024-11-12 18:49:48.240] [info] Using CSS file /home/fkf/.config/waybar/style.css
+[2024-11-12 18:49:48.256] [info] Loading persistent workspaces from Hyprland workspace rules
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+[2024-11-12 18:49:48.490] [warning] Requested height: 14 is less than the minimum height: 36 required by the modules
+[2024-11-12 18:49:48.490] [info] Bar configured (width: 1920, height: 36) for output: HDMI-A-1
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+[2024-11-12 18:57:07.543] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-11-12 18:57:07.564] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-12 18:57:07.661] [info] Reloading...
+[2024-11-12 18:57:07.696] [info] Using configuration file /home/fkf/.config/waybar/config
+[2024-11-12 18:57:07.697] [info] Using CSS file /home/fkf/.config/waybar/style.css
+[2024-11-12 18:57:07.726] [info] Loading persistent workspaces from Hyprland workspace rules
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+[2024-11-12 18:57:07.820] [warning] Requested height: 14 is less than the minimum height: 36 required by the modules
+[2024-11-12 18:57:07.820] [info] Bar configured (width: 1920, height: 36) for output: HDMI-A-1
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 18:59:17.951: Unable to replace properties on 0: Error getting properties for ID
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 18:59:18.450: Unable to replace properties on 0: Error getting properties for ID
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:09:42.115: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:09:45.528: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:09:45.947: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:09:46.030: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:09:46.128: Unable to replace properties on 0: Error getting properties for ID
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:12:37.944: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:12:37.944: Unable to replace properties on 2987776: Error getting properties for ID
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:12:37.944: Unable to replace properties on 2987777: Error getting properties for ID
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:12:37.944: Unable to replace properties on 2987778: Error getting properties for ID
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:12:37.944: Unable to replace properties on 2987779: Error getting properties for ID
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:12:37.944: Unable to replace properties on 2987780: Error getting properties for ID
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:12:37.944: Unable to replace properties on 2987781: Error getting properties for ID
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:12:37.944: Unable to replace properties on 2987782: Error getting properties for ID
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:12:38.035: Unable to replace properties on 0: Error getting properties for ID
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:13:27.262: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:13:27.471: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:13:27.571: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:13:28.056: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:13:28.078: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:13:28.176: Unable to replace properties on 0: Error getting properties for ID
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:15:26.522: Unable to replace properties on 0: Error getting properties for ID
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:48:50.310: Unable to replace properties on 0: Error getting properties for ID
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:48:53.215: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:48:53.740: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:48:53.836: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:108259): LIBDBUSMENU-GLIB-WARNING **: 19:48:53.946: Unable to replace properties on 0: Error getting properties for ID
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
