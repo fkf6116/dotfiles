@@ -160,7 +160,7 @@ let
         phone = " ";
         portable = " ";
       };
-      format-muted = "婢 {volume}%";
+      format-muted = " {volume}%";
       on-click = "pavucontrol -t 3";
       on-click-middle = "pamixer -t";
       on-scroll-down = "pamixer -d 5";
@@ -172,7 +172,7 @@ let
     "pulseaudio#microphone" = {
       format = "{format_source}";
       format-source = "  {volume}%";
-      format-source-muted = "  {volume}%";
+      format-source-muted = "   {volume}%";
       on-click = "pavucontrol -t 4";
       on-click-middle = "pamixer --default-source -t";
       on-scroll-down = "pamixer --default-source -d 5";
