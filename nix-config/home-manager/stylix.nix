@@ -8,13 +8,13 @@
 {
 
   stylix.enable = true;
-  stylix.image = /home/fkf/wallpapers/desktop-wallpaper/simply-muted/muted-11.png;
+  stylix.image = /home/fkf/wallpapers/desktop-wallpaper/simply-muted/muted-50.jpg;
 
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
   stylix.opacity = {
     applications = 1.0;
-    terminal = 0.75;
+    terminal = 1.0;
     desktop = 1.0;
     popups = 1.0;
   };
