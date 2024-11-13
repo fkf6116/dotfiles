@@ -31,6 +31,7 @@ let
       "network"
       "bluetooth"
       "pulseaudio#microphone"
+      "pulseaudio"
       "custom/battery"
       "clock"
       "tray"
