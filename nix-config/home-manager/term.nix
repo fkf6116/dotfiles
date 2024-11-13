@@ -1,15 +1,20 @@
 {
-programs.helix = {
-  enable = true;
-  settings = {
-    editor.cursor-shape = {
-      normal = "block";
-      insert = "bar";
-      select = "underline";
+  programs.helix = {
+    enable = true;
+    settings = {
+      editor.cursor-shape = {
+        normal = "block";
+        insert = "bar";
+        select = "underline";
+      };
+      keys.normal = {
+        C-g = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80% -h80% -E lazygit";
+
+        C-y = ":sh tmux split-window -d -h  -p 40  yazi";
+      };
     };
   };
-  };
-
+  programs.wezterm.enable = true;
   programs.kitty = {
     enable = true;
     settings = {
