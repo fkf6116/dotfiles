@@ -29,7 +29,7 @@
       # TODO change this because my keyboard layout is kinda weird honestly
       input = {
         kb_layout = "us";
-        kb_options = "ctrl:nocaps, altwin:swap_alt_win";
+        kb_options = "caps:swapescape, altwin:swap_alt_win";
         #        kb_variant = ",altgr-intl";
         #       kb_options = "grp:alt_space_toggle";
         #      repeat_delay = 300;

@@ -11,7 +11,7 @@
   programs.fish = {
     enable = true;
 
-    shellInit = "set -g fish_greeting";
+    shellInit = "set -g fish_greeting;  fish_vi_key_bindings";
     shellAliases = {
       ".." = "cd ..";
       "..." = "cd ../..";
@@ -19,7 +19,7 @@
       "....." = "cd ../../../../";
 
       "dot" = "cd ~/.dotfiles";
-      "stor" = "cd /storage/FTP/";
+      "conf" = "cd ~/.config";
 
       "cp" = "cp -v";
       "ddf" = "df -h";
@@ -37,8 +37,6 @@
       "llt" = "eza -lh -s time --no-quotes --time-style long-iso";
       "lltr" = "eza -lhr -s time --no-quotes --time-style long-iso";
 
-      "p" = "feh -Z pics/";
-      "v" = "vlc vids/";
       "avi" = "vlc *.avi";
       "jpeg" = "feh -Z *.jpeg";
       "jpg" = "feh -Z *.jpg";
@@ -58,6 +56,8 @@
       cc = "cargo check";
       cdo = "cargo doc --open";
       cr = "cargo run";
+      hms = "home-manager switch --flake .#fkf@pc --impure";
+      nrs = "sudo nixos-rebuild switch --flake .#pc";
 
       # git abbreviations
       gaa = "git add -A";
@@ -79,11 +79,6 @@
       # nix abbreviations
       ncg = "nix-collect-garbage";
 
-      nhb = "home-manager switch --flake .#beard@nixos";
-      nhs = "home-manager switch --flake .#storage@storage";
-
-      nrn = "sudo nixos-rebuild switch --flake .#nixos";
-      nrs = "sudo nixos-rebuild switch --flake .#storage";
     };
 
     functions = {
