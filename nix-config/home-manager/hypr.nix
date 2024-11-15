@@ -55,6 +55,7 @@
         drop_shadow = true;
         shadow_range = 20;
         shadow_render_power = 2;
+        inactive_opacity = 0.75;
 
         blur = {
           enabled = true;
@@ -87,6 +88,7 @@
 
       master = {
         new_status = "slave"; # slave, master, inherit
+        no_gaps_when_only = 1;
       };
 
       gestures = {
