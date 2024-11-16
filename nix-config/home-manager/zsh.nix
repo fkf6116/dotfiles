@@ -40,13 +40,6 @@
       # force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
       zstyle ':completion:*' menu no
 
-      # preview directory's content with eza when completing cd
-      zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --color=always $realpath'
-      zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
-      zstyle ':fzf-tab:complete:ls:*' fzf-preview 'cat $realpath'
-
-      # switch group using `<` and `>`
-      zstyle ':fzf-tab:*' switch-group '<' '>'
 
       # Keybindings
       bindkey -e
@@ -93,11 +86,7 @@
         src = pkgs.zsh-syntax-highlighting;
         file = "share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh";
       }
-      {
-        name = "fzf-tab";
-        src = pkgs.zsh-fzf-tab;
-        file = "share/fzf-tab/fzf-tab.plugin.zsh";
-      }
+
     ];
   };
 }
