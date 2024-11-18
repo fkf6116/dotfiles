@@ -23,10 +23,11 @@
       exec-once = [
         "hyprpaper"
         "emacs --daemon"
+        "blueman-applet"
 
         "waybar"
       ];
-      # TODO change this because my keyboard layout is kinda weird honestly
+      # TODO: change this because my keyboard layout is kinda weird honestly
       input = {
         kb_layout = "us";
         kb_options = "ctrl:nocaps, altwin:swap_alt_win";
@@ -147,6 +148,8 @@
 
       bind = [
         "$mainMod, Return, exec, kitty"
+        "$mainMod, E, exec, emacsclient -c"
+
         "$mainMod, Q, killactive,"
         "$mainMod, M, exit, "
         "$mainMod SHIFT, F, togglefloating,"
