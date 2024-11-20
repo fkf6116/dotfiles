@@ -44,9 +44,9 @@
       };
 
       general = {
-        gaps_in = 10;
-        gaps_out = 20;
-        border_size = 1;
+        gaps_in = 5;
+        gaps_out = 10;
+        border_size = 2;
         layout = "master";
 
       };

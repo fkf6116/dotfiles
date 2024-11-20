@@ -113,6 +113,7 @@
     packages = with pkgs; [
       noto-fonts
       nerdfonts
+      jetbrains-mono
       noto-fonts-cjk
       noto-fonts-emoji
       font-awesome
@@ -280,7 +281,6 @@
     kitty
     kitty-themes
     kitty-img
-    jetbrains-mono
     spotify
     vesktop
     cowsay
@@ -334,10 +334,10 @@
     # kdePackages.breeze-icons
     # kdePackages.breeze.qt5
     # kdePackages.breeze
-    catppuccin-cursors # Mouse cursor theme
-    catppuccin-papirus-folders # Icon theme, e.g. for pcmanfm-qt
-    papirus-folders # For the catppucing stuff work
-    papirus-folders
+    # catppuccin-cursors # Mouse cursor theme
+    # catppuccin-papirus-folders # Icon theme, e.g. for pcmanfm-qt
+    # papirus-folders # For the catppucing stuff work
+    # papirus-folders
     # catppuccin-kde
     # sweet-nova
     # nordic
@@ -395,6 +395,8 @@
     tidyp
     stylelint
     glslang
+    pandoc
+    hugo
 
   ];
 
