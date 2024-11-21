@@ -64,7 +64,7 @@
         nix-path = config.nix.nixPath;
       };
       # Opinionated: disable channels
-      channel.enable = false;
+      channel.enable = true;
 
       # Opinionated: make flake registry and nix path match flake inputs
       registry = lib.mapAttrs (_: flake: { inherit flake; }) flakeInputs;
@@ -200,6 +200,11 @@
 
   security.polkit.enable = true;
 
+  services.emacs = {
+    enable = true;
+    package = pkgs.emacs; # replace with emacs-gtk, or a version provided by the community overlay if desired.
+  };
+
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.greetd.enableGnomeKeyring = true;
 
@@ -246,20 +251,20 @@
   };
 
   environment.variables = {
-    # This will become a global environment variable
-    # "QT_STYLE_OVERRIDE" = "kvantum";
+    "QT_STYLE_OVERRIDE" = "kvantum";
     # XDG_CURRENT_DESKTOP = "Hyprland";
     # XDG_SESSION_DESKTOP = "Hyprland";
-    # XDG_SESSION_TYPE = "wayland";
-    # GDK_BACKEND = "wayland";
-    # GTK_USE_PORTAL = "1";
-    # QT_QPA_PLATFORMTHEME = "qt5ct";
-    # QT_QPA_PLATFORM = "wayland";
-    # QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-    # QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-    # MOZ_ENABLE_WAYLAND = "1";
-    # EDITOR = "nvim";
-    # MANPAGER = "sh -c 'col -bx | bat -l man -p'";
+    XDG_SESSION_TYPE = "wayland";
+    GDK_BACKEND = "wayland";
+    GTK_USE_PORTAL = "1";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
+    QT_QPA_PLATFORM = "wayland";
+    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+    QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+    MOZ_ENABLE_WAYLAND = "1";
+    EDITOR = "nvim";
+
+    MANPAGER = "nvim +Man!";
 
   };
 
