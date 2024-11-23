@@ -18,10 +18,11 @@
 
       exec = [
         "lxqt-policykit-agent"
+
+        "hyprpaper"
         " swaync"
       ];
       exec-once = [
-        "hyprpaper"
         "emacs --daemon"
         "blueman-applet"
 

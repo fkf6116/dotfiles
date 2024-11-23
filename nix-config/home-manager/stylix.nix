@@ -8,7 +8,7 @@
 {
 
   stylix.enable = true;
-  stylix.image = /home/fkf/wallpapers/desktop-wallpaper/colorful/colorful-012.png;
+  stylix.image = /home/fkf/wallpaper/desktop-wallpaper/catppuccin/catpppuccin-19.png;
 
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
@@ -24,6 +24,7 @@
   stylix.targets.foot.enable = true;
   stylix.targets.waybar.enable = true;
   stylix.targets.fish.enable = true;
+  stylix.targets.spicetify.enable = false;
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;

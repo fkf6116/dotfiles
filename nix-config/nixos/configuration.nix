@@ -286,7 +286,6 @@
     kitty
     kitty-themes
     kitty-img
-    spotify
     vesktop
     cowsay
     nodejs
@@ -402,6 +401,7 @@
     glslang
     pandoc
     hugo
+    cmus
 
   ];
 

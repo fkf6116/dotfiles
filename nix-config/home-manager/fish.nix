@@ -14,6 +14,7 @@
     shellInit = "set -g fish_greeting;  fish_vi_key_bindings";
     shellAliases = {
       ".." = "cd ..";
+
       "..." = "cd ../..";
       "...." = "cd ../../../";
       "....." = "cd ../../../../";
@@ -58,6 +59,7 @@
       cr = "cargo run";
       hms = "home-manager switch --flake .#fkf@pc --impure";
       nrs = "sudo nixos-rebuild switch --flake .#pc";
+      nds = "nix develop -c $SHELL";
 
       # git abbreviations
       gaa = "git add -A";
@@ -75,6 +77,7 @@
       gs = "git status";
       gst = "git stash";
       gstp = "git stash pop";
+      gcl = "git clone";
 
       # nix abbreviations
       ncg = "nix-collect-garbage";
