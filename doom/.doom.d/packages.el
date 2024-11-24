@@ -9,28 +9,27 @@
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;; (package! some-package)
 (package! emmet-mode)
+(package! fzf)
 (package! catppuccin-theme)
-(use-package ox-hugo
-  :ensure t   ;Auto-install the package from Melpa
-  :pin melpa  ;`package-archives' should already have ("melpa" . "https://melpa.org/packages/")
-  :after ox)
+(package! ox-hugo)
 
 (require 'ox-md)
+
 (use-package fzf
-  :defer t
+  :bind
+  ;; Don't forget to set keybinds!
   :config
-  (setq
-   fzf/args "-x --print-query --margin=1,0 --no-hscroll"
-   fzf/executable "fzf"
-   fzf/git-grep-args "-i --line-number %s"
-   fzf/grep-command "rg --no-heading -nH"
-   fzf/position-bottom t
-   fzf/window-height 15)
-  :bind  (
-          ("M-s fg" . (lambda (&optional x) (interactive "P")
-                        (if x (fzf-git-grep) (fzf-grep))))
-          ("M-s ff" . (lambda (&optional x) (interactive "P")
-                        (if x (fzf-git) (fzf))))))
+  (setq fzf/args "-x --color bw --print-query --margin=1,0 --no-hscroll"
+        fzf/executable "fzf"
+        fzf/git-grep-args "-i --line-number %s"
+        ;; command used for `fzf-grep-*` functions
+        ;; example usage for ripgrep:
+        ;; fzf/grep-command "rg --no-heading -nH"
+        fzf/grep-command "grep -nrH"
+        ;; If nil, the fzf buffer will appear at the top of the window
+        fzf/position-bottom t
+        fzf/window-height 15))
+
 
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:
