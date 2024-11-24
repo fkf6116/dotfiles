@@ -21,6 +21,7 @@ The bar is [Hyprpanel](https://hyprpanel.com/configuration/themes.html) or wayba
 
 My colorscheme is either catppuccin or Gruvbox material
 
+Stole emacs from headpat
 
 > # INFO
 
