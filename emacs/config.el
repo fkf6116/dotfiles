@@ -93,10 +93,26 @@
 
 (require 'use-package)
 (setq use-package-always-ensure t)
+(with-eval-after-load 'evil-maps
+  (define-key evil-motion-state-map (kbd "SPC") nil)
+  (define-key evil-motion-state-map (kbd "RET") nil)
+  (define-key evil-motion-state-map (kbd "TAB") nil))
+;; Setting RETURN key in org-mode to follow links
+  (setq org-return-follows-link  t)
 
-(use-package evil)
-(require 'evil)
-(evil-mode 1)
+;;(use-package evil)
+;;(require 'evil)
+;;(evil-mode 1)
+
+
+(use-package evil
+    :init      ;; tweak evil's configuration before loading it
+    (setq evil-want-integration t  ;; This is optional since it's already set to t by default.
+          evil-want-keybinding nil
+          evil-vsplit-window-right t
+          evil-split-window-below t
+          evil-undo-system 'undo-redo)  ;; Adds vim-like C-r redo functionality
+    (evil-mode))
 
 (use-package general
           :config
@@ -109,14 +125,28 @@
             :prefix "SPC" ;; set leader
             :global-prefix "M-SPC") ;; access leader in insert mode
 
-          (ht/leader-keys
-            "b" '(:ignore t :wk "buffer")
-            "bb" '(switch-to-buffer :wk "Switch buffer")
-            "bk" '(kill-this-buffer :wk "Kill this buffer")
-            "bn" '(next-buffer :wk "Next buffer")
-            "bp" '(previous-buffer :wk "Previous buffer")
-            "br" '(revert-buffer :wk "Reload buffer")
-            "bi"  '(ibuffer :wk "Ibuffer"))
+
+(ht/leader-keys
+    "b" '(:ignore t :wk "Bookmarks/Buffers")
+    "b c" '(clone-indirect-buffer :wk "Create indirect buffer copy in a split")
+    "b C" '(clone-indirect-buffer-other-window :wk "Clone indirect buffer in new window")
+    "b d" '(bookmark-delete :wk "Delete bookmark")
+    "b i" '(ibuffer :wk "Ibuffer")
+    "b k" '(kill-this-buffer :wk "Kill this buffer")
+    "b K" '(kill-some-buffers :wk "Kill multiple buffers")
+    "b l" '(list-bookmarks :wk "List bookmarks")
+    "b m" '(bookmark-set :wk "Set bookmark")
+    "b n" '(next-buffer :wk "Next buffer")
+    "b p" '(previous-buffer :wk "Previous buffer")
+    "b r" '(revert-buffer :wk "Reload buffer")
+    "b R" '(rename-buffer :wk "Rename buffer")
+    "b s" '(basic-save-buffer :wk "Save buffer")
+    "b S" '(save-some-buffers :wk "Save multiple buffers")
+    "b w" '(bookmark-save :wk "Save current bookmarks to bookmark file"))
+
+
+
+
  (ht/leader-keys
     "SPC" '(counsel-M-x :wk "Counsel M-x")
   "." '(find-file :wk "Find file")
@@ -225,11 +255,15 @@
     :init (add-hook 'org-mode-hook 'toc-org-enable))
 
 (add-hook 'org-mode-hook 'org-indent-mode)
-(use-package org-bullets)
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+;;(use-package org-bullets)
+;;(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+(require 'org-superstar)
+(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
 
 (electric-indent-mode -1)
 (setq org-edit-src-content-indentation 0)
+(setq org-startup-indented t)
 
 (eval-after-load 'org-indent '(diminish 'org-indent-mode))
 
@@ -321,6 +355,15 @@ nil
 (use-package emojify
   :hook (after-init . global-emojify-mode))
 
+(setq backup-directory-alist '((".*" . "~/.Trash")))
+(electric-pair-mode 1)
+
+(global-set-key [escape] 'keyboard-escape-quit)
+
+(use-package rainbow-delimiters
+  :hook ((emacs-lisp-mode . rainbow-delimiters-mode)
+         (clojure-mode . rainbow-delimiters-mode)))
+
 (use-package neotree
   :config
   (setq neo-smart-open t
@@ -347,3 +390,16 @@ nil
   :defer t
   :diminish
   :init (global-flycheck-mode))
+
+(use-package hl-todo
+  :hook ((org-mode . hl-todo-mode)
+         (prog-mode . hl-todo-mode))
+  :config
+  (setq hl-todo-highlight-punctuation ":"
+        hl-todo-keyword-faces
+        `(("TODO"       warning bold)
+          ("FIXME"      error bold)
+          ("HACK"       font-lock-constant-face bold)
+          ("REVIEW"     font-lock-keyword-face bold)
+          ("NOTE"       success bold)
+          ("DEPRECATED" font-lock-doc-face bold))))

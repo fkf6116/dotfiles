@@ -1,13 +1,12 @@
 #+TITLE: My emacs config
 #+AUTHOR: Headset (Stolen by FKF >:3)
-#+STARTUP: showeverything
 #+OPTIONS: toc:2
 
 
 * TOC :toc:
 - [[#interface-customization][Interface Customization]]
 - [[#all-the-icons][ALL THE ICONS]]
-- [[#dashboard][DASHBOARD]]
+- [[#dashboard][Dashboard]]
 - [[#dired][Dired]]
 - [[#company][Company]]
 - [[#font-setup][Font Setup]]
@@ -33,8 +32,11 @@
 - [[#prevent-save-files][Prevent save files]]
 - [[#modeline][Modeline]]
 - [[#misc-tweaks-that-are-useful][Misc tweaks that are useful:]]
+  - [[#minibuffer-escape][MINIBUFFER ESCAPE]]
+  - [[#rainbow-delimiters][RAINBOW DELIMITERS]]
 - [[#neotree][NEOTREE]]
 - [[#flycheck][FLYCHECK]]
+- [[#highlight-todo][HIGHLIGHT TODO]]
 
 * Interface Customization
 Disabling unnecessary GUI elements and enabling line numbers:
@@ -183,15 +185,33 @@ Set up use-package for package management:
 
 (require 'use-package)
 (setq use-package-always-ensure t)
+(with-eval-after-load 'evil-maps
+  (define-key evil-motion-state-map (kbd "SPC") nil)
+  (define-key evil-motion-state-map (kbd "RET") nil)
+  (define-key evil-motion-state-map (kbd "TAB") nil))
+;; Setting RETURN key in org-mode to follow links
+  (setq org-return-follows-link  t)
+
 #+END_SRC
 
 * Evil Mode Setup
 To enable Evil mode for Vim-like keybindings:
 
 #+BEGIN_SRC emacs-lisp
-(use-package evil)
-(require 'evil)
-(evil-mode 1)
+;;(use-package evil)
+;;(require 'evil)
+;;(evil-mode 1)
+
+
+(use-package evil
+    :init      ;; tweak evil's configuration before loading it
+    (setq evil-want-integration t  ;; This is optional since it's already set to t by default.
+          evil-want-keybinding nil
+          evil-vsplit-window-right t
+          evil-split-window-below t
+          evil-undo-system 'undo-redo)  ;; Adds vim-like C-r redo functionality
+    (evil-mode))
+
 #+END_SRC
 
 * Keybindings with General
@@ -209,14 +229,28 @@ Setting up custom keybindings using =general= package:
             :prefix "SPC" ;; set leader
             :global-prefix "M-SPC") ;; access leader in insert mode
 
-          (ht/leader-keys
-            "b" '(:ignore t :wk "buffer")
-            "bb" '(switch-to-buffer :wk "Switch buffer")
-            "bk" '(kill-this-buffer :wk "Kill this buffer")
-            "bn" '(next-buffer :wk "Next buffer")
-            "bp" '(previous-buffer :wk "Previous buffer")
-            "br" '(revert-buffer :wk "Reload buffer")
-            "bi"  '(ibuffer :wk "Ibuffer"))
+
+(ht/leader-keys
+    "b" '(:ignore t :wk "Bookmarks/Buffers")
+    "b c" '(clone-indirect-buffer :wk "Create indirect buffer copy in a split")
+    "b C" '(clone-indirect-buffer-other-window :wk "Clone indirect buffer in new window")
+    "b d" '(bookmark-delete :wk "Delete bookmark")
+    "b i" '(ibuffer :wk "Ibuffer")
+    "b k" '(kill-this-buffer :wk "Kill this buffer")
+    "b K" '(kill-some-buffers :wk "Kill multiple buffers")
+    "b l" '(list-bookmarks :wk "List bookmarks")
+    "b m" '(bookmark-set :wk "Set bookmark")
+    "b n" '(next-buffer :wk "Next buffer")
+    "b p" '(previous-buffer :wk "Previous buffer")
+    "b r" '(revert-buffer :wk "Reload buffer")
+    "b R" '(rename-buffer :wk "Rename buffer")
+    "b s" '(basic-save-buffer :wk "Save buffer")
+    "b S" '(save-some-buffers :wk "Save multiple buffers")
+    "b w" '(bookmark-save :wk "Save current bookmarks to bookmark file"))
+
+
+
+
  (ht/leader-keys
     "SPC" '(counsel-M-x :wk "Counsel M-x")
   "." '(find-file :wk "Find file")
@@ -358,8 +392,12 @@ Org-bullets gives us attractive bullets rather than asterisks.
 
 #+begin_src emacs-lisp
 (add-hook 'org-mode-hook 'org-indent-mode)
-(use-package org-bullets)
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+;;(use-package org-bullets)
+;;(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+(require 'org-superstar)
+(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
+
 #+end_src
 
 ** Disable Electric Indent
@@ -368,6 +406,7 @@ Org mode source blocks have some really weird and annoying default indentation b
 #+begin_src emacs-lisp
 (electric-indent-mode -1)
 (setq org-edit-src-content-indentation 0)
+(setq org-startup-indented t)
 #+end_src
 
 ** Diminish Org Indent Mode
@@ -499,6 +538,8 @@ Sudo edit gives you sudo perms when using emacs.
 
 
 * Modeline
+A statusbar
+
 #+begin_src emacs-lisp
 (use-package doom-modeline
   :ensure t
@@ -517,9 +558,23 @@ Sudo edit gives you sudo perms when using emacs.
 (use-package emojify
   :hook (after-init . global-emojify-mode))
 
+(setq backup-directory-alist '((".*" . "~/.Trash")))
+(electric-pair-mode 1)
+#+end_src
+** MINIBUFFER ESCAPE
+By default, Emacs requires you to hit ESC three times to escape quit the minibuffer.  
 
+#+begin_src emacs-lisp
+(global-set-key [escape] 'keyboard-escape-quit)
+#+end_src
 
+** RAINBOW DELIMITERS
+Adding rainbow coloring to parentheses.
 
+#+begin_src emacs-lisp
+(use-package rainbow-delimiters
+  :hook ((emacs-lisp-mode . rainbow-delimiters-mode)
+         (clojure-mode . rainbow-delimiters-mode)))
 
 #+end_src
 
@@ -565,5 +620,24 @@ Install =luacheck= from your Linux distro's repositories for flycheck to work co
   :defer t
   :diminish
   :init (global-flycheck-mode))
+
+#+end_src
+
+* HIGHLIGHT TODO
+Adding highlights to TODO and related words.
+
+#+begin_src emacs-lisp
+(use-package hl-todo
+  :hook ((org-mode . hl-todo-mode)
+         (prog-mode . hl-todo-mode))
+  :config
+  (setq hl-todo-highlight-punctuation ":"
+        hl-todo-keyword-faces
+        `(("TODO"       warning bold)
+          ("FIXME"      error bold)
+          ("HACK"       font-lock-constant-face bold)
+          ("REVIEW"     font-lock-keyword-face bold)
+          ("NOTE"       success bold)
+          ("DEPRECATED" font-lock-doc-face bold))))
 
 #+end_src

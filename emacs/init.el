@@ -8,7 +8,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(lisp-mode elisp-mode flycheck diminish python-mode lua-mode haskell-mode nerd-icons-completion neotree emojify doom-modeline peep-dired dired-open company-box company all-the-icons-nerd-fonts dashboard vterm eshell-syntax-highlighting which-key toc-org sudo-edit org-bullets general evil counsel catppuccin-theme all-the-icons-ivy-rich all-the-icons-dired)))
+   '(rainbow-delimiters hl-todo evil-collection evil-org org-superstar lisp-mode elisp-mode flycheck diminish python-mode lua-mode haskell-mode nerd-icons-completion neotree emojify doom-modeline peep-dired dired-open company-box company all-the-icons-nerd-fonts dashboard vterm eshell-syntax-highlighting which-key toc-org sudo-edit org-bullets general evil counsel catppuccin-theme all-the-icons-ivy-rich all-the-icons-dired)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
