@@ -18,7 +18,7 @@
 
       exec = [
         "lxqt-policykit-agent"
-
+        "foot --server"
         "hyprpaper"
         " swaync"
       ];
@@ -148,7 +148,7 @@
       ];
 
       bind = [
-        "$mainMod, Return, exec, kitty"
+        "$mainMod, Return, exec, footclient"
         "$mainMod, E, exec, emacsclient -c"
 
         "$mainMod, Q, killactive,"
