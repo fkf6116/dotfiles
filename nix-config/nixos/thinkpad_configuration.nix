@@ -168,6 +168,31 @@
 
   services.flatpak.enable = true;
 
+  # services.syncthing = {
+  #   enable = true;
+  #   openDefaultPorts = true;
+  #
+  #   settings = {
+  #
+  #     gui = {
+  #       user = "fkf";
+  #       password = "cgnat_is_good";
+  #     };
+  #     devices = {
+  #       "device1" = {
+  #         id = "ZVKESYN-ITV5Y77-CEYY47Q-2PAAT7Y-2B25KAG-7X6A7KD-JV6A5DR-CRQ2MQC";
+  #       };
+  #     };
+  #     folders = {
+  #       "Documents" = {
+  #         path = "/home/FKF/Documents";
+  #         devices = [ "device1" ];
+  #       };
+  #     };
+  #   };
+  #
+  # };
+
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -200,11 +225,11 @@
 
   security.polkit.enable = true;
 
-  services.emacs = {
-    enable = true;
-    package = pkgs.emacs; # replace with emacs-gtk, or a version provided by the community overlay if desired.
-  };
-
+  # services.emacs = {
+  #   enable = true;
+  #   package = pkgs.emacs; # replace with emacs-gtk, or a version provided by the community overlay if desired.
+  # };
+  #
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.greetd.enableGnomeKeyring = true;
 
@@ -402,6 +427,7 @@
     pandoc
     hugo
     cmus
+    texliveFull
   ];
 
 }
