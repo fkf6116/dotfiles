@@ -67,7 +67,7 @@
             ./nixos/configuration.nix
           ];
         };
-        
+
         thonkpad = nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit inputs outputs;
@@ -89,6 +89,11 @@
           extraSpecialArgs = {
             inherit inputs outputs;
           };
+          modules = [
+            stylix.homeManagerModules.stylix
+            ./home-manager/home.nix
+          ];
+        };
 
         "fkf@thonkpad" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
