@@ -32,7 +32,7 @@ let
       "bluetooth"
       "pulseaudio#microphone"
       "pulseaudio"
-      "custom/battery"
+      "battery"
       "clock"
       "tray"
     ];
@@ -110,6 +110,19 @@ let
       exec = "${scripts.battery}/bin/script";
       format = " 󰁹 {}";
       interval = 10;
+    };
+
+    "battery" = {
+      states = {
+        warning = 30;
+        critical = 15;
+      };
+      format = "󰁹 {capacity}%";
+      format-charging = "󰂄 {capacity}%";
+      format-plugged = " {capacity}%";
+      # format-alt = "{time} {icon}";
+      format-full = "󱊣 {capacity}%";
+
     };
 
     "custom/logo" = {
