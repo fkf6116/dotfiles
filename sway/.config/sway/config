@@ -22,26 +22,25 @@ set $term kitty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # set $menu rofi -show drun 
-set $menu ulauncher-toggle 
+set $menu  wofi --show drun --allow-images
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
 exec_always autotiling-rs
-exec lxsession 
-exec wl-paste -t text --watch clipman store --no-persist
-exec --no-startup-id lxsession 
+exec lxqt-policykit-agent 
+# exec wl-paste -t text --watch clipman store --no-persist
+# exec --no-startup-id lxsession 
 # Notification Daemon
-exec dunst &
+# exec dunst &
 
 # Toggle control center
 #bindsym $mod+Shift+n exec swaync-client -t -sw
 
-bindsym $mod+n exec ~/.config/rofi/applets/bin/quicklinks.sh
 
-exec waypaper --restore
+# exec waypaper --restore
 
-#exec swaync
-
+exec swaync
+exec_always hyprpaper
 #### SWAYFX ONLY!!!
 
 corner_radius 12
@@ -102,6 +101,7 @@ input "12815:20571:Evision_AK820" {
 
 
 xkb_options ctrl:nocaps
+xkb_options altwin:swap_alt_win
 }
 input "1739:0:Synaptics_TM3276-022" {
     dwt enabled
@@ -145,14 +145,14 @@ input "3141:31237:SONiX_Gaming_Mouse" {
 
 
 
-# capture all screens to clipboard    
-bindsym $mod+Shift+P exec grim - | wl-copy    
+bindsym $mod+Shift+P exec grimblast --notify --freeze copy area
+
     
 # capture the specified screen area to clipboard    
-bindsym $mod+p exec grim -g "$(slurp)" - | wl-copy    
+# bindsym $mod+p exec grim -g "$(slurp)" - | wl-copy    
     
 # capture the focused monitor to clipboard    
-bindsym Shift+Control+Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
+# bindsym Shift+Control+Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
 
 
 
