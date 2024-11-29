@@ -278,9 +278,6 @@ bindsym $mod+r mode "resize"
 exec waybar
 exec ulauncher --hide-window
 exec wl-paste -t text --watch clipman store --no-persist
-exec /usr/libexec/xdg-desktop-portal-gtk
-exec /usr/libexec/xdg-desktop-portal-wlr
-exec /usr/libexec/xdg-desktop-portal-gnome
 
 
 include @sysconfdir@/sway/config.d/*
