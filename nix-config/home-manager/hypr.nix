@@ -54,9 +54,9 @@
 
       decoration = {
         rounding = 0;
-        drop_shadow = true;
-        shadow_range = 20;
-        shadow_render_power = 2;
+        # drop_shadow = true;
+        # shadow_range = 20;
+        # shadow_render_power = 2;
         inactive_opacity = 0.75;
 
         blur = {
