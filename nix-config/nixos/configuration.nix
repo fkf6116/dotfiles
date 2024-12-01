@@ -404,6 +404,7 @@
     cmus
     hyprland
     pkgs.nerd-fonts.jetbrains-mono
+    pkgs.hyprpanel
   ];
 
 }

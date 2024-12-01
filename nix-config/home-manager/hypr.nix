@@ -18,14 +18,14 @@
 
       exec = [
         "lxqt-policykit-agent"
-        "foot --server"
+        # "foot --server"
         "hyprpaper"
-        " swaync"
+        # " swaync"
       ];
       exec-once = [
         "emacs --daemon"
         "blueman-applet"
-
+        "hyprpanel"
         "waybar"
       ];
       # TODO: change this because my keyboard layout is kinda weird honestly
@@ -161,7 +161,7 @@
       ];
 
       bind = [
-        "$mainMod, Return, exec, footclient"
+        "$mainMod, Return, exec, kitty"
         "$mainMod, E, exec, emacsclient -c"
 
         "$mainMod, Q, killactive,"

@@ -17,6 +17,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+
   };
 
   outputs =
@@ -70,6 +73,8 @@
           modules = [
             # > Our main nixos configuration file <
             ./nixos/configuration.nix
+
+            { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
           ];
         };
 
