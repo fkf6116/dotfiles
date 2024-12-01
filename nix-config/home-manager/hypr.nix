@@ -26,7 +26,7 @@
         "emacs --daemon"
         "blueman-applet"
         "hyprpanel"
-        "waybar"
+        # "waybar"
       ];
       # TODO: change this because my keyboard layout is kinda weird honestly
       input = {
