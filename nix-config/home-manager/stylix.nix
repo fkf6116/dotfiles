@@ -25,8 +25,7 @@
   stylix.targets.waybar.enable = true;
   stylix.targets.fish.enable = true;
   # stylix.targets.spicetify.enable = false;
-  # stylix.targets.hyprland.enable = false;
-  # stylix.targets.hyprpaper.enable = true;
+  stylix.targets.hyprland.enable = true;
 
   programs.rofi = {
     enable = true;
@@ -38,7 +37,7 @@
 
   stylix.fonts = {
     monospace = {
-      package = pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; };
+      package = pkgs.nerd-fonts.jetbrains-mono;
       name = "JetBrainsMono Nerd Font Mono";
     };
     sansSerif = {

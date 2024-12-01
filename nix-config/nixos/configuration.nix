@@ -92,7 +92,6 @@
   ];
 
   #    NOTE enableShit
-
   programs.hyprland.enable = true;
   programs.kdeconnect = {
     enable = true;
@@ -112,25 +111,26 @@
   fonts = {
     packages = with pkgs; [
       noto-fonts
-      nerdfonts
+      # nerd-fonts
+      nerd-fonts.jetbrains-mono
       jetbrains-mono
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
       noto-fonts-emoji
       font-awesome
       source-han-sans
       source-han-sans-japanese
       source-han-serif-japanese
     ];
-    fontconfig.defaultFonts = {
-      serif = [
-        "Noto Serif"
-        "Source Han Serif"
-      ];
-      sansSerif = [
-        "Noto Sans"
-        "Source Han Sans"
-      ];
-    };
+    # fontconfig.defaultFonts = {
+    #   serif = [
+    #     "Noto Serif"
+    #     "Source Han Serif"
+    #   ];
+    #   sansSerif = [
+    #     "Noto Sans"
+    #     "Source Han Sans"
+    #   ];
+    # };
   };
 
   time.timeZone = "Europe/Oslo";
@@ -150,7 +150,7 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # NOTE enable GNOMEEEEEEE 
+  # NOTE enable GNOMEEEEEEE
 
   services.xserver.enable = true;
 
@@ -291,7 +291,7 @@
     nodejs
     pipx
     zoxide
-    gnome.gnome-tweaks
+    gnome-tweaks
     hugo
     tldr
     fzf
@@ -386,7 +386,7 @@
     pavucontrol
     lsp-plugins
     easyeffects
-    gnome.gnome-keyring
+    pkgs.gnome-keyring
     zsh
     ytmdl
     markdown-oxide
@@ -402,7 +402,8 @@
     pandoc
     hugo
     cmus
-
+    hyprland
+    pkgs.nerd-fonts.jetbrains-mono
   ];
 
 }
