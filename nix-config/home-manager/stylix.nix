@@ -31,9 +31,13 @@
     enable = true;
     package = pkgs.rofi-wayland;
   };
-  programs.wofi.enable = true;
-  stylix.cursor.package = pkgs.bibata-cursors;
-  stylix.cursor.name = "Bibata-Modern-Ice";
+
+  stylix.cursor = {
+    package = pkgs.catppuccin-cursors.mochaMauve;
+    name = "catppuccin-mocha-mauve-cursors";
+    size = 24;
+
+  };
 
   stylix.fonts = {
     monospace = {
@@ -48,6 +52,18 @@
       package = pkgs.dejavu_fonts;
       name = "DejaVu Serif";
     };
+    sizes = {
+      applications = 12;
+      desktop = 12;
+      terminal = 11;
+      popups = 12;
+    };
+
   };
 
+  ### enable apps
+
+  programs.wofi.enable = true;
+
+  programs.zellij.enable = true;
 }

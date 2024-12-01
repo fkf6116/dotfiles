@@ -20,6 +20,9 @@
         "lxqt-policykit-agent"
         # "foot --server"
         "hyprpaper"
+        #### For setting the cursor
+        "hyprctl setcursor catppuccin-mocha-mauve-cursors 24"
+
         # " swaync"
       ];
       exec-once = [
