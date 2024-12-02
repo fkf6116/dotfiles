@@ -1,11 +1,11 @@
 { pkgs, lib, ... }:
 {
 
-  #      the standard path under ~/.config/ 
+  #      the standard path under ~/.config/
   #           to find the file       Where the file is located relative to this .nix file
   #                    |                             |
   #                    V                             V
-  xdg.configFile."starship.toml".source = ./starship_jetpack.toml;
+  xdg.configFile."starship.toml".source = ./starship-rose-pine.toml;
 
   home.packages = with pkgs; [
     pkgs.fishPlugins.autopair
@@ -85,7 +85,7 @@
   programs.nushell = {
     enable = true;
     # The config.nu can be anywhere you want if you like to edit your Nushell with Nu
-    # for editing directly to config.nu 
+    # for editing directly to config.nu
     extraConfig = ''
       let carapace_completer = {|spans|
       carapace $spans.0 nushell $spans | from json

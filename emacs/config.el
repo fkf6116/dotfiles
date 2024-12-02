@@ -100,6 +100,22 @@
 ;; Setting RETURN key in org-mode to follow links
   (setq org-return-follows-link  t)
 
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name
+        "straight/repos/straight.el/bootstrap.el"
+        (or (bound-and-true-p straight-base-dir)
+            user-emacs-directory)))
+      (bootstrap-version 7))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
+
 ;;(use-package evil)
 ;;(require 'evil)
 ;;(evil-mode 1)
@@ -233,7 +249,7 @@
 
 )
 
-(add-to-list 'default-frame-alist '(alpha-background . 90)) ; For all new frames henceforth
+(add-to-list 'default-frame-alist '(alpha-background . 60)) ; For all new frames henceforth
 
 (defun reload-init-file ()
   (interactive)
@@ -241,7 +257,20 @@
   (load-file user-init-file))
 
 (use-package catppuccin-theme)
-  (load-theme 'catppuccin :no-confirm)
+
+(use-package autothemer :ensure t)
+
+(straight-use-package
+ '(rose-pine-emacs
+   :host github
+   :repo "thongpv87/rose-pine-emacs"
+   :branch "master"))
+
+;; set the theme
+
+(load-theme 'rose-pine-color t)
+
+;;(load-theme 'catppuccin :no-confirm)
 
 (use-package haskell-mode)
 (use-package lua-mode)
@@ -347,7 +376,7 @@ nil
   :ensure t
   :init (doom-modeline-mode 1)
   :config
-  (setq doom-modeline-height 35      ;; sets modeline height
+  (setq doom-modeline-height 25      ;; sets modeline height
         doom-modeline-bar-width 5    ;; sets right bar width
         doom-modeline-persp-name t   ;; adds perspective name to modeline
         doom-modeline-persp-icon t)) ;; adds folder icon next to persp name
