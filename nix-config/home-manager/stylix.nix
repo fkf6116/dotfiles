@@ -26,6 +26,7 @@
   stylix.targets.fish.enable = true;
   # stylix.targets.spicetify.enable = false;
   stylix.targets.hyprland.enable = true;
+  stylix.targets.zellij.enable = true;
 
   programs.rofi = {
     enable = true;
@@ -65,5 +66,4 @@
 
   programs.wofi.enable = true;
 
-  programs.zellij.enable = true;
 }

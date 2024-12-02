@@ -30,13 +30,18 @@
       "rm" = "rm -v";
       "rr" = "rm -rf";
 
-      "ld" = "eza -ld */ --no-quotes --time-style long-iso";
-      "lla" = "eza -lah --no-quotes --time-style long-iso";
-      "ll" = "eza -lh --no-quotes --time-style long-iso";
-      "llr" = "eza -lhr --no-quotes --time-style long-iso";
-      "lls" = "eza -lh -s size --no-quotes --time-style long-iso";
-      "llt" = "eza -lh -s time --no-quotes --time-style long-iso";
-      "lltr" = "eza -lhr -s time --no-quotes --time-style long-iso";
+      "ld" = "eza -ld */ --no-quotes --time-style default --icons";
+      "lla" = "eza -lah --no-quotes --time-style default --icons";
+      "ll" = "eza -lh --no-quotes --time-style default --icons";
+      "llr" = "eza -lhr --no-quotes --time-style default --icons";
+      "lls" = "eza -lh -s size --no-quotes --time-style default --icons";
+      "llt" = "eza -lh -s time --no-quotes --time-style default --icons";
+      "lltr" = "eza -lhr -s time --no-quotes --time-style default --icons";
+
+      "zj" = "zellij";
+      "zja" = "zellij attach";
+      "tm" = "tmux";
+      "tma" = "tmux attach";
 
       "avi" = "vlc *.avi";
       "jpeg" = "feh -Z *.jpeg";
@@ -58,7 +63,10 @@
       cdo = "cargo doc --open";
       cr = "cargo run";
       hms = "home-manager switch --flake .#fkf@pc --impure";
+      hmt = "home-manager switch --flake .#fkf@thonkpad --impure";
       nrs = "sudo nixos-rebuild switch --flake .#pc";
+      nrt = "sudo nixos-rebuild switch --flake .#thonkpad";
+
       nds = "nix develop -c $SHELL";
 
       # git abbreviations
