@@ -8,7 +8,7 @@
 {
 
   stylix.enable = true;
-  stylix.image = /home/fkf/wallpaper/desktop-wallpaper/rose-pine/moon.jpg;
+  stylix.image = /home/fkf/wallpaper/desktop-wallpaper/rose-pine/wallhaven-jxgd25.jpg;
 
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
 

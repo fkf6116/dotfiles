@@ -103,6 +103,10 @@
       vi = "hx";
       vim = "hx";
       nano = "hx";
+      gaa = "git add .";
+      
+      gcl = "git clone";
+      gcm = "git commit -m";
     };
   };
   programs.carapace.enable = true;
