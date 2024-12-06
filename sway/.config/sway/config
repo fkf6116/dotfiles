@@ -34,13 +34,13 @@ exec lxqt-policykit-agent
 # exec dunst &
 
 # Toggle control center
-#bindsym $mod+Shift+n exec swaync-client -t -sw
+bindsym $mod+Shift+n exec swaync-client -t -sw
 
 
-# exec waypaper --restore
+exec waypaper --restore
 
 exec swaync
-exec_always hyprpaper
+# exec_always hyprpaper
 #### SWAYFX ONLY!!!
 
 corner_radius 12
@@ -96,23 +96,23 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 #
 # Example configuration:
 
-input "12815:20571:Evision_AK820" {
-
-
-
-xkb_options ctrl:nocaps
-xkb_options altwin:swap_alt_win
-}
-input "1739:0:Synaptics_TM3276-022" {
-    dwt enabled
-    tap enabled
-    natural_scroll enabled
-    middle_emulation enabled
-  }
-input "3141:31237:SONiX_Gaming_Mouse" {
-    accel_profile "flat"
-  }
-
+# input "12815:20571:Evision_AK820" {
+#
+#
+#
+# xkb_options ctrl:nocaps
+# xkb_options altwin:swap_alt_win
+# }
+# input "1739:0:Synaptics_TM3276-022" {
+#     dwt enabled
+#     tap enabled
+#     natural_scroll enabled
+#     middle_emulation enabled
+#   }
+# input "3141:31237:SONiX_Gaming_Mouse" {
+#     accel_profile "flat"
+#   }
+#
 
 
 
@@ -308,4 +308,3 @@ client.background        $base
 # }
 
 
-exec killall xwaylandvideobridge
