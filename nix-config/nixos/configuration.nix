@@ -99,6 +99,13 @@
   };
   programs.firefox.enable = true;
 
+
+  programs.sway = {
+    enable = true;
+    package = pkgs.swayfx;
+    wrapperFeatures.gtk = true;
+  };
+
   programs.fish.enable = true;
   programs.zsh.enable = true;
   virtualisation.libvirtd.enable = true;
@@ -107,6 +114,10 @@
   programs.nix-ld.enable = true;
 
   # users.defaultUserShell = pkgs.zsh;
+
+
+xdg.portal = { enable = true; extraPortals = [ pkgs.xdg-desktop-portal-wlr pkgs.xdg-desktop-portal-gtk  ]; };
+
 
   fonts = {
     packages = with pkgs; [

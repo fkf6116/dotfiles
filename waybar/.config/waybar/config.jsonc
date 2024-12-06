@@ -1,7 +1,7 @@
 
 {
   "position": "top",
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": ["sway/workspaces"],
   "modules-right": ["network", "pulseaudio", "battery", "clock","custom/swaync", "tray"],
   "clock": {
     "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",

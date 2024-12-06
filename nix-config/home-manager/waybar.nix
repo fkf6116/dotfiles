@@ -26,6 +26,8 @@ let
     modules-left = [
       "custom/logo"
       "hyprland/workspaces"
+
+      "sway/workspaces"
     ];
     modules-right = [
       "network"
