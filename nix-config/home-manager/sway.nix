@@ -95,7 +95,7 @@
           "${mod}+Shift+c" = "reload";
 
           # Screenshot
-          "Print" = "grimblast --notify --freeze copy area";
+          "${mod}+Shift+s" = "exec grimblast --notify copy area";
 
           # Exit sway (logs you out of your Wayland session)
           "${mod}+Shift+e" = "exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'";
