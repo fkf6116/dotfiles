@@ -95,10 +95,9 @@
   programs.hyprland.enable = true;
   programs.kdeconnect = {
     enable = true;
-    package = pkgs.gnomeExtensions.gsconnect;
+    # package = pkgs.gnomeExtensions.gsconnect;
   };
   programs.firefox.enable = true;
-
 
   programs.sway = {
     enable = true;
@@ -115,9 +114,13 @@
 
   # users.defaultUserShell = pkgs.zsh;
 
-
-xdg.portal = { enable = true; extraPortals = [ pkgs.xdg-desktop-portal-wlr pkgs.xdg-desktop-portal-gtk  ]; };
-
+  xdg.portal = {
+    enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-wlr
+      pkgs.xdg-desktop-portal-gtk
+    ];
+  };
 
   fonts = {
     packages = with pkgs; [
@@ -161,12 +164,15 @@ xdg.portal = { enable = true; extraPortals = [ pkgs.xdg-desktop-portal-wlr pkgs.
     LC_TIME = "en_US.UTF-8";
   };
 
-  # NOTE enable GNOMEEEEEEE
+  # NOTE enable KDE or gnome
 
   services.xserver.enable = true;
 
-  services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
+
+  # services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.displayManager.gdm.enable = true;
 
   #    NOTE Services
 

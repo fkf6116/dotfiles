@@ -197,11 +197,11 @@
       blur_passes 4
       default_border pixel 2
 
-        input "12815:20571:Evision_AK820" {
+        input "*" {
 
 
 
-        xkb_options ctrl:nocaps
+        xkb_options ctrl:swapcaps
         xkb_options altwin:swap_alt_win
         }
         input "1739:0:Synaptics_TM3276-022" {

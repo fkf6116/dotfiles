@@ -105,6 +105,17 @@
           ];
         };
 
+        "fkf@arch" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+          extraSpecialArgs = {
+            inherit inputs outputs;
+          };
+          modules = [
+            stylix.homeManagerModules.stylix
+            ./home-manager/home-non-nixos.nix
+          ];
+        };
+
         "fkf@thonkpad" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
           extraSpecialArgs = {
