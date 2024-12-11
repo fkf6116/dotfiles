@@ -23,15 +23,23 @@
   stylix.autoEnable = false;
 
   stylix.targets.kitty.enable = true;
+  stylix.targets.kitty.variant256Colors = true;
   stylix.targets.foot.enable = true;
-  # stylix.targets.waybar.enable = true;
   stylix.targets.fish.enable = true;
-  # stylix.targets.spicetify.enable = false;
-  # stylix.targets.hyprland.enable = true;
   stylix.targets.zellij.enable = true;
   stylix.targets.tmux.enable = true;
   stylix.targets.helix.enable = true;
+  stylix.targets.bat.enable = true;
+  stylix.targets.fzf.enable = true;
+  stylix.targets.lazygit.enable = true;
+  stylix.targets.nushell.enable = true;
+  stylix.targets.vesktop.enable = true;
+  stylix.targets.zathura.enable = true;
+  stylix.targets.yazi.enable = true;
 
+  # stylix.targets.waybar.enable = true;
+  # stylix.targets.spicetify.enable = false;
+  # stylix.targets.hyprland.enable = true;
   # programs.rofi = {
   #   enable = true;
   #   package = pkgs.rofi-wayland;
