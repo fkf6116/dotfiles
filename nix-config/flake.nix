@@ -101,7 +101,7 @@
           };
           modules = [
             stylix.homeManagerModules.stylix
-            ./home-manager/home.nix
+            ./home-manager/pc/home.nix
           ];
         };
 
@@ -123,7 +123,7 @@
           };
           modules = [
             stylix.homeManagerModules.stylix
-            ./home-manager/home.nix
+            ./home-manager/thonkpad/home.nix
           ];
         };
       };
