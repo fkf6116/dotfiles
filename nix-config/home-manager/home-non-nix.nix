@@ -13,7 +13,7 @@
   imports = [
 
     ./shell-stuff.nix
-    ./term.nix
+    ./term-nn.nix
     ./stylix-non-nix.nix
     ./tmux.nix
     # ./fancy.nix

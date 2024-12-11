@@ -112,7 +112,7 @@
           };
           modules = [
             stylix.homeManagerModules.stylix
-            ./home-manager/home-non-nixos.nix
+            ./home-manager/home-non-nix.nix
           ];
         };
 
