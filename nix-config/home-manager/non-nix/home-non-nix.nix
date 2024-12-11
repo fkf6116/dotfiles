@@ -12,16 +12,13 @@
   # You can import other home-manager modules here
   imports = [
 
-    ./shell-stuff.nix
-    ./term.nix
-    ./stylix.nix
-    ./tmux.nix
-    ./fancy.nix
-    ./zsh.nix
-    ./fish.nix
-    ./hypr.nix
-    ./waybar.nix
-    ./sway.nix
+    ../common/shell-stuff.nix
+  ../common/tmux.nix
+  ../common/zsh.nix
+  ../common/fish.nix
+  ../common/fancy.nix
+    ./term-nn.nix
+    ./stylix-non-nix.nix
 
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example
@@ -81,7 +78,7 @@
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
-  programs.git.enable = true;
+  # programs.git.enable = true;
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
