@@ -110,5 +110,6 @@
     };
   };
   programs.carapace.enable = true;
+programs.carapace.enableFishIntegration = false;
 
 }
