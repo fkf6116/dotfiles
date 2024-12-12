@@ -8,9 +8,9 @@
 {
 
   stylix.enable = true;
-  stylix.image = /home/fkf/wallpaper/desktop-wallpaper/rose-pine/wallhaven-jxgd25.jpg;
+  stylix.image = /home/fkf/wallpaper.image;
 
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
 
   stylix.opacity = {
     # applications = 1.0;

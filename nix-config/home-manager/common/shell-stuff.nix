@@ -5,7 +5,7 @@
   #           to find the file       Where the file is located relative to this .nix file
   #                    |                             |
   #                    V                             V
-  xdg.configFile."starship.toml".source = ./starship-rose-pine.toml;
+  xdg.configFile."starship.toml".source = ./starship.toml;
 
   home.packages = with pkgs; [
     pkgs.fishPlugins.autopair
@@ -104,12 +104,12 @@
       vim = "hx";
       nano = "hx";
       gaa = "git add .";
-      
+
       gcl = "git clone";
       gcm = "git commit -m";
     };
   };
   programs.carapace.enable = true;
-programs.carapace.enableFishIntegration = false;
+  programs.carapace.enableFishIntegration = false;
 
 }
