@@ -127,7 +127,6 @@
       noto-fonts
       # nerd-fonts
       nerd-fonts.jetbrains-mono
-      jetbrains-mono
       noto-fonts-cjk-sans
       noto-fonts-emoji
       font-awesome
