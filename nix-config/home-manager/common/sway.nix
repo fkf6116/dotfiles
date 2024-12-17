@@ -71,7 +71,7 @@
       startup = [
         { command = "hyprpaper"; }
         { command = "autotiling"; }
-        { command = "hyprpanel"; }
+        { command = "waybar"; }
         { command = "lxqt-policykit-agent"; }
         # { command = "wlsunset -l 43.7 -L -79.3"; }
       ];
@@ -98,7 +98,8 @@
           "${mod}+Shift+s" = "exec grimblast --notify copy area";
 
           # Exit sway (logs you out of your Wayland session)
-          "${mod}+Shift+e" = "exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'";
+          "${mod}+Shift+e" =
+            "exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'";
 
           # Move your focus around
           "${mod}+h" = "focus left";
