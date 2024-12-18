@@ -1,10 +1,6 @@
 { pkgs, lib, ... }:
 {
 
-  #      the standard path under ~/.config/
-  #           to find the file       Where the file is located relative to this .nix file
-  #                    |                             |
-  #                    V                             V
   xdg.configFile."starship.toml".source = ./starship.toml;
 
   home.packages = with pkgs; [
@@ -21,11 +17,7 @@
     lfs.enable = true;
     userName = "fruity-fkf";
     userEmail = "fruity.fkf@proton.me";
-
     extraConfig = {
-      # pull = {
-      #   rebase = true;
-      # };
       init = {
         defaultBranch = "main";
       };
@@ -44,48 +36,8 @@
     enableFishIntegration = true;
   };
 
-  # programs.starship = {
-  #   enable = true;
-  #   # Configuration written to ~/.config/starship.toml
-  #   settings = {
-  #     add_newline = true;
-  #
-  #     character = {
-  #       success_symbol = "[➜](bold green)";
-  #       error_symbol = "[➜](bold red)";
-  #     };
-  #     # package.disabled = true;
-  #   };
-  # };
-  #
-  # programs.starship = {
-  #   enable = true;
-  #   enableFishIntegration = true;
-  #   settings = {
-  #     add_newline = true;
-  #     hostname.style = "bold green"; # don"t like the default
-  #     username.style_user = "bold blue"; # don"t like the default
-  #     format = lib.concatStrings [
-  #       "$all"
-  #       "$line_break"
-  #       "$package"
-  #       "$line_break"
-  #       "$character"
-  #       "$username"
-  #     ];
-  #     scan_timeout = 2000;
-  #     character = {
-  #       success_symbol = "➜";
-  #       error_symbol = "➜";
-  #     };
-  #   };
-  #   enableTransience = true;
-  # };
-
   programs.nushell = {
     enable = true;
-    # The config.nu can be anywhere you want if you like to edit your Nushell with Nu
-    # for editing directly to config.nu
     extraConfig = ''
       let carapace_completer = {|spans|
       carapace $spans.0 nushell $spans | from json
@@ -102,14 +54,69 @@
     shellAliases = {
       vi = "hx";
       vim = "hx";
+      nvim = "hx";
+      ga = "git add";
+      gcm = "git commit -m";
+      gp = "git push";
       nano = "hx";
       gaa = "git add .";
-
-      gcl = "git clone";
-      gcm = "git commit -m";
     };
   };
+
   programs.carapace.enable = true;
   programs.carapace.enableFishIntegration = false;
+
+  programs.helix = {
+    enable = true;
+    settings = {
+      editor = {
+        indent-guides = {
+          character = "|";
+          render = true;
+        };
+        lsp = {
+          auto-signature-help = false;
+          display-messages = true;
+        };
+        statusline = {
+          left = [
+            "mode"
+            "spinner"
+            "version-control"
+            "file-name"
+          ];
+        };
+        cursor-shape = {
+          normal = "block";
+          insert = "bar";
+          select = "underline";
+        };
+      };
+
+      # languages.nix = [
+      #   {
+      #     name = "nix";
+      #     auto-format = true;
+      #     formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
+      #   }
+      # ];
+
+      keys.normal = {
+        C-g = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80% -h80% -E lazygit";
+
+        C-y = ":sh tmux split-window -d -h  -p 40  yazi";
+      };
+    };
+  };
+
+  programs.zellij = {
+    enable = true;
+    settings = {
+      pane_frames = false;
+      tab_bar = false;
+      default_layout = "compact";
+      # theme = "rose-pine";
+    };
+  };
 
 }
