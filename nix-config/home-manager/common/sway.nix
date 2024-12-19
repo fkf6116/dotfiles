@@ -197,13 +197,15 @@
       blur_radius 7
       blur_passes 4
       default_border pixel 2
+      output HDMI-A-1 mode 1920x1080@1001hz
 
         input "*" {
 
 
 
-        xkb_options ctrl:swapcaps
-        xkb_options altwin:swap_alt_win
+      xkb_options altwin:swap_alt_win
+            xkb_options caps:ctrl_modifier
+
         }
         input "1739:0:Synaptics_TM3276-022" {
             dwt enabled
