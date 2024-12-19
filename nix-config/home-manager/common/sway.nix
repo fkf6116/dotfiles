@@ -203,8 +203,7 @@
 
 
 
-      xkb_options altwin:swap_alt_win
-            xkb_options caps:ctrl_modifier
+      xkb_options altwin:swap_alt_win,caps:ctrl_modifier
 
         }
         input "1739:0:Synaptics_TM3276-022" {
