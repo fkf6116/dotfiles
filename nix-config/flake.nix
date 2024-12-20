@@ -105,6 +105,8 @@
           };
           modules = [
             stylix.homeManagerModules.stylix
+            inputs.spicetify-nix.homeManagerModules.default
+
             ./home-manager/pc/home.nix
           ];
         };

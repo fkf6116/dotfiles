@@ -13,7 +13,7 @@
   imports = [
 
     ./stylix.nix
-
+    ../common/spot.nix
     ../common/shell-stuff.nix
     ../common/tmux.nix
     ../common/zsh.nix

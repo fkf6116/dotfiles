@@ -423,6 +423,7 @@
     pkgs.hyprpanel
     hub
     dwt1-shell-color-scripts
+    spotify
   ];
 
 }

@@ -1,0 +1,8 @@
+Usage:
+	 swaync <OPTION>
+Help:
+	 -h, --help 		 Show help options
+	 -v, --version 		 Prints version
+Options:
+	 -s, --style 		 Use a custom Stylesheet file
+	 -c, --config 		 Use a custom config file

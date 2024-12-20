@@ -69,7 +69,7 @@
       };
 
       startup = [
-        { command = "hyprpaper"; }
+        { command = "swaync"; }
         { command = "autotiling"; }
         { command = "waybar"; }
         { command = "lxqt-policykit-agent"; }
@@ -94,6 +94,7 @@
           # Reload the configuration file
           "${mod}+Shift+c" = "reload";
 
+          "${mod}+Shift+n" = "swaync-client -t";
           # Screenshot
           "${mod}+Shift+s" = "exec grimblast --notify copy area";
 
