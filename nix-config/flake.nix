@@ -18,6 +18,10 @@
       inputs.home-manager.follows = "home-manager";
     };
 
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
 
   };
@@ -123,6 +127,7 @@
           };
           modules = [
             stylix.homeManagerModules.stylix
+            inputs.spicetify-nix.homeManagerModules.default
             ./home-manager/thonkpad/home.nix
           ];
         };

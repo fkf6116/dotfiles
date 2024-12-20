@@ -8,22 +8,25 @@
   pkgs,
   ...
 }:
+
+let
+  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+in
 {
   # You can import other home-manager modules here
   imports = [
 
-./stylix.nix
+    ./stylix.nix
 
-../common/shell-stuff.nix
-../common/tmux.nix
-../common/zsh.nix
-../common/fish.nix
-../common/fancy.nix
-../common/hypr.nix
-../common/sway.nix
-../common/waybar.nix
-
-
+    ../common/shell-stuff.nix
+    ../common/tmux.nix
+    ../common/zsh.nix
+    ../common/fish.nix
+    ../common/fancy.nix
+    ../common/hypr.nix
+    ../common/sway.nix
+    ../common/waybar.nix
+    ../common/term.nix
 
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example
@@ -35,6 +38,14 @@
     # ./nvim.nix
   ];
 
+  programs.spicetify = {
+    enable = true;
+    enabledExtensions = with spicePkgs.extensions; [
+      adblock
+      hidePodcasts
+      shuffle # shuffle+ (special characters are sanitized out of extension names)
+    ];
+  };
   xdg.enable = true;
   xdg.mimeApps.enable = true;
   xdg.mimeApps.defaultApplications = {

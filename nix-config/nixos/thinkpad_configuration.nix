@@ -428,7 +428,11 @@
     pandoc
     hugo
     cmus
+    hub
+    dwt1-shell-color-scripts
+    lime3ds
     # texliveFull
+    spotify
   ];
 
 }
