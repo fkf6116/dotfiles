@@ -433,6 +433,7 @@
     lime3ds
     # texliveFull
     spotify
+    ulauncher
   ];
 
 }

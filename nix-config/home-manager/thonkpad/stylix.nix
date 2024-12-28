@@ -10,7 +10,7 @@
   stylix.enable = true;
   stylix.image = /home/fkf/wallpaper.image;
 
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest.yaml";
 
   stylix.opacity = {
     # applications = 1.0;
@@ -20,13 +20,13 @@
   };
   stylix.polarity = "dark";
 
-  stylix.targets.kitty.enable = true;
-  stylix.targets.foot.enable = true;
-  stylix.targets.waybar.enable = true;
-  stylix.targets.fish.enable = true;
-  # stylix.targets.spicetify.enable = false;
-  stylix.targets.hyprland.enable = true;
-  stylix.targets.zellij.enable = true;
+  # stylix.targets.kitty.enable = true;
+  # stylix.targets.foot.enable = true;
+  # stylix.targets.waybar.enable = true;
+  # stylix.targets.fish.enable = true;
+  # # stylix.targets.spicetify.enable = false;
+  # stylix.targets.hyprland.enable = true;
+  # stylix.targets.zellij.enable = true;
 
   programs.rofi = {
     enable = true;
@@ -38,6 +38,11 @@
     name = "catppuccin-mocha-mauve-cursors";
     size = 24;
 
+  };
+  stylix.iconTheme = {
+    enable = true;
+    package = pkgs.kora-icon-theme;
+    dark = "kora";
   };
 
   stylix.fonts = {

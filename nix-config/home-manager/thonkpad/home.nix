@@ -23,6 +23,7 @@
     ../common/sway.nix
     ../common/waybar.nix
     ../common/term.nix
+    ../common/spot.nix
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example
 
