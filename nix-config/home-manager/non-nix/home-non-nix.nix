@@ -13,10 +13,10 @@
   imports = [
 
     ../common/shell-stuff.nix
-  ../common/tmux.nix
-  ../common/zsh.nix
-  ../common/fish.nix
-  ../common/fancy.nix
+    ../common/tmux.nix
+    ../common/zsh.nix
+    ../common/fish.nix
+    ../common/fancy.nix
     ./term-nn.nix
     ./stylix-non-nix.nix
 

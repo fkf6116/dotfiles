@@ -92,6 +92,13 @@
   ];
 
   #    NOTE enableShit
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+  };
+
   programs.hyprland.enable = true;
   programs.kdeconnect = {
     enable = true;
@@ -133,6 +140,8 @@
       source-han-sans
       source-han-sans-japanese
       source-han-serif-japanese
+      ubuntu-sans
+      ubuntu_font_family
     ];
     # fontconfig.defaultFonts = {
     #   serif = [
@@ -168,9 +177,9 @@
   services.xserver.enable = true;
 
   services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  # services.desktopManager.plasma6.enable = true;
 
-  # services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
   # services.xserver.displayManager.gdm.enable = true;
 
   #    NOTE Services
@@ -237,7 +246,7 @@
       # If you do, you can skip setting a root password by passing '--no-root-passwd' to nixos-install.
       # Be sure to change it (using passwd) after rebooting!
       isNormalUser = true;
-      shell = pkgs.zsh;
+      shell = pkgs.fish;
       openssh.authorizedKeys.keys = [
         # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
       ];

@@ -72,6 +72,7 @@
         { command = "swaync"; }
         { command = "autotiling"; }
         { command = "waybar"; }
+        { command = "foot --server"; }
         { command = "lxqt-policykit-agent"; }
         # { command = "wlsunset -l 43.7 -L -79.3"; }
       ];
@@ -79,7 +80,7 @@
       keybindings =
         let
           mod = "Mod4";
-          term = "kitty";
+          term = "footclient";
           app-menu = "wofi --show drun --allow-images";
           power-menu = "ags -t power-menu";
 
@@ -194,6 +195,9 @@
       smart_gaps on
       shadows enable
       corner_radius 12
+      for_window [app_id="foot"] blur enable
+      for_window [app_id="footclient"] blur enable
+
       for_window [app_id="kitty"] blur enable
       blur_radius 7
       blur_passes 4
@@ -201,9 +205,6 @@
       output HDMI-A-1 mode 1920x1080@1001hz
 
         input "*" {
-
-
-
       xkb_options altwin:swap_alt_win,caps:ctrl_modifier
 
         }

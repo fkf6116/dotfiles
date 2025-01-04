@@ -10,8 +10,7 @@
   stylix.enable = true;
   stylix.image = /home/fkf/wallpaper.image;
 
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
-
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
   stylix.opacity = {
     # applications = 1.0;
     terminal = 0.75;
@@ -40,19 +39,25 @@
 
   };
 
+  stylix.iconTheme = {
+    enable = true;
+    package = pkgs.kora-icon-theme;
+    dark = "kora";
+  };
   stylix.fonts = {
     monospace = {
       package = pkgs.nerd-fonts.jetbrains-mono;
       name = "JetBrainsMono Nerd Font Mono";
     };
     sansSerif = {
-      package = pkgs.dejavu_fonts;
-      name = "DejaVu Sans";
+      package = pkgs.ubuntu-sans;
+      name = "Ubuntu Sans";
     };
     serif = {
       package = pkgs.dejavu_fonts;
       name = "DejaVu Serif";
     };
+
     sizes = {
       applications = 12;
       desktop = 12;

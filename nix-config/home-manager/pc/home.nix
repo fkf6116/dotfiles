@@ -36,13 +36,13 @@
 
   xdg.enable = true;
   xdg.mimeApps.enable = true;
+  xdg.configFile."mimeapps.list".force = true;
   xdg.mimeApps.defaultApplications = {
     "text/plain" = [ "neovide.desktop" ];
     "application/pdf" = [ "zathura.desktop" ];
-    "image/*" = [ "sxiv.desktop" ];
-    "video/png" = [ "mpv.desktop" ];
-    "video/jpg" = [ "mpv.desktop" ];
-    "video/*" = [ "mpv.desktop" ];
+    "image/png" = [ "sxiv.desktop" ];
+    "image/jpg" = [ "sxiv.desktop" ];
+    "video/mp4" = [ "mpv.desktop" ];
   };
 
   nixpkgs = {
