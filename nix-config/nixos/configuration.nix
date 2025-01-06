@@ -298,7 +298,7 @@
   environment.systemPackages = with pkgs; [
     vim
     yazi
-    unstable.neovim
+    # unstable.neovim
     bottom
     fish
     git
