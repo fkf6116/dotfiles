@@ -113,7 +113,7 @@
           indent-blankline.enable = true;
 
           # Fun
-          cellular-automaton.enable = false;
+          cellular-automaton.enable = true;
         };
 
         statusline = {
@@ -172,10 +172,10 @@
           nvim-notify.enable = true;
         };
 
-        # projects = {
-        #   project-nvim.enable = true;
-        # };
-        #
+        projects = {
+          project-nvim.enable = true;
+        };
+
         utility = {
           ccc.enable = false;
           vim-wakatime.enable = false;
