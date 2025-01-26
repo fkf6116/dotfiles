@@ -10,7 +10,7 @@
 }: {
   # You can import other home-manager modules here
   imports = [
-    ./common/stylix.nix
+    ../common/stylix.nix
     ../common/shell-stuff.nix
     ../common/tmux.nix
     ../common/zsh.nix
