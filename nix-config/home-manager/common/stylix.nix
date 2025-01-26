@@ -3,14 +3,11 @@
   stylix,
   lib,
   ...
-}:
-
-{
-
+}: {
   stylix.enable = true;
   stylix.image = /home/fkf/wallpaper.image;
 
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
   stylix.opacity = {
     # applications = 1.0;
     terminal = 0.75;
@@ -36,7 +33,6 @@
     package = pkgs.catppuccin-cursors.mochaMauve;
     name = "catppuccin-mocha-mauve-cursors";
     size = 24;
-
   };
 
   stylix.iconTheme = {
@@ -46,8 +42,8 @@
   };
   stylix.fonts = {
     monospace = {
-      package = pkgs.nerd-fonts.jetbrains-mono;
-      name = "JetBrainsMono Nerd Font Mono";
+      package = pkgs.pixel-code;
+      name = "Pixel Code";
     };
     sansSerif = {
       package = pkgs.ubuntu-sans;
@@ -64,11 +60,9 @@
       terminal = 11;
       popups = 12;
     };
-
   };
 
   ### enable apps
 
   programs.wofi.enable = true;
-
 }

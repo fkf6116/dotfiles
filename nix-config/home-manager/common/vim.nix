@@ -138,15 +138,15 @@
         statusline = {
           lualine = {
             enable = true;
-            theme = "catppuccin";
+            theme = "gruvbox";
           };
         };
 
         theme = {
           enable = true;
-          name = "catppuccin";
-          style = "mocha";
-          transparent = false;
+          name = "gruvbox";
+          style = "dark";
+          transparent = true;
         };
 
         autopairs.nvim-autopairs.enable = true;
@@ -266,7 +266,7 @@
         };
 
         presence = {
-          neocord.enable = false;
+          neocord.enable = true;
         };
 
         # Other options will go here. Refer to the config

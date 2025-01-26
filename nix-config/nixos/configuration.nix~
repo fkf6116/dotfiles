@@ -19,7 +19,6 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./users.nix
-
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
   ];
@@ -139,6 +138,7 @@
       source-han-serif-japanese
       ubuntu-sans
       ubuntu_font_family
+      pixel-code
     ];
     # fontconfig.defaultFonts = {
     #   serif = [
@@ -432,5 +432,7 @@
     cloc
     libreoffice-fresh
     hunspell
+    chromium
+    qmk
   ];
 }

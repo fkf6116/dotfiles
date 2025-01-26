@@ -138,14 +138,14 @@
         statusline = {
           lualine = {
             enable = true;
-            theme = "catppuccin";
+            theme = "gruvbox";
           };
         };
 
         theme = {
           enable = true;
-          name = "catppuccin";
-          style = "mocha";
+          name = "gruvbox";
+          style = "Gruvbox Material Dark Hard";
           transparent = false;
         };
 
@@ -266,7 +266,7 @@
         };
 
         presence = {
-          neocord.enable = false;
+          neocord.enable = true;
         };
 
         # Other options will go here. Refer to the config
