@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   wayland.windowManager.hyprland = {
     enable = true;
 
@@ -12,14 +11,15 @@
 
       monitor = [
         "HDMI-A-1, 1920x1080@100, auto, 1"
+        "eDP-1, 1920x1080@60, auto, 1"
         #monitor config here
-
       ];
 
       exec = [
         "lxqt-policykit-agent"
-        # "foot --server"
+        "foot --server"
         "hyprpaper"
+        "hyprpanel"
         #### For setting the cursor
         "hyprctl setcursor catppuccin-mocha-mauve-cursors 24"
 
@@ -52,7 +52,6 @@
         gaps_out = 10;
         border_size = 2;
         layout = "master";
-
       };
 
       decoration = {
@@ -164,7 +163,7 @@
       ];
 
       bind = [
-        "$mainMod, Return, exec, kitty"
+        "$mainMod, Return, exec, footclient"
         "$mainMod, E, exec, emacsclient -c"
 
         "$mainMod, Q, killactive,"

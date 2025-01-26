@@ -7,8 +7,7 @@
   config,
   pkgs,
   ...
-}:
-{
+}: {
   # You can import other NixOS modules here
   imports = [
     # If you want to use modules your own flake exports (from modules/nixos):
@@ -50,26 +49,24 @@
     };
   };
 
-  nix =
-    let
-      flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
-    in
-    {
-      settings = {
-        # Enable flakes and new 'nix' command
-        experimental-features = "nix-command flakes";
-        # Opinionated: disable global registry
-        flake-registry = "";
-        # Workaround for https://github.com/NixOS/nix/issues/9574
-        nix-path = config.nix.nixPath;
-      };
-      # Opinionated: disable channels
-      channel.enable = true;
-
-      # Opinionated: make flake registry and nix path match flake inputs
-      registry = lib.mapAttrs (_: flake: { inherit flake; }) flakeInputs;
-      nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
+  nix = let
+    flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
+  in {
+    settings = {
+      # Enable flakes and new 'nix' command
+      experimental-features = "nix-command flakes";
+      # Opinionated: disable global registry
+      flake-registry = "";
+      # Workaround for https://github.com/NixOS/nix/issues/9574
+      nix-path = config.nix.nixPath;
     };
+    # Opinionated: disable channels
+    channel.enable = true;
+
+    # Opinionated: make flake registry and nix path match flake inputs
+    registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
+    nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
+  };
 
   # FIXME: Add the rest of your current configuration
 
@@ -79,7 +76,7 @@
   boot.plymouth = {
     enable = true;
     theme = "rings";
-    themePackages = [ (pkgs.adi1090x-plymouth-themes.override { selected_themes = [ "rings" ]; }) ];
+    themePackages = [(pkgs.adi1090x-plymouth-themes.override {selected_themes = ["rings"];})];
   };
 
   boot.initrd.verbose = false;
@@ -259,7 +256,6 @@
         "uinput"
         "input"
       ];
-
     };
   };
 
@@ -291,7 +287,6 @@
     EDITOR = "nvim";
 
     MANPAGER = "nvim +Man!";
-
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
@@ -430,10 +425,10 @@
     cmus
     hub
     dwt1-shell-color-scripts
-    lime3ds
+
     # texliveFull
     spotify
     ulauncher
+    pkgs.hyprpanel
   ];
-
 }
