@@ -430,5 +430,7 @@
     spotify
     ulauncher
     pkgs.hyprpanel
+    hyfetch
+    cloc
   ];
 }
