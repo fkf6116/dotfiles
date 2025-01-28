@@ -21,7 +21,7 @@
     ../common/sway.nix
     ../common/waybar.nix
     ../common/term.nix
-    ../common/vim.nix
+    # ../common/vim.nix
 
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example
@@ -42,6 +42,12 @@
     "image/png" = ["sxiv.desktop"];
     "image/jpg" = ["sxiv.desktop"];
     "video/mp4" = ["mpv.desktop"];
+    "default-web-browser" = ["firefox.desktop"];
+    "text/html" = ["firefox.desktop"];
+    "x-scheme-handler/http" = ["firefox.desktop"];
+    "x-scheme-handler/https" = ["firefox.desktop"];
+    "x-scheme-handler/about" = ["firefox.desktop"];
+    "x-scheme-handler/unknown" = ["firefox.desktop"];
   };
 
   nixpkgs = {

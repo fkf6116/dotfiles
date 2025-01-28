@@ -433,6 +433,8 @@
     libreoffice-fresh
     hunspell
     chromium
-    qmk
+    cloc
+    pfetch
+    neovim
   ];
 }
