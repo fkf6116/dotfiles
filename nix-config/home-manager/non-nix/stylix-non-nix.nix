@@ -20,7 +20,7 @@
   };
   stylix.polarity = "dark";
 
-  stylix.autoEnable = false;
+  stylix.autoEnable = true;
 
   stylix.targets.kitty.enable = true;
   stylix.targets.kitty.variant256Colors = true;

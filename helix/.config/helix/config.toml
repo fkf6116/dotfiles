@@ -1,6 +1,6 @@
 #theme = "gruvbox_dark_hard"
 # theme = "cyberdream"
-theme = "catppuccin_mocha"
+theme = "cyberdream"
 
 [editor]
 line-number = "relative"

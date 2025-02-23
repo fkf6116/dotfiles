@@ -19,6 +19,7 @@
     ../common/fancy.nix
     ./term-nn.nix
     ./stylix-non-nix.nix
+    ../common/vim.nix
 
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example

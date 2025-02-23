@@ -103,6 +103,7 @@
         };
         modules = [
           stylix.homeManagerModules.stylix
+          nvf.homeManagerModules.default
           ./home-manager/non-nix/home-non-nix.nix
         ];
       };
