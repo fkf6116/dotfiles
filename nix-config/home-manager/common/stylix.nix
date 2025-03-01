@@ -8,7 +8,7 @@
   stylix.enable = true;
   stylix.image = /home/fkf/wallpaper.image;
 
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
   stylix.opacity = {
     # applications = 1.0;
     terminal = 0.75;
