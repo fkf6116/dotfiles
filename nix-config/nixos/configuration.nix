@@ -438,6 +438,8 @@
     chromium
     cloc
     pfetch
+    ghostty
+    lix
     neovim
   ];
 }
