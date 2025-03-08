@@ -441,5 +441,6 @@
     ghostty
     lix
     neovim
+    ulauncher
   ];
 }
