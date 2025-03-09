@@ -442,5 +442,7 @@
     lix
     neovim
     ulauncher
+    ytmdl
+    picard
   ];
 }
