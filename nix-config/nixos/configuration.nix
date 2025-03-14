@@ -444,5 +444,6 @@
     ulauncher
     ytmdl
     picard
+    itch
   ];
 }
