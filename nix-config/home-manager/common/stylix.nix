@@ -24,6 +24,7 @@
   # stylix.targets.spicetify.enable = false;
   stylix.targets.hyprland.enable = true;
   stylix.targets.zellij.enable = true;
+  stylix.targets.tmux.enable = false;
 
   programs.rofi = {
     enable = true;

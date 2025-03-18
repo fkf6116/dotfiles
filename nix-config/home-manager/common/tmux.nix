@@ -2,7 +2,7 @@
 {
   programs.tmux = {
     enable = true;
-    shortcut = "a";
+    shortcut = "s";
     # aggressiveResize = true; -- Disabled to be iTerm-friendly
     baseIndex = 1;
     newSession = true;
@@ -13,7 +13,7 @@
 
     plugins = with pkgs; [
       tmuxPlugins.better-mouse-mode
-      tmuxPlugins.rose-pine
+      # tmuxPlugins.rose-pine
       tmuxPlugins.vim-tmux-navigator
 
     ];
