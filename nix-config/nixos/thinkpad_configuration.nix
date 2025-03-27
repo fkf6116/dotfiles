@@ -159,6 +159,13 @@
 
   networking.networkmanager.enable = true;
 
+networking.extraHosts =
+  ''
+  192.168.0.100 srvr.fkf
+  '';
+
+
+
   services.xserver.xkb = {
     layout = "us";
     variant = "";
@@ -432,5 +439,6 @@
     pkgs.hyprpanel
     hyfetch
     cloc
+    luarocks
   ];
 }
