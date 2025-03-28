@@ -4,7 +4,7 @@
   ...
 }:
 {
-  xdg.configFile."starship.toml".source = ./starship-rose-pine.toml;
+  xdg.configFile."starship.toml".source = ./starship_jetpack.toml;
 
   home.packages = with pkgs; [
     pkgs.fishPlugins.autopair
