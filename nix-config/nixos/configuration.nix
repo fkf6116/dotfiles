@@ -445,5 +445,8 @@
     ytmdl
     picard
     itch
+    mgba
+    localsend
+    kid3
   ];
 }
