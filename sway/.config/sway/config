@@ -17,7 +17,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term kitty
+set $term footclient
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -27,7 +27,12 @@ set $menu  wofi --show drun --allow-images
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
 exec_always autotiling-rs
+
+
 exec lxqt-policykit-agent 
+exec_always foot --server
+
+
 # exec wl-paste -t text --watch clipman store --no-persist
 # exec --no-startup-id lxsession 
 # Notification Daemon
