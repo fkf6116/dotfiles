@@ -8,7 +8,7 @@
   stylix.enable = true;
   stylix.image = /home/fkf/wallpaper.image;
 
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest.yaml";
   stylix.opacity = {
     # applications = 1.0;
     terminal = 0.75;
@@ -43,10 +43,17 @@
     dark = "kora";
   };
   stylix.fonts = {
-    monospace = {
-      package = pkgs.pixel-code;
-      name = "Pixel Code";
-    };
+    # monospace = {
+    #   package = pkgs.pixel-code;
+    #   name = "Pixel Code";
+    # };
+monospace = {
+    package = pkgs.nerd-fonts.jetbrains-mono;
+    name = "JetbrainsMono Nerd Font";
+  };
+
+
+
     sansSerif = {
       package = pkgs.ubuntu-sans;
       name = "Ubuntu Sans";
