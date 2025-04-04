@@ -440,5 +440,8 @@ networking.extraHosts =
     hyfetch
     cloc
     luarocks
+    wireguard-ui
+    wireguard-tools
+
   ];
 }
