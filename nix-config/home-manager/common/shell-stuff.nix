@@ -4,7 +4,7 @@
   ...
 }:
 {
-  xdg.configFile."starship.toml".source = ./starship_jetpack.toml;
+  xdg.configFile."starship.toml".source = lib.mkForce ./starship_jetpack.toml;
 
   home.packages = with pkgs; [
     pkgs.fishPlugins.autopair
@@ -38,7 +38,7 @@
 
   programs.starship = {
     enable = true;
-    enableFishIntegration = true;
+    # enableFishIntegration = true;
   };
 
   programs.nushell = {

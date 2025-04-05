@@ -98,7 +98,7 @@
 
           "${mod}+Shift+n" = "swaync-client -t";
           # Screenshot
-          "${mod}+Shift+s" = "exec grimblast --notify copy area";
+          "${mod}+Shift+s" = "exec grim -g \"$(slurp)\" - | wl-copy";
 
           # Exit sway (logs you out of your Wayland session)
           "${mod}+Shift+e" =
