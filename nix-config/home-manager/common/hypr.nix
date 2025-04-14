@@ -226,8 +226,8 @@
 
         "$mainMod, PERIOD, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
         "$mainMod, COMMA, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-        "$mainMod, XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
         ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+        ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
         ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"
         ", XF86MonBrightnessUp, exec, brightnessctl set 10%+"
         "SHIFT, XF86MonBrightnessDown, exec, brightnessctl set 5%-"
