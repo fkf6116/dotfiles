@@ -238,6 +238,11 @@ networking.extraHosts =
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.greetd.enableGnomeKeyring = true;
 
+security.pam.services.sway = {
+  enableGnomeKeyring = true;
+};
+
+
   systemd.services.NetworkManager-wait-online.enable = false;
 
   # TODO: Set your hostname
