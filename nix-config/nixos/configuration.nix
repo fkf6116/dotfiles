@@ -378,7 +378,6 @@
     vscode
     home-manager
     neovide
-    sxiv
     zathura
     mpv
     base16-schemes
@@ -389,6 +388,7 @@
     nixd
     nixfmt-rfc-style
     sxiv
+    feh
     # brave
     unstable.joplin-desktop
     krita
