@@ -7,7 +7,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   # You can import other NixOS modules here
   imports = [
     # If you want to use modules your own flake exports (from modules/nixos):
@@ -49,24 +50,26 @@
     };
   };
 
-  nix = let
-    flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
-  in {
-    settings = {
-      # Enable flakes and new 'nix' command
-      experimental-features = "nix-command flakes";
-      # Opinionated: disable global registry
-      flake-registry = "";
-      # Workaround for https://github.com/NixOS/nix/issues/9574
-      nix-path = config.nix.nixPath;
-    };
-    # Opinionated: disable channels
-    channel.enable = true;
+  nix =
+    let
+      flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
+    in
+    {
+      settings = {
+        # Enable flakes and new 'nix' command
+        experimental-features = "nix-command flakes";
+        # Opinionated: disable global registry
+        flake-registry = "";
+        # Workaround for https://github.com/NixOS/nix/issues/9574
+        nix-path = config.nix.nixPath;
+      };
+      # Opinionated: disable channels
+      channel.enable = true;
 
-    # Opinionated: make flake registry and nix path match flake inputs
-    registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
-    nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
-  };
+      # Opinionated: make flake registry and nix path match flake inputs
+      registry = lib.mapAttrs (_: flake: { inherit flake; }) flakeInputs;
+      nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
+    };
 
   # FIXME: Add the rest of your current configuration
 
@@ -76,7 +79,7 @@
   boot.plymouth = {
     enable = true;
     theme = "rings";
-    themePackages = [(pkgs.adi1090x-plymouth-themes.override {selected_themes = ["rings"];})];
+    themePackages = [ (pkgs.adi1090x-plymouth-themes.override { selected_themes = [ "rings" ]; }) ];
   };
 
   boot.initrd.verbose = false;
@@ -159,12 +162,9 @@
 
   networking.networkmanager.enable = true;
 
-networking.extraHosts =
-  ''
-  192.168.0.100 srvr.fkf
+  networking.extraHosts = ''
+    192.168.0.100 srvr.fkf
   '';
-
-
 
   services.xserver.xkb = {
     layout = "us";
@@ -238,10 +238,9 @@ networking.extraHosts =
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.greetd.enableGnomeKeyring = true;
 
-security.pam.services.sway = {
-  enableGnomeKeyring = true;
-};
-
+  security.pam.services.sway = {
+    enableGnomeKeyring = true;
+  };
 
   systemd.services.NetworkManager-wait-online.enable = false;
 

@@ -47,12 +47,10 @@
     #   package = pkgs.pixel-code;
     #   name = "Pixel Code";
     # };
-monospace = {
-    package = pkgs.nerd-fonts.jetbrains-mono;
-    name = "JetbrainsMono Nerd Font";
-  };
-
-
+    monospace = {
+      package = pkgs.nerd-fonts.jetbrains-mono;
+      name = "JetbrainsMono Nerd Font";
+    };
 
     sansSerif = {
       package = pkgs.ubuntu-sans;
