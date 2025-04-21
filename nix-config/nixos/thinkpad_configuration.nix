@@ -447,6 +447,8 @@ security.pam.services.sway = {
     luarocks
     wireguard-ui
     wireguard-tools
+    ghostty
+    feh
 
   ];
 }
