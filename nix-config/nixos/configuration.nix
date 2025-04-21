@@ -437,7 +437,7 @@
     cloc
     libreoffice-fresh
     hunspell
-    google-chrome
+    chromium
     cloc
     pfetch
     ghostty
@@ -450,5 +450,6 @@
     mgba
     localsend
     kid3
+    barrier
   ];
 }
