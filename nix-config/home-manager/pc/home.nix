@@ -7,7 +7,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   # You can import other home-manager modules here
   imports = [
     ../common/stylix.nix
@@ -37,22 +38,19 @@
   xdg.mimeApps.enable = true;
   xdg.configFile."mimeapps.list".force = true;
 
-
-xdg.mimeApps.defaultApplications = {
-  "text/plain" = [ "neovide.desktop" ];
-  "application/pdf" = [ "zathura.desktop" ];
-  "image/jpeg" = [ "feh.desktop" ];
-  "image/png" = [ "feh.desktop" ];
-  "image/gif" = [ "feh.desktop" ];
-  "video/mp4" = [ "mpv.desktop" ];
-  "default-web-browser" = [ "firefox.desktop" ];
-  "text/html" = [ "firefox.desktop" ];
-  "x-scheme-handler/http" = [ "firefox.desktop" ];
-  "x-scheme-handler/https" = [ "firefox.desktop" ];
-  "x-scheme-handler/about" = [ "firefox.desktop" ];
-  "x-scheme-handler/unknown" = [ "firefox.desktop" ];
-};
-
+  xdg.mimeApps.defaultApplications = {
+    "text/plain" = [ "neovide.desktop" ];
+    "application/pdf" = [ "zathura.desktop" ];
+    "image/jpeg" = [ "feh.desktop" ];
+    "image/png" = [ "feh.desktop" ];
+    "image/gif" = [ "feh.desktop" ];
+    "video/mp4" = [ "mpv.desktop" ];
+    "x-scheme-handler/http" = "firefox.desktop";
+    "x-scheme-handler/https" = "firefox.desktop";
+    "text/html" = "firefox.desktop";
+    "application/xhtml+xml" = "firefox.desktop";
+    "default-web-browser" = [ "firefox.desktop" ];
+  };
 
   nixpkgs = {
     # You can add overlays here

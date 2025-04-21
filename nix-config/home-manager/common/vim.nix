@@ -4,7 +4,8 @@
   lib,
   inputs,
   ...
-}: {
+}:
+{
   programs.nvf = {
     enable = true;
     # your settings need to go into the settings attribute set
@@ -14,14 +15,14 @@
         keymaps = [
           {
             key = "<leader>wq";
-            mode = ["n"];
+            mode = [ "n" ];
             action = ":wq<CR>";
             silent = true;
             desc = "Save file and quit";
           }
           {
             key = "<leader>nt";
-            mode = ["n"];
+            mode = [ "n" ];
             action = ":Neotree toggle<CR>";
             silent = true;
             desc = "File tree (Neotree)";

@@ -232,9 +232,9 @@
 
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.greetd.enableGnomeKeyring = true;
-security.pam.services.sway = {
-  enableGnomeKeyring = true;
-};
+  security.pam.services.sway = {
+    enableGnomeKeyring = true;
+  };
   systemd.services.NetworkManager-wait-online.enable = false;
 
   # TODO: Set your hostname
@@ -450,5 +450,6 @@ security.pam.services.sway = {
     mgba
     localsend
     kid3
+    barrier
   ];
 }
