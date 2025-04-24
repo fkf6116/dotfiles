@@ -446,6 +446,8 @@
     luarocks
     wireguard-ui
     wireguard-tools
+    ghostty
+    feh
 
   ];
 }

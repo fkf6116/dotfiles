@@ -35,6 +35,8 @@
       # TODO: change this because my keyboard layout is kinda weird honestly
       input = {
         kb_layout = "us";
+
+        # kb_variant = "colemak_dh";
         kb_options = "ctrl:nocaps, altwin:swap_alt_win";
         #        kb_variant = ",altgr-intl";
         #       kb_options = "grp:alt_space_toggle";
