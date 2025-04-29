@@ -180,6 +180,7 @@
   # services.desktopManager.plasma6.enable = true;
 
   services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.windowManager.i3.enable = true;
   services.xserver.displayManager.gdm.enable = true;
 
   #    NOTE Services
@@ -451,5 +452,7 @@
     localsend
     kid3
     barrier
+    i3
+    code-cursor
   ];
 }

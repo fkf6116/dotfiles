@@ -25,6 +25,7 @@
   stylix.targets.hyprland.enable = true;
   stylix.targets.zellij.enable = true;
   stylix.targets.tmux.enable = false;
+  stylix.targets.i3.enable = false;
 
   programs.rofi = {
     enable = true;
