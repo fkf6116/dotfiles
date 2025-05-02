@@ -1,232 +1,163 @@
+
+add_newline = false
+format = """$directory$character"""
+right_format = """$all"""
+command_timeout = 1000
+palette = "cyberdream"
+
 [character]
-success_symbol = "[➜](bold green) "
-error_symbol = "[✗](bold red) "
+vicmd_symbol = "[N] >>>"
+success_symbol = '[➜](bold green)'
 
-# Nerd Font Symbols combined with Bracketed Segments base on official presets
-# https://starship.rs/presets
-[aws]
-format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
-symbol = ""
-
-[cmake]
-format = '\[[$symbol($version)]($style)\]'
-
-[cmd_duration]
-format = '\[[ 󰥔 $duration]($style)\]' # replace clock emoji ⏱(U+23F1) to 🕑(U+1F551)
-
-[cobol]
-format = '\[[$symbol($version)]($style)\]'
-
-[conda]
-format = '\[[$symbol$environment]($style)\]'
-symbol = " "
-
-[crystal]
-format = '\[[$symbol($version)]($style)\]'
-
-[dart]
-format = '\[[$symbol($version)]($style)\]'
-symbol = " "
-
-[directory]
-read_only = " "
-
-[deno]
-format = '\[[$symbol($version)]($style)\]'
-
-[docker_context]
-format = '\[[$symbol$context]($style)\]'
-symbol = " "
-
-[dotnet]
-format = '\[[$symbol($version)(🎯$tfm)]($style)\]'
-
-[elixir]
-format = '\[[$symbol($version \(OTP $otp_version\))]($style)\]'
-symbol = " "
-
-[elm]
-format = '\[[$symbol($version)]($style)\]'
-symbol = " "
-
-[erlang]
-format = '\[[$symbol($version)]($style)\]'
-
-[gcloud]
-format = '\[[$symbol$account(@$domain)(\($region\))]($style)\]'
+[directory.substitutions]
+'~/tests/starship-custom' = 'work-project'
 
 [git_branch]
-format = '\[[$symbol$branch]($style)\]'
-symbol = " "
+format =  '[$symbol$branch(:$remote_branch)]($style)'
 
-[git_status]
-format = '([\[$all_status$ahead_behind\]]($style))'
+[aws]
+format = '[$symbol(profile: "$profile" )(\(region: $region\) )]($style)'
+disabled = false
+style = 'bold blue'
+symbol = " "
 
-[golang]
-format = '\[[$symbol($version)]($style)\]'
-symbol = " "
-
-[helm]
-format = '\[[$symbol($version)]($style)\]'
-
-[hg_branch]
-format = '\[[$symbol$branch]($style)\]'
-symbol = " "
-
-[java]
-format = '\[[$symbol($version)]($style)\]'
-symbol = " "
-
-[julia]
-format = '\[[$symbol($version)]($style)\]'
-symbol = " "
-
-[kotlin]
-format = '\[[$symbol($version)]($style)\]'
-
-[kubernetes]
-format = '\[[$symbol$context( \($namespace\))]($style)\]'
-
-[lua]
-format = '\[[$symbol($version)]($style)\]'
-
-[memory_usage]
-format = '\[$symbol[$ram( | $swap)]($style)\]'
-symbol = " "
-
-[nim]
-format = '\[[$symbol($version)]($style)\]'
-symbol = " "
-
-[nix_shell]
-format = '\[[$symbol$state( \($name\))]($style)\]'
-symbol = " "
-
-[nodejs]
-format = '\[[$symbol($version)]($style)\]'
-
-[ocaml]
-format = '\[[$symbol($version)(\($switch_indicator$switch_name\))]($style)\]'
-
-[openstack]
-format = '\[[$symbol$cloud(\($project\))]($style)\]'
-
-[package]
-format = '\[[$symbol$version]($style)\]'
-symbol = " "
-
-[perl]
-format = '\[[$symbol($version)]($style)\]'
-symbol = " "
-
-[php]
-format = '\[[$symbol($version)]($style)\]'
-symbol = " "
-
-[pulumi]
-format = '\[[$symbol$stack]($style)\]'
-
-[purescript]
-format = '\[[$symbol($version)]($style)\]'
-
-[python]
-format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
-symbol = " "
-
-[red]
-format = '\[[$symbol($version)]($style)\]'
-
-[ruby]
-format = '\[[$symbol($version)]($style)\]'
-symbol = " "
+# Programming languages with Nerd Font icons and colors
 
 [rust]
-format = '\[[$symbol($version)]($style)\]'
 symbol = " "
+style = "fg:peach"
+format = '[$symbol($version)]($style)'
+
+[lua]
+symbol = " "
+style = "fg:blue"
+format = '[$symbol($version)]($style)'
+
+[python]
+symbol = " "
+style = "fg:yellow"
+format = '[$symbol($version)]($style)'
+
+[nodejs]
+symbol = " "
+style = "fg:green"
+format = '[$symbol($version)]($style)'
+
+[java]
+symbol = " "
+style = "fg:red"
+format = '[$symbol($version)]($style)'
+
+[golang]
+symbol = " "
+style = "fg:teal"
+format = '[$symbol($version)]($style)'
+
+[c]
+symbol = " "
+style = "fg:sapphire"
+format = '[$symbol($version)]($style)'
+
+[cpp]
+symbol = " "
+style = "fg:lavender"
+format = '[$symbol($version)]($style)'
+
+[php]
+symbol = " "
+style = "fg:purple"
+format = '[$symbol($version)]($style)'
+
+[ruby]
+symbol = " "
+style = "fg:maroon"
+format = '[$symbol($version)]($style)'
+
+[perl]
+symbol = " "
+style = "fg:flamingo"
+format = '[$symbol($version)]($style)'
+
+[elixir]
+symbol = " "
+style = "fg:pink"
+format = '[$symbol($version)]($style)'
+
+[erlang]
+symbol = " "
+style = "fg:subtext1"
+format = '[$symbol($version)]($style)'
 
 [scala]
-format = '\[[$symbol($version)]($style)\]'
 symbol = " "
-
-[shlvl]
-symbol = " "
-
-[sudo]
-format = '\[[as $symbol]\]'
+style = "fg:red"
+format = '[$symbol($version)]($style)'
 
 [swift]
-format = '\[[$symbol($version)]($style)\]'
-symbol = "ﯣ "
+symbol = " "
+style = "fg:orange"
+format = '[$symbol($version)]($style)'
 
-[terraform]
-format = '\[[$symbol$workspace]($style)\]'
+[dart]
+symbol = " "
+style = "fg:sky"
+format = '[$symbol($version)]($style)'
 
-[time]
-format = '\[[$time]($style)\]'
+[haskell]
+symbol = " "
+style = "fg:mauve"
+format = '[$symbol($version)]($style)'
 
-[username]
-format = '\[[$user]($style)\]'
+[typescript]
+symbol = " "
+style = "fg:blue"
+format = '[$symbol($version)]($style)'
 
-[vagrant]
-format = '\[[$symbol($version)]($style)\]'
+[kotlin]
+symbol = " "
+style = "fg:lavender"
+format = '[$symbol($version)]($style)'
 
-[vlang]
-format = '\[[$symbol($version)]($style)\]'
+[dotnet]
+symbol = " "
+style = "fg:text"
+format = '[$symbol($version)]($style)'
 
-[zig]
-format = '\[[$symbol($version)]($style)\]'
+# Docker and Kubernetes
+[docker_context]
+disabled = true
 
+[kubernetes]
+symbol = '☸ '
+disabled = true
+detect_files = ['Dockerfile']
+format = '[$symbol$context( \($namespace\))]($style) '
+contexts = [
+  { context_pattern = "arn:aws:eks:us-west-2:577926974532:cluster/zd-pvc-omer", style = "green", context_alias = "omerxx", symbol = " " },
+]
 
-[os.symbols]
-Alpaquita = " "
-Alpine = " "
-AlmaLinux = " "
-Amazon = " "
-Android = " "
-Arch = " "
-Artix = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = "󰛓 "
-Gentoo = " "
-HardenedBSD = "󰞌 "
-Illumos = "󰈸 "
-Kali = " "
-Linux = " "
-Mabox = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-OpenBSD = "󰈺 "
-openSUSE = " "
-OracleLinux = "󰌷 "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-RockyLinux = " "
-Redox = "󰀘 "
-Solus = "󰠳 "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Void = " "
-Windows = "󰍲 "
-
-[battery]
-full_symbol = '🔋 '
-charging_symbol = '⚡️ '
-discharging_symbol = '💀 '
-
-
-
-
+# Cyberdream color palette
+[palettes.cyberdream]
+peach = "#f4a261"
+blue = "#82aaff"
+yellow = "#f2cc81"
+green = "#a3be8c"
+teal = "#5fb3b3"
+sapphire = "#57c7ff"
+lavender = "#b4befe"
+pink = "#ff79c6"
+red = "#ec5f67"
+maroon = "#c678dd"
+purple = "#c792ea"
+flamingo = "#ff5370"
+sky = "#89dceb"
+text = "#d0d0d0"
+subtext1 = "#a0a0a0"
+overlay2 = "#7f849c"
+overlay1 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#2e2e3e"
+base = "#1c1c24"
+mantle = "#1a1b26"
+crust = "#16161e"
