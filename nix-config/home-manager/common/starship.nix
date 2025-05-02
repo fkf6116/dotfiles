@@ -49,7 +49,6 @@
       java.symbol = " ";
       golang.symbol = " ";
       c.symbol = " ";
-      cpp.symbol = " ";
       php.symbol = " ";
       ruby.symbol = " ";
       perl.symbol = " ";
