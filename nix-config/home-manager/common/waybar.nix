@@ -99,12 +99,12 @@ let
     };
 
     "cpu" = {
-      "format" = " {usage}%";
+      "format" = "󰻠 {usage}%";
       "tooltip" = true;
     };
 
     "memory" = {
-      "format" = " {percentage}%";
+      "format" = "󱘭 {percentage}%";
       "tooltip-format" = "{used:0.1f}GB/{total:0.1f}GB used";
     };
 
