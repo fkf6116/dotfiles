@@ -58,9 +58,9 @@
       swift.symbol = " ";
       dart.symbol = " ";
       haskell.symbol = " ";
-      typescript.symbol = " ";
       kotlin.symbol = " ";
       dotnet.symbol = " ";
+
     };
   };
 }

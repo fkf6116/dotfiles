@@ -65,7 +65,8 @@
   };
 
   programs.carapace.enable = true;
-  programs.carapace.enableFishIntegration = false;
+  programs.carapace.enableFishIntegration = true;
+  programs.carapace.enableZshIntegration = true;
 
   programs.helix = {
     enable = true;

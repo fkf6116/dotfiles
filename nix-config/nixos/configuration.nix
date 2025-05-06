@@ -205,6 +205,7 @@
 
     #media-session.enable = true;
   };
+    hardware.opentabletdriver.enable = true;
 
   hardware.bluetooth = {
     enable = true;
@@ -378,7 +379,7 @@
     lazygit
     swaynotificationcenter
     fd
-    vscode
+    vscode.fhs
     home-manager
     neovide
     zathura
@@ -454,5 +455,7 @@
     barrier
     i3
     code-cursor
+    xournalpp
+    pixelorama
   ];
 }

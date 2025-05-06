@@ -8,7 +8,7 @@
   stylix.enable = true;
   stylix.image = /home/fkf/wallpaper.image;
 
-  stylix.base16Scheme = "/home/fkf/dotfiles/nix-config/home-manager/common/cyber.yaml";
+  # stylix.base16Scheme = "/home/fkf/dotfiles/nix-config/home-manager/common/cyber.yaml";
   stylix.opacity = {
     # applications = 1.0;
     terminal = 0.75;
@@ -26,12 +26,13 @@
   stylix.targets.zellij.enable = true;
   stylix.targets.tmux.enable = false;
   stylix.targets.i3.enable = false;
+  stylix.targets.firefox.enable = true;
 
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
   };
-
+programs.ghostty.enable = true;
   stylix.cursor = {
     package = pkgs.catppuccin-cursors.mochaMauve;
     name = "catppuccin-mocha-mauve-cursors";

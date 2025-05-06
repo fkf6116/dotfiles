@@ -72,6 +72,7 @@
 
       startup = [
         { command = "swaync"; }
+        { command = "blueman-applet"; }
         { command = "autotiling"; }
         { command = "waybar"; }
         { command = "foot --server"; }
