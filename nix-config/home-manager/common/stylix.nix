@@ -3,12 +3,12 @@
   stylix,
   lib,
   ...
-}:
-{
+}: {
   stylix.enable = true;
   stylix.image = /home/fkf/wallpaper.image;
 
   # stylix.base16Scheme = "/home/fkf/dotfiles/nix-config/home-manager/common/cyber.yaml";
+    stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/horizon-dark.yaml";
   stylix.opacity = {
     # applications = 1.0;
     terminal = 0.75;
@@ -27,12 +27,13 @@
   stylix.targets.tmux.enable = false;
   stylix.targets.i3.enable = false;
   stylix.targets.firefox.enable = true;
+  stylix.targets.nixvim.enable = false;
 
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
   };
-programs.ghostty.enable = true;
+  programs.ghostty.enable = true;
   stylix.cursor = {
     package = pkgs.catppuccin-cursors.mochaMauve;
     name = "catppuccin-mocha-mauve-cursors";

@@ -4,28 +4,53 @@
   lib,
   inputs,
   ...
-}:
-{
+}: {
   programs.nvf = {
     enable = true;
-    # your settings need to go into the settings attribute set
-    # most settings are documented in the appendix
     settings = {
       vim = {
         keymaps = [
           {
             key = "<leader>wq";
-            mode = [ "n" ];
+            mode = ["n"];
             action = ":wq<CR>";
             silent = true;
             desc = "Save file and quit";
           }
           {
             key = "<leader>nt";
-            mode = [ "n" ];
+            mode = ["n"];
             action = ":Neotree toggle<CR>";
             silent = true;
             desc = "File tree (Neotree)";
+          }
+          {
+            key = "<leader>ff";
+            mode = ["n"];
+            action = ":Telescope find_files<CR>";
+            silent = true;
+            desc = "Find files";
+          }
+          {
+            key = "<leader>fg";
+            mode = ["n"];
+            action = ":Telescope live_grep<CR>";
+            silent = true;
+            desc = "Search in files";
+          }
+          {
+            key = "<leader>fb";
+            mode = ["n"];
+            action = ":Telescope buffers<CR>";
+            silent = true;
+            desc = "List buffers";
+          }
+          {
+            key = "<leader>fh";
+            mode = ["n"];
+            action = ":Telescope help_tags<CR>";
+            silent = true;
+            desc = "Search help";
           }
         ];
 
@@ -47,14 +72,14 @@
         };
 
         lsp = {
+          enable = true;
           formatOnSave = true;
-          lspkind.enable = false;
+          lspkind.enable = true;
           lightbulb.enable = true;
-          lspsaga.enable = false;
+          lspsaga.enable = true;
           trouble.enable = true;
           lspSignature.enable = true;
           otter-nvim.enable = true;
-          lsplines.enable = true;
           nvim-docs-view.enable = true;
         };
 
@@ -68,7 +93,6 @@
         # This section does not include a comprehensive list of available language modules.
         # To list all available language module options, please visit the nvf manual.
         languages = {
-          enableLSP = true;
           enableFormat = true;
           enableTreesitter = true;
           enableExtraDiagnostics = true;
@@ -82,13 +106,13 @@
           clang.enable = true;
           css.enable = true;
           html.enable = true;
-          # sql.enable = true;
+          sql.enable = true;
           # java.enable = true;
           # kotlin.enable = true;
           ts.enable = true;
-          # go.enable = true;
+          go.enable = true;
           lua.enable = true;
-          # zig.enable = true;
+          zig.enable = true;
           python.enable = true;
           typst.enable = true;
           rust = {
@@ -123,9 +147,9 @@
         };
 
         visuals = {
-          nvim-scrollbar.enable = false;
+          nvim-scrollbar.enable = true;
           nvim-web-devicons.enable = true;
-          nvim-cursorline.enable = false;
+          nvim-cursorline.enable = true;
           # cinnamon-nvim.enable = true;
           fidget-nvim.enable = true;
 
@@ -139,15 +163,8 @@
         statusline = {
           lualine = {
             enable = true;
-            theme = "gruvbox";
+            #            theme = "gruvbox";
           };
-        };
-
-        theme = {
-          enable = true;
-          name = "gruvbox";
-          style = "dark";
-          transparent = true;
         };
 
         autopairs.nvim-autopairs.enable = true;
@@ -175,7 +192,7 @@
         git = {
           enable = true;
           gitsigns.enable = true;
-          gitsigns.codeActions.enable = false; # throws an annoying debug message
+          gitsigns.codeActions.enable = true;
         };
 
         minimap = {
@@ -197,20 +214,16 @@
         };
 
         utility = {
-          ccc.enable = false;
-          vim-wakatime.enable = false;
+          ccc.enable = true;
+          vim-wakatime.enable = true;
           icon-picker.enable = true;
           surround.enable = true;
           diffview-nvim.enable = true;
           motion = {
-            # hop.enable = true;
-            # leap.enable = true;
-            # precognition.enable = true;
+            hop.enable = true;
+            leap.enable = true;
           };
 
-          images = {
-            image-nvim.enable = false;
-          };
         };
 
         notes = {
@@ -236,10 +249,10 @@
           illuminate.enable = true;
           breadcrumbs = {
             enable = true;
-            # navbuddy.enable = true;
+            navbuddy.enable = true;
           };
           smartcolumn = {
-            # enable = true;
+            enable = true;
             setupOpts.custom_colorcolumn = {
               # this is a freeform module, it's `buftype = int;` for configuring column position
               nix = "110";
@@ -255,11 +268,11 @@
         };
 
         session = {
-          nvim-session-manager.enable = false;
+          nvim-session-manager.enable = true;
         };
 
         gestures = {
-          gesture-nvim.enable = false;
+          gesture-nvim.enable = true;
         };
 
         comments = {
