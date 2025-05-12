@@ -19,6 +19,7 @@
     ../common/fancy.nix
     ../common/hypr.nix
     ../common/sway.nix
+    ../common/starship.nix
     ../common/waybar.nix
     ../common/term.nix
     ../common/spot.nix

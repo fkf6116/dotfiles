@@ -94,6 +94,12 @@
   #    NOTE enableShit
 
   programs.hyprland.enable = true;
+    programs.sway = {
+    enable = true;
+    package = pkgs.swayfx;
+    wrapperFeatures.gtk = true;
+  };
+
   programs.kdeconnect = {
     enable = true;
     package = pkgs.gnomeExtensions.gsconnect;
@@ -448,6 +454,7 @@
     wireguard-tools
     ghostty
     feh
+    barrier
 
   ];
 }

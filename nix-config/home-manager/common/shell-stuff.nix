@@ -61,6 +61,46 @@
       gp = "git push";
       nano = "hx";
       gaa = "git add .";
+      ".." = "cd ..";
+
+      "..." = "cd ../..";
+      "...." = "cd ../../../";
+      "....." = "cd ../../../../";
+
+      "dot" = "cd ~/.dotfiles";
+      "conf" = "cd ~/.config";
+
+      "cp" = "cp -v";
+      "ddf" = "df -h";
+      "etc" = "erd -H";
+      "mkdir" = "mkdir -p";
+      "mv" = "mv -v";
+      "rm" = "rm -v";
+      "rr" = "rm -rf";
+
+      "ld" = "eza -ld */ --no-quotes --time-style default --icons";
+      "lla" = "eza -lah --no-quotes --time-style default --icons";
+      "ll" = "eza -lh --no-quotes --time-style default --icons";
+      "llr" = "eza -lhr --no-quotes --time-style default --icons";
+      "lls" = "eza -lh -s size --no-quotes --time-style default --icons";
+      "llt" = "eza -lh -s time --no-quotes --time-style default --icons";
+      "lltr" = "eza -lhr -s time --no-quotes --time-style default --icons";
+
+      "zj" = "zellij";
+      "zja" = "zellij attach";
+      "tm" = "tmux";
+      "tma" = "tmux attach";
+
+      "avi" = "vlc *.avi";
+      "jpeg" = "feh -Z *.jpeg";
+      "jpg" = "feh -Z *.jpg";
+      "mkv" = "vlc *.mkv";
+      "mov" = "vlc *.mov";
+      "mp3" = "vlc *.mp3";
+      "mp4" = "vlc *.mp4";
+      "png" = "feh -Z *.png";
+      "vvlc" = "vlc *";
+      "webm" = "vlc *.webm";
     };
   };
 
