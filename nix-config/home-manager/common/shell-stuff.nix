@@ -2,9 +2,9 @@
   pkgs,
   lib,
   ...
-}:
-{
-  # xdg.configFile."starship.toml".source = lib.mkForce ./starship.toml;
+}: {
+  xdg.configFile."starship.toml".source = lib.mkForce ./starship_jetpack.toml;
+  programs.starship.enable = true;
 
   home.packages = with pkgs; [
     pkgs.fishPlugins.autopair
@@ -33,9 +33,8 @@
     enable = true;
     enableZshIntegration = true;
     enableFishIntegration = true;
-    options = [ "--cmd cd" ];
+    options = ["--cmd cd"];
   };
-
 
   programs.nushell = {
     enable = true;

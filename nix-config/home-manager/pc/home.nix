@@ -7,8 +7,7 @@
   config,
   pkgs,
   ...
-}:
-{
+}: {
   # You can import other home-manager modules here
   imports = [
     ../common/stylix.nix
@@ -23,7 +22,7 @@
     ../common/waybar.nix
     ../common/term.nix
     ../common/i3.nix
-    ../common/starship.nix
+    # ../common/starship.nix
     # ../common/vim.nix
 
     # If you want to use modules your own flake exports (from modules/home-manager):
@@ -41,17 +40,17 @@
   xdg.configFile."mimeapps.list".force = true;
 
   xdg.mimeApps.defaultApplications = {
-    "text/plain" = [ "neovide.desktop" ];
-    "application/pdf" = [ "zathura.desktop" ];
-    "image/jpeg" = [ "feh.desktop" ];
-    "image/png" = [ "feh.desktop" ];
-    "image/gif" = [ "feh.desktop" ];
-    "video/mp4" = [ "mpv.desktop" ];
+    "text/plain" = ["neovide.desktop"];
+    "application/pdf" = ["zathura.desktop"];
+    "image/jpeg" = ["feh.desktop"];
+    "image/png" = ["feh.desktop"];
+    "image/gif" = ["feh.desktop"];
+    "video/mp4" = ["mpv.desktop"];
     "x-scheme-handler/http" = "firefox.desktop";
     "x-scheme-handler/https" = "firefox.desktop";
     "text/html" = "firefox.desktop";
     "application/xhtml+xml" = "firefox.desktop";
-    "default-web-browser" = [ "firefox.desktop" ];
+    "default-web-browser" = ["firefox.desktop"];
   };
 
   nixpkgs = {
