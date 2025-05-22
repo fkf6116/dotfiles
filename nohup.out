@@ -1,0 +1,18 @@
+[ 05/03/2025 08:57:37.207 parse_config_libconfig WARN ] The refresh-rate option has been deprecated. Please remove it from your configuration file. If you encounter any problems without this feature, please feel free to open a bug report
+[ 05/03/2025 08:57:37.207 c2_parse_target WARN ] Type specifier is deprecated. Type "c" specified on target "_GTK_FRAME_EXTENTS" will be ignored, you can remove it.
+[ 05/03/2025 08:57:37.207 c2_parse_target WARN ] Type specifier is deprecated. Type "c" specified on target "_GTK_FRAME_EXTENTS" will be ignored, you can remove it.
+[ 05/03/2025 08:57:37.264 glxext_init INFO ] Extension GLX_SGI_video_sync - present
+[ 05/03/2025 08:57:37.264 glxext_init INFO ] Extension GLX_SGI_swap_control - present
+[ 05/03/2025 08:57:37.264 glxext_init INFO ] Extension GLX_OML_sync_control - present
+[ 05/03/2025 08:57:37.264 glxext_init INFO ] Extension GLX_MESA_swap_control - present
+[ 05/03/2025 08:57:37.264 glxext_init INFO ] Extension GLX_EXT_swap_control - present
+[ 05/03/2025 08:57:37.265 glxext_init INFO ] Extension GLX_EXT_texture_from_pixmap - present
+[ 05/03/2025 08:57:37.265 glxext_init INFO ] Extension GLX_ARB_create_context - present
+[ 05/03/2025 08:57:37.265 glxext_init INFO ] Extension GLX_EXT_buffer_age - present
+[ 05/03/2025 08:57:37.265 glxext_init INFO ] Extension GLX_ARB_create_context_robustness - present
+[ 05/03/2025 08:57:37.265 glxext_init INFO ] Extension GLX_MESA_query_renderer - present
+[ 05/03/2025 08:57:37.307 redirect_start INFO ] Using vblank scheduler: present.
+[ 05/03/2025 08:57:37.347 wm_find_leader WARN ] Window 0x0020008c is part of a cycle in the leadership tree
+[ 05/03/2025 09:09:18.780 c2_window_state_update_from_replies WARN ] Failed to get property 0 for window 0x0040001a, some window rules might not work.
+[ 05/03/2025 09:09:37.118 c2_window_state_update_from_replies WARN ] Failed to get property 0 for window 0x0040001a, some window rules might not work.
+[ 05/03/2025 09:15:16.382 c2_window_state_update_from_replies WARN ] Failed to get property 0 for window 0x0040001a, some window rules might not work.

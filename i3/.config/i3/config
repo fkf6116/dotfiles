@@ -1,6 +1,8 @@
 
 include ~/.config/i3/colors.conf
 set $mod Mod4
+font pango:JetBrainsMono Nerd Font 10
+
 
 exec --no-startup-id picom
 exec --no-startup-id nitrogen --restore
