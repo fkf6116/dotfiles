@@ -1,0 +1,63 @@
+# Global settings
+separator=false
+markup=none
+interval=1
+
+# Time & Date
+[time]
+command=date '+ %H:%M   %a, %b %d'
+interval=1
+
+# CPU Load
+[cpu]
+command=top -bn1 | awk '/Cpu\(s\)/ { printf(" %.1f%%", $2 + $4) }'
+interval=5
+
+# RAM Usage
+[memory]
+command=free -h | awk '/^Mem/ { printf(" %s / %s", $3, $2) }'
+interval=10
+
+# Disk Space
+[disk]
+command=df -h / | awk 'NR==2 { printf(" %s / %s", $3, $2) }'
+interval=60
+
+# Network
+[network]
+command=ip -4 addr show wlan0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | awk '{print " " $1}' || echo "睊 Offline"
+interval=10
+
+# Battery
+[battery]
+command=acpi -b | awk -F', ' '{gsub(/Battery 0: /,"", $1); print "🔋 " $2 " (" $1 ")"}'
+interval=30
+
+# Volume
+[volume]
+command=pamixer --get-volume-human | sed 's/^/ /'
+interval=5
+signal=10
+
+# Brightness
+[brightness]
+command=brightnessctl | awk -F'[(|)]' '/Current/ { print "🔆 " $2 }'
+interval=10
+
+# Now Playing
+# [media]
+# command=playerctl metadata --format '{{🎵 artist: {{artist}} - title: {{title}} }}' 2>/dev/null || echo "🎵 Not playing"
+# interval=5
+# signal=11
+
+# Keyboard Layout
+[kblayout]
+command=setxkbmap -query | awk '/layout/ { print "⌨️ " $2 }'
+interval=5
+
+[media]
+command=$HOME/.config/i3blocks/scripts/media.sh
+interval=5
+signal=11
+markup=none
+
