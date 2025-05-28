@@ -2,7 +2,8 @@
   pkgs,
   lib,
   ...
-}: {
+}:
+{
   xdg.configFile."starship.toml".source = lib.mkForce ./starship_jetpack.toml;
   programs.starship.enable = true;
 
@@ -33,7 +34,7 @@
     enable = true;
     enableZshIntegration = true;
     enableFishIntegration = true;
-    options = ["--cmd cd"];
+    options = [ "--cmd cd" ];
   };
 
   programs.nushell = {
@@ -72,7 +73,6 @@
       "cp" = "cp -v";
       "ddf" = "df -h";
       "etc" = "erd -H";
-      "mkdir" = "mkdir -p";
       "mv" = "mv -v";
       "rm" = "rm -v";
       "rr" = "rm -rf";
@@ -112,6 +112,7 @@
     settings = {
       editor = {
         end-of-line-diagnostics = "hint";
+        line-number = "relative";
         auto-format = true;
         path-completion = true;
 
@@ -120,36 +121,39 @@
         };
 
         indent-guides = {
-          character = "|";
+          character = "▏";
           render = true;
         };
+
         lsp = {
           auto-signature-help = false;
           display-messages = true;
         };
+
         statusline = {
           left = [
             "mode"
             "spinner"
             "version-control"
+          ];
+          center = [
             "file-name"
           ];
+          right = ["position" "file-type"];
+
         };
+
         cursor-shape = {
           normal = "block";
           insert = "bar";
           select = "underline";
         };
       };
-
-      # languages.nix = [
-      #   {
-      #     name = "nix";
-      #     auto-format = true;
-      #     formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
-      #   }
-      # ];
     };
+
+    extraConfig = ''[keys.insert]
+j = { k = "normal_mode" } # Maps `jk` to exit insert mode"
+'';
   };
 
   programs.zellij = {

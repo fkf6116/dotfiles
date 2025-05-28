@@ -122,6 +122,7 @@
 
   xdg.portal = {
     enable = true;
+    wlr.enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-wlr
       pkgs.xdg-desktop-portal-gtk
@@ -183,6 +184,12 @@
   services.xserver.windowManager.i3.enable = true;
   services.xserver.displayManager.gdm.enable = true;
 
+
+services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
+  src = /home/fkf/chadwm/chadwm;
+};
+
+
   #    NOTE Services
 
   networking.networkmanager.enable = true;
@@ -191,6 +198,8 @@
     layout = "us";
     variant = "";
   };
+
+  services.dbus.enable = true;
 
   services.flatpak.enable = true;
 
@@ -205,7 +214,7 @@
 
     #media-session.enable = true;
   };
-    hardware.opentabletdriver.enable = true;
+  hardware.opentabletdriver.enable = true;
 
   hardware.bluetooth = {
     enable = true;
@@ -234,9 +243,8 @@
 
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.greetd.enableGnomeKeyring = true;
-  security.pam.services.sway = {
-    enableGnomeKeyring = true;
-  };
+
+
   systemd.services.NetworkManager-wait-online.enable = false;
 
   # TODO: Set your hostname
@@ -351,27 +359,13 @@
     stylua
     nodePackages.bash-language-server
     # nixd
-    helix
     brightnessctl
-    zig
-    zls
     rust-analyzer
     bibata-cursors
     prismlauncher
     lxqt.lxqt-policykit
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qt5ct
-    # kdePackages.breeze-gtk
-    # kdePackages.breeze-icons
-    # kdePackages.breeze.qt5
-    # kdePackages.breeze
-    # catppuccin-cursors # Mouse cursor theme
-    # catppuccin-papirus-folders # Icon theme, e.g. for pcmanfm-qt
-    # papirus-folders # For the catppucing stuff work
-    # papirus-folders
-    # catppuccin-kde
-    # sweet-nova
-    # nordic
     nil
     ffmpeg
     obs-studio
@@ -452,9 +446,8 @@
     mgba
     localsend
     kid3
-    barrier
     i3
-    code-cursor
+    # code-cursor
     xournalpp
     pixelorama
   ];

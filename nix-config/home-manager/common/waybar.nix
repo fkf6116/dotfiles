@@ -32,16 +32,16 @@ let
 
     "sway/workspaces" = {
       "persistent_workspaces" = {
-        "1" = [];
-        "2" = [];
-        "3" = [];
-        "4" = [];
-        "5" = [];
-        "6" = [];
-        "7" = [];
-        "8" = [];
-        "9" = [];
-        "10" = [];
+        "1" = [ ];
+        "2" = [ ];
+        "3" = [ ];
+        "4" = [ ];
+        "5" = [ ];
+        "6" = [ ];
+        "7" = [ ];
+        "8" = [ ];
+        "9" = [ ];
+        "10" = [ ];
       };
       "format" = "{name}";
       "sort-by-number" = true;
@@ -50,7 +50,10 @@ let
     "sway/scratchpad" = {
       "format" = "{icon} {count}";
       "show-empty" = false;
-      "format-icons" = [ "󰎆" "󰎇" ];
+      "format-icons" = [
+        "󰎆"
+        "󰎇"
+      ];
       "tooltip" = true;
       "tooltip-format" = "{app}: {title}";
     };
@@ -85,7 +88,11 @@ let
         "phone" = "󰏲";
         "portable" = "󰋊";
         "car" = "󰄋";
-        "default" = [ "󰕿" "󰖀" "󰕾" ];
+        "default" = [
+          "󰕿"
+          "󰖀"
+          "󰕾"
+        ];
       };
       "on-click" = "pavucontrol";
     };
@@ -111,7 +118,11 @@ let
     "temperature" = {
       "critical-threshold" = 80;
       "format" = " {icon} {temperatureC}°C";
-      "format-icons" = [ "󰈸" "󰈹" "󰈺" ];
+      "format-icons" = [
+        "󰈸"
+        "󰈹"
+        "󰈺"
+      ];
     };
 
     "battery" = {
@@ -123,12 +134,33 @@ let
       "format-charging" = "󰂄 {capacity}%";
       "format-plugged" = "󰂄 {capacity}%";
       "format-alt" = "{time} {icon}";
-      "format-icons" = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
+      "format-icons" = [
+        "󰁺"
+        "󰁻"
+        "󰁼"
+        "󰁽"
+        "󰁾"
+        "󰁿"
+        "󰂀"
+        "󰂁"
+        "󰂂"
+        "󰁹"
+      ];
     };
 
     "backlight" = {
       "format" = " {percent}%";
-      "format-icons" = [ "󰃞" "󰃟" "󰃠" "󰃡" "󰃢" "󰃣" "󰃤" "󰃥" "󰃦" ];
+      "format-icons" = [
+        "󰃞"
+        "󰃟"
+        "󰃠"
+        "󰃡"
+        "󰃢"
+        "󰃣"
+        "󰃤"
+        "󰃥"
+        "󰃦"
+      ];
     };
 
     "tray" = {

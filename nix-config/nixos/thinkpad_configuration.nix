@@ -94,7 +94,7 @@
   #    NOTE enableShit
 
   programs.hyprland.enable = true;
-    programs.sway = {
+  programs.sway = {
     enable = true;
     package = pkgs.swayfx;
     wrapperFeatures.gtk = true;

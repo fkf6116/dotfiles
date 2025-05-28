@@ -4,7 +4,8 @@
   lib,
   inputs,
   ...
-}: {
+}:
+{
   programs.nvf = {
     enable = true;
     settings = {
@@ -12,42 +13,42 @@
         keymaps = [
           {
             key = "<leader>wq";
-            mode = ["n"];
+            mode = [ "n" ];
             action = ":wq<CR>";
             silent = true;
             desc = "Save file and quit";
           }
           {
             key = "<leader>nt";
-            mode = ["n"];
+            mode = [ "n" ];
             action = ":Neotree toggle<CR>";
             silent = true;
             desc = "File tree (Neotree)";
           }
           {
             key = "<leader>ff";
-            mode = ["n"];
+            mode = [ "n" ];
             action = ":Telescope find_files<CR>";
             silent = true;
             desc = "Find files";
           }
           {
             key = "<leader>fg";
-            mode = ["n"];
+            mode = [ "n" ];
             action = ":Telescope live_grep<CR>";
             silent = true;
             desc = "Search in files";
           }
           {
             key = "<leader>fb";
-            mode = ["n"];
+            mode = [ "n" ];
             action = ":Telescope buffers<CR>";
             silent = true;
             desc = "List buffers";
           }
           {
             key = "<leader>fh";
-            mode = ["n"];
+            mode = [ "n" ];
             action = ":Telescope help_tags<CR>";
             silent = true;
             desc = "Search help";

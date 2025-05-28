@@ -84,6 +84,7 @@
         let
           mod = "Mod4";
           term = "footclient";
+          notif = "swaync-client";
           app-menu = "wofi --show drun --allow-images";
           power-menu = "ags -t power-menu";
         in
@@ -97,7 +98,7 @@
           # Reload the configuration file
           "${mod}+Shift+c" = "reload";
 
-          "${mod}+Shift+n" = "swaync-client -t";
+          "${mod}+n" = "exec swaync-client -t";
           # Screenshot
           "${mod}+Shift+s" = "exec grim -g \"$(slurp)\" - | wl-copy";
 

@@ -3,7 +3,8 @@
   pkgs,
   lib,
   ...
-}: {
+}:
+{
   programs.zsh = {
     enable = true;
     history.size = 10000;
