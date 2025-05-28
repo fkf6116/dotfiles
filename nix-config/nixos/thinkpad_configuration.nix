@@ -455,6 +455,7 @@
     ghostty
     feh
     barrier
+    chromium
 
   ];
 }
