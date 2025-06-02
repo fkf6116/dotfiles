@@ -12,6 +12,7 @@ let
     "margin-right" = 5;
     "modules-left" = [
       "sway/workspaces"
+      "hyprland/workspaces"
       "sway/scratchpad"
       "window"
     ];

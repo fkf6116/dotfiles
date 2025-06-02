@@ -12,7 +12,7 @@ in
 {
   programs.spicetify = {
     enable = true;
-    theme = spicePkgs.themes.starryNight;
+    # theme = spicePkgs.themes.starryNight;
     enabledExtensions = with spicePkgs.extensions; [
       adblock
       hidePodcasts

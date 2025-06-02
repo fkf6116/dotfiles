@@ -18,9 +18,8 @@
 
       exec = [
         "lxqt-policykit-agent"
-        "foot --server"
         "hyprpaper"
-        "hyprpanel"
+        "waybar"
         #### For setting the cursor
         "hyprctl setcursor catppuccin-mocha-mauve-cursors 24"
 
@@ -29,7 +28,6 @@
       exec-once = [
         "emacs --daemon"
         "blueman-applet"
-        "hyprpanel"
         # "waybar"
       ];
       # TODO: change this because my keyboard layout is kinda weird honestly
@@ -166,7 +164,7 @@
       ];
 
       bind = [
-        "$mainMod, Return, exec, footclient"
+        "$mainMod, Return, exec, kitty"
         "$mainMod, E, exec, emacsclient -c"
 
         "$mainMod, Q, killactive,"
