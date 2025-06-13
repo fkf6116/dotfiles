@@ -9,9 +9,12 @@
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;; (package! some-package)
 (package! emmet-mode)
+(package! autothemer)
 (package! fzf)
 (package! catppuccin-theme)
 (package! ox-hugo)
+(package! rose-pine-theme
+  :recipe (:host github :repo "thongpv87/rose-pine-emacs"))
 
 (require 'ox-md)
 

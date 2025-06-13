@@ -450,5 +450,7 @@ services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
     # code-cursor
     xournalpp
     pixelorama
+    tofi
+    imagemagick
   ];
 }

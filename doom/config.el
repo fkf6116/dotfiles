@@ -43,9 +43,9 @@
 ;;NOTE: THEMES:
 
 
-(setq doom-theme 'catppuccin)
-(setq catppuccin-flavor 'mocha) ;; or 'latte, 'macchiato, or 'mocha
-
+;; (setq doom-theme 'catppuccin)
+(setq doom-theme 'rose-pine-moon)
+;; (setq catppuccin-flavor 'mocha) ;; or 'latte, 'macchiato, or 'mocha
 ;; (setq doom-theme 'doom-gruvbox)
 ;; (load-theme 'doom-gruvbox t)
 
@@ -83,13 +83,15 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org")
+(setq org-directory "~/Downloads/Org")
 
 
 
 
 (add-to-list 'default-frame-alist '(alpha-background . 90)) ; For all new frames henceforth
 
+(after! evil-escape
+  (setq evil-escape-key-sequence "jk"))
 
 
 
