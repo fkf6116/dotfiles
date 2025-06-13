@@ -43,8 +43,8 @@
 
   stylix.iconTheme = {
     enable = true;
-    package = pkgs.kora-icon-theme;
-    dark = "kora";
+    package = pkgs.rose-pine-icon-theme;
+    dark = "rose-pine";
   };
   stylix.fonts = {
     # monospace = {
