@@ -277,8 +277,6 @@
 
 (use-package cc-mode)
 
-(use-package python-mode)
-
 (use-package toc-org
     :commands toc-org-enable
     :init (add-hook 'org-mode-hook 'toc-org-enable))

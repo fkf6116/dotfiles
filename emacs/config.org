@@ -417,7 +417,6 @@ Emacs has built-in programming language modes for Lisp, Scheme, DSSSL, Ada, ASM,
 
 (use-package cc-mode)
 
-(use-package python-mode)
 
 
 #+end_src 
