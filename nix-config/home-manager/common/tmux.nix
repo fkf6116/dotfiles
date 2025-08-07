@@ -1,43 +1,60 @@
 { pkgs, config, ... }:
 {
-  programs.tmux = {
+
+
+programs.tmux = {
     enable = true;
-    shortcut = "s";
-    # aggressiveResize = true; -- Disabled to be iTerm-friendly
-    baseIndex = 1;
-    newSession = true;
-    # Stop tmux+escape craziness.
     escapeTime = 0;
-    # Force tmux to use /tmp for sockets (WSL2 compat)
-    secureSocket = false;
+    baseIndex = 1;
+    prefix = "C-Space";
+    keyMode = "vi";
+    terminal = "screen-256color"; # Also applies to xterm-256color due to terminal-features override
 
-    plugins = with pkgs; [
-      tmuxPlugins.better-mouse-mode
-      # tmuxPlugins.rose-pine
-      tmuxPlugins.vim-tmux-navigator
 
-    ];
 
-    extraConfig = ''
-      # Mouse works as expected
-      set-option -g mouse on
-      # easy-to-remember split pane commands
-      bind | split-window -h -c "#{pane_current_path}"
-      bind - split-window -v -c "#{pane_current_path}"
-      bind c new-window -c "#{pane_current_path}"
-      bind-key h select-pane -L 
-      bind-key j select-pane -D 
-      bind-key k select-pane -U 
-      bind-key l select-pane -R 
-      set-option -g status-position bottom
+extraConfig = ''
+  set-option -sa terminal-features ',xterm-256color:RGB'
+  set-option -a terminal-features 'screen-256color:RGB'
 
-    '';
+  set-option -g allow-passthrough on
+  bind-key C-Space send-prefix
+
+  set -g renumber-windows on
+  set-window-option -g mode-keys vi
+
+  # Status bar styles
+  set -g status-position top
+  set -g status-justify absolute-centre
+  set -g status-style "fg=color7 bg=default"
+  set -g status-right ""
+  set -g status-left "#S"
+  set -g status-left-style "fg=color8"
+  set -g status-right-length 0
+  set -g status-left-length 100
+
+  setw -g window-status-current-style "fg=colour6 bg=default bold"
+  setw -g window-status-current-format "#I:#W "
+  setw -g window-status-style "fg=color8"
+
+  # Vim-like pane switching
+  bind -r ^ last-window
+  bind -r k select-pane -U
+  bind -r j select-pane -D
+  bind -r h select-pane -L
+  bind -r l select-pane -R
+
+  # Pane splitting in current path
+  bind v split-window -v -c "#{pane_current_path}"
+  bind h split-window -h -c "#{pane_current_path}"
+
+  # Toggle status bar
+  bind-key b set-option status
+'';
+
+
+
   };
 
-  programs.tmate = {
-    enable = true;
-    # FIXME: This causes tmate to hang.
-    # extraConfig = config.xdg.configFile."tmux/tmux.conf".text;
-  };
+
 
 }
