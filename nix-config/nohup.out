@@ -6,3 +6,17 @@ Help:
 Options:
 	 -s, --style 		 Use a custom Stylesheet file
 	 -c, --config 		 Use a custom config file
+
+(waybar:18311): Gdk-WARNING **: 00:03:20.804: Failed to read portal settings: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2025-06-15 00:03:20.888] [info] Using configuration file /home/fkf/.config/waybar/config
+[2025-06-15 00:03:20.890] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2025-06-15 00:03:20.890] [info] Using CSS file /home/fkf/.config/waybar/style.css
+[2025-06-15 00:03:20.924] [warning] module sway/workspaces: Disabling module "sway/workspaces", Socket path is empty
+[2025-06-15 00:03:20.925] [info] Hyprland IPC starting
+[2025-06-15 00:03:20.926] [info] Loading persistent workspaces from Hyprland workspace rules
+[2025-06-15 00:03:20.950] [warning] module sway/scratchpad: Disabling module "sway/scratchpad", Socket path is empty
+[2025-06-15 00:03:20.950] [warning] module window: Unknown module: window
+[2025-06-15 00:03:20.958] [warning] module temperature: Disabling module "temperature", Can't open /sys/class/thermal/thermal_zone0/temp
+[2025-06-15 00:03:20.958] [warning] No batteries.
+[2025-06-15 00:03:20.958] [warning] module backlight: Disabling module "backlight", No backlight found
+[2025-06-15 00:03:21.100] [info] Bar configured (width: 1910, height: 30) for output: HDMI-A-1

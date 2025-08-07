@@ -452,5 +452,6 @@ services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
     pixelorama
     tofi
     imagemagick
+    obsidian
   ];
 }

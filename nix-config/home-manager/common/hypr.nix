@@ -168,7 +168,7 @@
         "$mainMod, E, exec, emacsclient -c"
 
         "$mainMod, Q, killactive,"
-        "$mainMod, M, exit, "
+        "$mainMod SHIFT, M, exit, "
         "$mainMod SHIFT, F, togglefloating,"
         "$mainMod, F, fullscreen,"
         "$mainMod, D, exec, wofi --show drun --allow-images"
