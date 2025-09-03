@@ -4,8 +4,12 @@
   ...
 }:
 {
-  xdg.configFile."starship.toml".source = lib.mkForce ./starship_jetpack.toml;
-  programs.starship.enable = true;
+
+programs.starship = {
+  enable = true;
+  settings = lib.mkForce {}; # disable inline config
+};
+home.file.".config/starship.toml".source = ./starship_jetpack.toml;
 
   home.packages = with pkgs; [
     pkgs.fishPlugins.autopair
@@ -156,12 +160,13 @@ j = { k = "normal_mode" } # Maps `jk` to exit insert mode"
 '';
   };
 
+
   programs.zellij = {
     enable = true;
-    enableFishIntegration = false;
+    enableFishIntegration = true;
     settings = {
-      pane_frames = false;
-      tab_bar = false;
+      pane_frames = true;
+      tab_bar = true;
       default_layout = "compact";
       # theme = "rose-pine";
     };
