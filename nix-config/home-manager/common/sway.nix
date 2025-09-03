@@ -6,7 +6,6 @@
 {
   home.packages = with pkgs; [
     swaybg
-    autotiling
     slurp
     grim
     wlsunset

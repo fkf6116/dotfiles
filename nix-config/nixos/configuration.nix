@@ -177,18 +177,16 @@
 
   services.xserver.enable = true;
 
-  # services.displayManager.sddm.enable = true;
-  # services.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
 
-  services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.windowManager.i3.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.windowManager.i3.enable = true;
+  # services.xserver.displayManager.gdm.enable = true;
 
-
-services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
-  src = /home/fkf/chadwm/chadwm;
-};
-
+  services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
+    src = /home/fkf/chadwm/chadwm;
+  };
 
   #    NOTE Services
 
@@ -243,7 +241,6 @@ services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
 
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.greetd.enableGnomeKeyring = true;
-
 
   systemd.services.NetworkManager-wait-online.enable = false;
 
@@ -305,6 +302,10 @@ services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
+  nixpkgs.config.permittedInsecurePackages = [
+    "libsoup-2.74.3"
+  ];
+
   environment.systemPackages = with pkgs; [
     vim
     yazi
@@ -384,7 +385,7 @@ services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
     hyprcursor
     hyprpaper
     nixd
-    nixfmt-rfc-style
+    nixfmt-tree
     sxiv
     feh
     # brave

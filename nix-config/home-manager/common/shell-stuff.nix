@@ -158,17 +158,33 @@ home.file.".config/starship.toml".source = ./starship_jetpack.toml;
     extraConfig = ''[keys.insert]
 j = { k = "normal_mode" } # Maps `jk` to exit insert mode"
 '';
-  };
+};
+  
 
+programs.zellij = {
+  enable = true;
+  enableFishIntegration = false;
 
-  programs.zellij = {
-    enable = true;
-    enableFishIntegration = true;
-    settings = {
-      pane_frames = true;
-      tab_bar = true;
-      default_layout = "compact";
-      # theme = "rose-pine";
+  settings = {
+    # UI niceties
+    pane_frames = true;          # show pane borders
+    tab_bar = true;              # tab bar at bottom
+    default_layout = "compact";  # nice starter layout
+show_startup_tips = false;
+    ui = {
+      disable_tutorial = true;   # no tips on startup
+      pane_frames = "rounded";   # rounded corners look cleaner
+      theme = "rose-pine";       # pretty theme (comment out if unwanted)
     };
+
+    # Behavior niceties
+    simplified_ui = true;        # less clutter
+    mouse_mode = true;           # allow mouse resizing + scrolling
+    copy_on_select = true;       # instantly copy when selecting
+    scrollback_editor = "nvim";  # use Neovim for scrollback editing
+    mirror_session = true;       # makes reattaching more intuitive
+    default_shell = "fish";      # since you already use fish
   };
+};
+
 }
