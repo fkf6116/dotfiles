@@ -12,7 +12,7 @@
       cursor_trail = 3;
       # shell = "nu";
       # background_opacity = "0.75";
-      # background_blur = 5;
+      background_blur = 5;
     };
   };
   programs.foot.enable = true;
