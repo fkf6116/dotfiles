@@ -454,5 +454,6 @@
     tofi
     imagemagick
     obsidian
+    scrcpy
   ];
 }
