@@ -406,7 +406,6 @@
     man-pages
     man-pages-posix
     pavucontrol
-    lsp-plugins
     easyeffects
     pkgs.gnome-keyring
     zsh
