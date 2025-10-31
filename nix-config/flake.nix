@@ -8,10 +8,9 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-nixvim = {
-        url = "github:nix-community/nixvim/nixos-25.05";
-        # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
-        inputs.nixpkgs.follows = "nixpkgs";
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
 
@@ -29,7 +28,6 @@ nixvim = {
   outputs =
     {
       self,
-      nixvim,
       nixpkgs,
       home-manager,
       stylix,
@@ -93,7 +91,7 @@ nixvim = {
           };
           modules = [
             stylix.homeModules.stylix
-            nixvim.homeManagerModules.nixvim
+            inputs.nvf.homeManagerModules.default
             inputs.spicetify-nix.homeManagerModules.default
             ./home-manager/pc/home.nix
           ];
@@ -106,6 +104,7 @@ nixvim = {
           };
           modules = [
             stylix.homeModules.stylix
+            inputs.nvf.homeManagerModules.default
             ./home-manager/non-nix/home-non-nix.nix
           ];
         };
@@ -118,7 +117,7 @@ nixvim = {
           modules = [
             stylix.homeModules.stylix
             inputs.spicetify-nix.homeManagerModules.default
-	    nixvim.homeManagerModules.nixvim
+	    inputs.nvf.homeManagerModules.default
             ./home-manager/thonkpad/home.nix
           ];
         };

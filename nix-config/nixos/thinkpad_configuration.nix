@@ -451,7 +451,7 @@
     barrier
     chromium
     w3m
-    nixvim
+    # nixvim (removed; using NVF via Home Manager)
     
   ];
 }
