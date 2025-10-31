@@ -146,8 +146,10 @@
         };
 
         dashboard = {
-          dashboard-nvim.enable = true;
-          alpha.enable = false;
+          dashboard-nvim.enable = false;
+          startify = {
+            enable = true;
+          };
         };
 
         notify.nvim-notify.enable = true;
@@ -156,6 +158,7 @@
 
         utility = {
           ccc.enable = false;
+          snacks-nvim.enable = true;
           vim-wakatime.enable = false;
           diffview-nvim.enable = true;
           yanky-nvim.enable = false;
