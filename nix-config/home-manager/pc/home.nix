@@ -24,7 +24,7 @@
     ../common/term.nix
     ../common/i3.nix
     # ../common/starship.nix
-    # ../common/vim.nix
+    ../common/vim.nix
 
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example

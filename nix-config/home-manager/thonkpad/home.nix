@@ -5,6 +5,7 @@
   outputs,
   lib,
   config,
+  nixvim,
   pkgs,
   ...
 }:
@@ -19,11 +20,11 @@
     ../common/fancy.nix
     ../common/hypr.nix
     ../common/sway.nix
-    ../common/starship.nix
+    # ../common/starship.nix
     ../common/waybar.nix
     ../common/term.nix
     ../common/spot.nix
-    # ../common/vim.nix
+    ../common/vim.nix
     ../common/sway.nix
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example

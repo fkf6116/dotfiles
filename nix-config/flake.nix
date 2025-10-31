@@ -7,19 +7,21 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+nixvim = {
+        url = "github:nix-community/nixvim/nixos-25.05";
+        # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
-
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
-    nvf = {
-      url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -27,10 +29,10 @@
   outputs =
     {
       self,
+      nixvim,
       nixpkgs,
       home-manager,
       stylix,
-      nvf,
       ...
     }@inputs:
     let
@@ -48,7 +50,6 @@
     {
       packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
 
-      imports = [ inputs.nvf.homeModules.default ];
 
       formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
       overlays = import ./overlays { inherit inputs; };
@@ -66,7 +67,7 @@
             # > Our main nixos configuration file <
             ./nixos/configuration.nix
 
-            { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
+            { nixpkgs.overlays = [  ]; }
           ];
         };
 
@@ -75,7 +76,7 @@
             inherit inputs outputs;
           };
           modules = [
-            { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
+            { nixpkgs.overlays = [  ]; }
             # > Our main nixos configuration file <
             ./nixos/thinkpad_configuration.nix
           ];
@@ -92,8 +93,8 @@
           };
           modules = [
             stylix.homeModules.stylix
+            nixvim.homeManagerModules.nixvim
             inputs.spicetify-nix.homeManagerModules.default
-            nvf.homeManagerModules.default
             ./home-manager/pc/home.nix
           ];
         };
@@ -105,7 +106,6 @@
           };
           modules = [
             stylix.homeModules.stylix
-            nvf.homeManagerModules.default
             ./home-manager/non-nix/home-non-nix.nix
           ];
         };
@@ -116,9 +116,9 @@
             inherit inputs outputs;
           };
           modules = [
-            nvf.homeManagerModules.default
             stylix.homeModules.stylix
             inputs.spicetify-nix.homeManagerModules.default
+	    nixvim.homeManagerModules.nixvim
             ./home-manager/thonkpad/home.nix
           ];
         };

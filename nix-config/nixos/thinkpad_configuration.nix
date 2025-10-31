@@ -368,7 +368,7 @@
     zls
     rust-analyzer
     bibata-cursors
-    # prismlauncher
+    prismlauncher
     lxqt.lxqt-policykit
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qt5ct
@@ -429,7 +429,6 @@
     ytmdl
     markdown-oxide
     ispell
-    unstable.marksman
     cargo
     rustc
     shfmt
@@ -442,20 +441,17 @@
     cmus
     hub
     dwt1-shell-color-scripts
-
     # texliveFull
     spotify
-    ulauncher
-    pkgs.hyprpanel
     hyfetch
     cloc
     luarocks
-    wireguard-ui
-    wireguard-tools
     ghostty
     feh
     barrier
     chromium
-
+    w3m
+    nixvim
+    
   ];
 }
