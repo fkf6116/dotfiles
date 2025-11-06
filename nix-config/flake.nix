@@ -17,7 +17,6 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     nvf = {
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -66,7 +65,7 @@
             # > Our main nixos configuration file <
             ./nixos/configuration.nix
 
-            { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
+            # { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
           ];
         };
 
@@ -75,7 +74,7 @@
             inherit inputs outputs;
           };
           modules = [
-            { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
+            # { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
             # > Our main nixos configuration file <
             ./nixos/thinkpad_configuration.nix
           ];

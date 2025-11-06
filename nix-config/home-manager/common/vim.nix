@@ -4,51 +4,54 @@
   lib,
   inputs,
   ...
-}:
-{
+}: {
   programs.nvf = {
     enable = true;
     settings = {
       vim = {
+        options = {
+          clipboard = "unnamedplus"; # using the idiomatic vim.options key
+        };
+
         keymaps = [
           {
             key = "<leader>wq";
-            mode = [ "n" ];
+            mode = ["n"];
             action = ":wq<CR>";
             silent = true;
             desc = "Save file and quit";
           }
           {
             key = "<leader>nt";
-            mode = [ "n" ];
+            mode = ["n"];
             action = ":Neotree toggle<CR>";
             silent = true;
             desc = "File tree (Neotree)";
           }
           {
             key = "<leader>ff";
-            mode = [ "n" ];
+            mode = ["n"];
             action = ":Telescope find_files<CR>";
             silent = true;
             desc = "Find files";
           }
           {
             key = "<leader>fg";
-            mode = [ "n" ];
+            mode = ["n"];
             action = ":Telescope live_grep<CR>";
             silent = true;
             desc = "Search in files";
           }
           {
             key = "<leader>fb";
-            mode = [ "n" ];
+            mode = ["n"];
             action = ":Telescope buffers<CR>";
             silent = true;
             desc = "List buffers";
           }
           {
             key = "<leader>fh";
-            mode = [ "n" ];
+            mode = ["n"];
             action = ":Telescope help_tags<CR>";
             silent = true;
             desc = "Search help";
@@ -103,19 +106,19 @@
           markdown.enable = true;
 
           # Languages that are enabled in the maximal configuration.
-          bash.enable = true;
+          bash.enable = false;
           clang.enable = true;
-          css.enable = true;
-          html.enable = true;
-          sql.enable = true;
+          css.enable = false;
+          html.enable = false;
+          sql.enable = false;
           # java.enable = true;
           # kotlin.enable = true;
-          ts.enable = true;
-          go.enable = true;
+          ts.enable = false;
+          go.enable = false;
           lua.enable = true;
-          zig.enable = true;
+          zig.enable = false;
           python.enable = true;
-          typst.enable = true;
+          typst.enable = false;
           rust = {
             enable = true;
             crates.enable = true;
@@ -224,7 +227,6 @@
             hop.enable = true;
             leap.enable = true;
           };
-
         };
 
         notes = {

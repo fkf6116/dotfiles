@@ -317,7 +317,7 @@
     stow
     polybar
     waybar
-    rofi-wayland
+    rofi
     fastfetch
     kitty
     kitty-themes
@@ -425,7 +425,7 @@
     cmus
     hyprland
     pkgs.nerd-fonts.jetbrains-mono
-    pkgs.hyprpanel
+    # pkgs.hyprpanel
     hub
     dwt1-shell-color-scripts
     spotify

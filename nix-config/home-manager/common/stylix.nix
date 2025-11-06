@@ -3,13 +3,12 @@
   stylix,
   lib,
   ...
-}:
-{
+}: {
   stylix.enable = true;
   stylix.image = /home/fkf/wallpaper.image;
 
   # stylix.base16Scheme = "/home/fkf/dotfiles/nix-config/home-manager/common/cyber.yaml";
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/oxocarbon-dark.yaml";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
   stylix.opacity = {
     # applications = 1.0;
     terminal = 0.75;
