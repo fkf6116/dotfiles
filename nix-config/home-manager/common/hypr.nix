@@ -26,8 +26,7 @@
       exec-once = [
         "emacs --daemon"
         "blueman-applet"
-        # "waybar"
-        "hyprpanel"
+        "waybar"
       ];
       # TODO: change this because my keyboard layout is kinda weird honestly
       input = {
