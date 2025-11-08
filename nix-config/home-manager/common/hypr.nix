@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   wayland.windowManager.hyprland = {
     enable = true;
 
@@ -19,7 +18,6 @@
       exec = [
         "lxqt-policykit-agent"
         "hyprpaper"
-        "waybar"
         #### For setting the cursor
         "hyprctl setcursor catppuccin-mocha-mauve-cursors 24"
 
@@ -29,6 +27,7 @@
         "emacs --daemon"
         "blueman-applet"
         # "waybar"
+        "hyprpanel"
       ];
       # TODO: change this because my keyboard layout is kinda weird honestly
       input = {
@@ -223,7 +222,6 @@
       ];
 
       bindle = [
-
         "$mainMod, PERIOD, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
         "$mainMod, COMMA, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
         ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"

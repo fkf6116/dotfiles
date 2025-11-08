@@ -7,8 +7,7 @@
   config,
   pkgs,
   ...
-}:
-{
+}: {
   # You can import other home-manager modules here
   imports = [
     ../common/stylix.nix
@@ -25,6 +24,7 @@
     ../common/i3.nix
     # ../common/starship.nix
     ../common/vim.nix
+    ../common/hyprpanel.nix
 
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example
@@ -42,29 +42,29 @@
 
   xdg.mimeApps.defaultApplications = {
     # Web browser
-    "x-scheme-handler/http" = [ "firefox.desktop" ];
-    "x-scheme-handler/https" = [ "firefox.desktop" ];
-    "text/html" = [ "firefox.desktop" ];
-    "application/xhtml+xml" = [ "firefox.desktop" ];
-    "x-scheme-handler/about" = [ "firefox.desktop" ];
-    "x-scheme-handler/unknown" = [ "firefox.desktop" ];
+    "x-scheme-handler/http" = ["firefox.desktop"];
+    "x-scheme-handler/https" = ["firefox.desktop"];
+    "text/html" = ["firefox.desktop"];
+    "application/xhtml+xml" = ["firefox.desktop"];
+    "x-scheme-handler/about" = ["firefox.desktop"];
+    "x-scheme-handler/unknown" = ["firefox.desktop"];
 
     # Default web browser (for desktop environments that look for this key)
-    "default-web-browser" = [ "firefox.desktop" ];
+    "default-web-browser" = ["firefox.desktop"];
 
     # Text files
-    "text/plain" = [ "neovide.desktop" ];
+    "text/plain" = ["neovide.desktop"];
 
     # PDFs
-    "application/pdf" = [ "zathura.desktop" ];
+    "application/pdf" = ["zathura.desktop"];
 
     # Images
-    "image/jpeg" = [ "feh.desktop" ];
-    "image/png" = [ "feh.desktop" ];
-    "image/gif" = [ "feh.desktop" ];
+    "image/jpeg" = ["feh.desktop"];
+    "image/png" = ["feh.desktop"];
+    "image/gif" = ["feh.desktop"];
 
     # Videos
-    "video/mp4" = [ "mpv.desktop" ];
+    "video/mp4" = ["mpv.desktop"];
   };
 
   nixpkgs = {
