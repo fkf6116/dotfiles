@@ -7,8 +7,7 @@
   config,
   pkgs,
   ...
-}:
-{
+}: {
   # You can import other home-manager modules here
   imports = [
     ../common/stylix.nix
@@ -19,7 +18,7 @@
     ../common/fancy.nix
     ../common/hypr.nix
     ../common/sway.nix
-    ../common/starship.nix
+    # ../common/starship.nix
     ../common/waybar.nix
     ../common/term.nix
     ../common/spot.nix
@@ -39,18 +38,18 @@
   xdg.mimeApps.enable = true;
 
   xdg.mimeApps.defaultApplications = {
-    "text/plain" = [ "neovide.desktop" ];
-    "application/pdf" = [ "zathura.desktop" ];
-    "image/jpeg" = [ "feh.desktop" ];
-    "image/png" = [ "feh.desktop" ];
-    "image/gif" = [ "feh.desktop" ];
-    "video/mp4" = [ "mpv.desktop" ];
-    "default-web-browser" = [ "firefox.desktop" ];
-    "text/html" = [ "firefox.desktop" ];
-    "x-scheme-handler/http" = [ "firefox.desktop" ];
-    "x-scheme-handler/https" = [ "firefox.desktop" ];
-    "x-scheme-handler/about" = [ "firefox.desktop" ];
-    "x-scheme-handler/unknown" = [ "firefox.desktop" ];
+    "text/plain" = ["neovide.desktop"];
+    "application/pdf" = ["zathura.desktop"];
+    "image/jpeg" = ["feh.desktop"];
+    "image/png" = ["feh.desktop"];
+    "image/gif" = ["feh.desktop"];
+    "video/mp4" = ["mpv.desktop"];
+    "default-web-browser" = ["firefox.desktop"];
+    "text/html" = ["firefox.desktop"];
+    "x-scheme-handler/http" = ["firefox.desktop"];
+    "x-scheme-handler/https" = ["firefox.desktop"];
+    "x-scheme-handler/about" = ["firefox.desktop"];
+    "x-scheme-handler/unknown" = ["firefox.desktop"];
   };
 
   nixpkgs = {
