@@ -442,7 +442,6 @@
     cmus
     hub
     dwt1-shell-color-scripts
-
     # texliveFull
     spotify
     ulauncher
@@ -455,7 +454,7 @@
     ghostty
     feh
     barrier
-    chromium
+    google-chrome
 
   ];
 }
