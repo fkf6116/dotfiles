@@ -263,6 +263,8 @@
         "libvirtd"
         "uinput"
         "input"
+        "dialout"
+        "uucp"
       ];
     };
   };
@@ -451,6 +453,8 @@
     imagemagick
     obsidian
     scrcpy
+    arduino-ide
+    python313
     # hyprpanel
   ];
 }
