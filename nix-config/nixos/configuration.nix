@@ -455,6 +455,7 @@
     scrcpy
     arduino-ide
     python313
+    logseq
     # hyprpanel
   ];
 }
