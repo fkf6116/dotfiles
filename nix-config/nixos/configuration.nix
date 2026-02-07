@@ -311,7 +311,6 @@
     bottom
     fish
     git
-    # ulauncher
     stow
     polybar
     waybar
@@ -322,7 +321,7 @@
     kitty-img
     vesktop
     cowsay
-    nodejs
+    # nodejs
     pipx
     zoxide
     gnome-tweaks
@@ -359,7 +358,7 @@
     nodePackages.bash-language-server
     # nixd
     brightnessctl
-    rust-analyzer
+    # rust-analyzer
     bibata-cursors
     prismlauncher
     lxqt.lxqt-policykit
@@ -387,10 +386,10 @@
     sxiv
     feh
     # brave
-    unstable.joplin-desktop
-    krita
+    # unstable.joplin-desktop
+    # krita
     pinta
-    gimp
+    # gimp
     blender
     godot_4
     tilix
@@ -420,7 +419,7 @@
     glslang
     pandoc
     hugo
-    cmus
+    # cmus
     hyprland
     pkgs.nerd-fonts.jetbrains-mono
     hub
@@ -436,17 +435,16 @@
     ghostty
     lix
     neovim
-    ulauncher
-    ytmdl
-    picard
-    mgba
+    # ulauncher
+    # ytmdl
+    # picard
+    # mgba
     localsend
     kid3
     i3
     # code-cursor
     xournalpp
-    pixelorama
-    tofi
+    # pixelorama
     imagemagick
     obsidian
     scrcpy
