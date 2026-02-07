@@ -27,7 +27,7 @@ home.file.".config/starship.toml".source = ./starship_jetpack.toml;
     lfs.enable = true;
     userName = "fruity-fkf";
     userEmail = "fruity.fkf@proton.me";
-    extraConfig = {
+    settings = {
       init = {
         defaultBranch = "main";
       };

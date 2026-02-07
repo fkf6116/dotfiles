@@ -31,7 +31,6 @@
 
   programs.rofi = {
     enable = true;
-    package = pkgs.rofi-wayland;
   };
   programs.ghostty.enable = true;
   stylix.cursor = {
@@ -40,7 +39,7 @@
     size = 24;
   };
 
-  stylix.iconTheme = {
+  stylix.icons = {
     enable = true;
     package = pkgs.rose-pine-icon-theme;
     dark = "rose-pine";

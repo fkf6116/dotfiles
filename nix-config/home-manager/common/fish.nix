@@ -62,6 +62,10 @@
       cc = "cargo check";
       cdo = "cargo doc --open";
       cr = "cargo run";
+
+      # Nix specific
+      ndf = "nix develop -c fish";
+      nd = "nix develop";
       hms = "home-manager switch --flake .#fkf@pc --impure";
       hmt = "home-manager switch --flake .#fkf@thonkpad --impure";
       nrs = "sudo nixos-rebuild switch --flake .#pc";

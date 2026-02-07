@@ -132,13 +132,12 @@
       # nerd-fonts
       nerd-fonts.jetbrains-mono
       noto-fonts-cjk-sans
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       font-awesome
       source-han-sans
-      source-han-sans-japanese
-      source-han-serif-japanese
+      source-han-serif
       ubuntu-sans
-      ubuntu_font_family
+      ubuntu-classic
       pixel-code
     ];
     # fontconfig.defaultFonts = {
@@ -424,7 +423,6 @@
     cmus
     hyprland
     pkgs.nerd-fonts.jetbrains-mono
-    # pkgs.hyprpanel
     hub
     dwt1-shell-color-scripts
     spotify
@@ -441,7 +439,6 @@
     ulauncher
     ytmdl
     picard
-    itch
     mgba
     localsend
     kid3
@@ -453,9 +450,6 @@
     imagemagick
     obsidian
     scrcpy
-    arduino-ide
-    python313
     logseq
-    # hyprpanel
   ];
 }
