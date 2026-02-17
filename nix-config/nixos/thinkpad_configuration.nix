@@ -120,13 +120,14 @@
       noto-fonts
       # nerd-fonts
       nerd-fonts.jetbrains-mono
-      jetbrains-mono
       noto-fonts-cjk-sans
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       font-awesome
       source-han-sans
-      source-han-sans-japanese
-      source-han-serif-japanese
+      source-han-serif
+      ubuntu-sans
+      ubuntu-classic
+      pixel-code
     ];
     # fontconfig.defaultFonts = {
     #   serif = [
@@ -139,6 +140,7 @@
     #   ];
     # };
   };
+
 
   time.timeZone = "Europe/Oslo";
 
@@ -319,7 +321,7 @@
     stow
     polybar
     waybar
-    rofi-wayland
+    rofi
     fastfetch
     kitty
     kitty-themes
@@ -406,12 +408,12 @@
     sxiv
     # brave
     joplin-desktop
-    krita
+    # krita
     pinta
     # gimp
     # blender
     # godot_4
-    tilix
+    # tilix
     wofi
     playerctl
     pipes
@@ -427,9 +429,9 @@
     gnome-keyring
     zsh
     ytmdl
-    markdown-oxide
+    # markdown-oxide
     ispell
-    unstable.marksman
+    # unstable.marksman
     cargo
     rustc
     shfmt
@@ -444,17 +446,17 @@
     dwt1-shell-color-scripts
     # texliveFull
     spotify
-    ulauncher
-    pkgs.hyprpanel
+    # ulauncher
+    # pkgs.hyprpanel
     hyfetch
     cloc
     luarocks
-    wireguard-ui
-    wireguard-tools
-    ghostty
+    # wireguard-ui
+    # wireguard-tools
+    # ghostty
     feh
-    barrier
-    google-chrome
+    # barrier
+    # google-chrome
 
   ];
 }
